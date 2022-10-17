@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_08.DivisibleBy3</RootNamespace>
+    <RootNamespace>_06.StrongNumber</RootNamespace>
   </PropertyGroup>
 
 </Project>

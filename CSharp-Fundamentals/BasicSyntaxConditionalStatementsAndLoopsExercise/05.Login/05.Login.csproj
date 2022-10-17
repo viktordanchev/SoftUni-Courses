@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_07.TheatrePromotion</RootNamespace>
+    <RootNamespace>_05.Login</RootNamespace>
   </PropertyGroup>
 
 </Project>
