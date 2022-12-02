@@ -1,48 +1,60 @@
 ﻿using System;
 
-namespace _10._Top_Number
+namespace _10.TopNumber
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
             int number = int.Parse(Console.ReadLine());
 
-            PrintTopNumbersUpTo(number);
-        }
-
-        private static void PrintTopNumbersUpTo(int number)
-        {
-            for (int i = 1; i <= number; i++)
+            for (int currNum = 1; currNum <= number; currNum++)
             {
-                if (IsDigitSumDivisibleBy8(i) && HasOddDigit(i))
-                    Console.WriteLine(i);
+                bool numberIsDivisibleBy8 = CheckIfNumIsDivisibleBy8(currNum);
+                bool numberHoldOddDigit = CheckIfNumHoldOddDigit(currNum);
+
+                if (numberIsDivisibleBy8 && numberHoldOddDigit)
+                {
+                    Console.WriteLine(currNum);
+                }
             }
         }
 
-        private static bool HasOddDigit(int number)
+        static bool CheckIfNumHoldOddDigit(int i)
         {
-            while (number > 0)
+            int remainder, counter = 0;
+
+            while (i > 0)
             {
-                if ((number % 10) % 2 == 1)
-                    return true;
-                number /= 10;
+                remainder = i % 10;
+                i /= 10;
+
+                if (remainder % 2 == 1)
+                {
+                    counter++;
+                }
+            }
+
+            if (counter >= 1)
+            {
+                return true;
             }
 
             return false;
         }
 
-        private static bool IsDigitSumDivisibleBy8(int number)
+        static bool CheckIfNumIsDivisibleBy8(int i)
         {
-            int digitSum = 0;
+            int remainder, sum = 0;
 
-            while (number > 0)
+            while (i > 0)
             {
-                digitSum += number % 10;
-                number /= 10;
+                remainder = i % 10;
+                i /= 10;
+                sum += remainder;
             }
 
-            if (digitSum % 8 == 0)
+            if (sum % 8 == 0)
             {
                 return true;
             }
