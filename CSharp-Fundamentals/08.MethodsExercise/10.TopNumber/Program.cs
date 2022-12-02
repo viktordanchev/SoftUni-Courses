@@ -20,14 +20,14 @@ namespace _10.TopNumber
             }
         }
 
-        static bool CheckIfNumHoldOddDigit(int i)
+        static bool CheckIfNumHoldOddDigit(int currNum)
         {
             int remainder, counter = 0;
 
-            while (i > 0)
+            while (currNum > 0)
             {
-                remainder = i % 10;
-                i /= 10;
+                remainder = currNum % 10;
+                currNum /= 10;
 
                 if (remainder % 2 == 1)
                 {
@@ -43,14 +43,14 @@ namespace _10.TopNumber
             return false;
         }
 
-        static bool CheckIfNumIsDivisibleBy8(int i)
+        static bool CheckIfNumIsDivisibleBy8(int currNum)
         {
             int remainder, sum = 0;
 
-            while (i > 0)
+            while (currNum > 0)
             {
-                remainder = i % 10;
-                i /= 10;
+                remainder = currNum % 10;
+                currNum /= 10;
                 sum += remainder;
             }
 
