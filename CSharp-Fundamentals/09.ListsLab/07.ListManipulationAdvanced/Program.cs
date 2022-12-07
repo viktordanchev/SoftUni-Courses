@@ -27,7 +27,7 @@ namespace _07.ListManipulationAdvanced
                 }
                 else if (command[0] == "RemoveAt")
                 {
-                    result = RemoveNumberArAGivenIndex(command, numbers);
+                    result = RemoveNumberAtAGivenIndex(command, numbers);
                     counterForChanges++;
                 }
                 else if (command[0] == "Insert")
@@ -86,7 +86,7 @@ namespace _07.ListManipulationAdvanced
             return numbers;
         }
 
-        static List<int> RemoveNumberArAGivenIndex(string[] command, List<int> numbers)
+        static List<int> RemoveNumberAtAGivenIndex(string[] command, List<int> numbers)
         {
             int numToRemove = int.Parse(command[1]);
             numbers.RemoveAt(numToRemove);
