@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _02.OddOccurrences
 {
@@ -6,7 +8,28 @@ namespace _02.OddOccurrences
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] words = Console.ReadLine().Split(" ").Select(w => w.ToLower()).ToArray();
+            Dictionary<string, int> counts = new Dictionary<string, int>();
+
+            foreach (string word in words)
+            {
+                if (counts.ContainsKey(word))
+                {
+                    counts[word]++;
+                }
+                else
+                {
+                    counts.Add(word, 1);
+                }
+            }
+
+            foreach (var count in counts)
+            {
+                if (count.Value % 2 == 1)
+                {
+                    Console.Write(count.Key + " ");
+                }
+            }
         }
     }
 }

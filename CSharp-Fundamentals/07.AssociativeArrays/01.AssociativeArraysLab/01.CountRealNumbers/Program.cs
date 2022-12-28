@@ -8,10 +8,25 @@ namespace _01.CountRealNumbers
     {
         static void Main(string[] args)
         {
-            int a = 5;
+            List<int> numbers = Console.ReadLine().Split(" ").Select(int.Parse).ToList();
+            SortedDictionary<int, int> count = new SortedDictionary<int, int>();
 
-            Console.WriteLine(a--);
-            Console.WriteLine(--a);
+            foreach (var number in numbers)
+            {
+                if (!count.ContainsKey(number))
+                {
+                    count.Add(number, 1);
+                }
+                else
+                {
+                    count[number]++;
+                }
+            }
+
+            foreach (var item in count)
+            {
+                Console.WriteLine(item.Key + " " + "->" + " " + item.Value);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _04.WordFilter
 {
@@ -6,19 +7,15 @@ namespace _04.WordFilter
     {
         static void Main(string[] args)
         {
-            int[] nums = { 1, 2, };
-            int[] nums2 = new int[2];
+            string[] words = Console.ReadLine()
+                .Split(" ")
+                .Where(w => w.Length % 2 == 0)
+                .ToArray();
 
-            nums2 = nums;
-
-            Console.WriteLine(string.Join(' ', nums));
-            Console.WriteLine(string.Join(' ', nums2));
-
-            nums2[0] = 5;
-            nums2[1] = 53;
-
-            Console.WriteLine(string.Join(' ', nums));
-            Console.WriteLine(string.Join(' ', nums2));
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
         }
     }
 }
