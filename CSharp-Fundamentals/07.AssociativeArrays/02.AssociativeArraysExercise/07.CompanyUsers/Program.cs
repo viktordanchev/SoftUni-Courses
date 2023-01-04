@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _07.CompanyUsers
 {
@@ -42,10 +43,7 @@ namespace _07.CompanyUsers
             {
                 Console.WriteLine($"{company.Key}");
 
-                foreach (var id in company.Value)
-                {
-                    Console.WriteLine($"-- {id}");
-                }
+                Console.WriteLine($"-- {string.Join(Environment.NewLine, companyById[company.Key])}");
             }
         }
     }
