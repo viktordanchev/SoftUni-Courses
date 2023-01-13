@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace _03.MatchDates
 {
@@ -7,13 +7,20 @@ namespace _03.MatchDates
     {
         static void Main(string[] args)
         {
-            List<List<int>> ints = new List<List<int>>();
+            string date = Console.ReadLine();
 
-            ints.Add(new List<int>());
-            ints.Add(new List<int> { 1, 2, 3 });
+            string pattern = @"\b(?<day>\d{2})(?<separator>[-\.\/])(?<month>[A-Z][a-z]{2})\k<separator>(?<year>\d{4})\b";
 
-            Console.WriteLine(string.Join(' ', ints));
+            MatchCollection matches = Regex.Matches(date, pattern);
 
+            foreach (Match match in matches)
+            {
+                string day = match.Groups["day"].Value;
+                string month = match.Groups["month"].Value;
+                string year = match.Groups["year"].Value;
+
+                Console.WriteLine($"Day: {day}, Month: {month}, Year: {year}");
+            }
         }
     }
 }
