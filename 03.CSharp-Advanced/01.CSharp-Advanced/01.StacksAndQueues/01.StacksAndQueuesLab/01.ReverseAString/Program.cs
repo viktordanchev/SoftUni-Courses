@@ -16,7 +16,7 @@ namespace _01.ReverseAString
             }
 
             while (reversedInput.Count != 0)
-            { 
+            {
                 Console.Write(reversedInput.Pop());
             }
         }

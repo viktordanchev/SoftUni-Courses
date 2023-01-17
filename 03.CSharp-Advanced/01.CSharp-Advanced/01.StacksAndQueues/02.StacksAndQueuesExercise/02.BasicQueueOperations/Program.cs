@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _01.BasicStackOperations
+namespace _02.BasicQueue
 {
     internal class Program
     {
@@ -10,23 +10,23 @@ namespace _01.BasicStackOperations
         {
             int[] commands = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            Stack<int> stack = new Stack<int>();
+            Queue<int> queue = new Queue<int>();
 
-            int numOfElementsToPush = commands[0];
-            int numOfElementsToPop = commands[1];
+            int numOfElementsToEnqueue = commands[0];
+            int numOfElementsToDequeue = commands[1];
             int numOfElementsToPeek = commands[2];
 
-            for (int i = 0; i < numOfElementsToPush; i++)
+            for (int i = 0; i < numOfElementsToEnqueue; i++)
             {
-                stack.Push(numbers[i]);
+                queue.Enqueue(numbers[i]);
             }
 
-            for (int i = 0; i < numOfElementsToPop; i++)
+            for (int i = 0; i < numOfElementsToDequeue; i++)
             {
-                stack.Pop();
+                queue.Dequeue();
             }
 
-            foreach (int num in stack)
+            foreach (int num in queue)
             {
                 if (num == numOfElementsToPeek)
                 {
@@ -35,13 +35,13 @@ namespace _01.BasicStackOperations
                 }
             }
 
-            if (stack.Count == 0)
+            if (queue.Count == 0)
             {
                 Console.WriteLine(0);
             }
             else
             {
-                Console.WriteLine(stack.Min());
+                Console.WriteLine(queue.Min());
             }
         }
     }

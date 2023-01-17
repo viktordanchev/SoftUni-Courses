@@ -24,7 +24,7 @@ namespace _05.PrintEvenNumbers
                     continue;
                 }
             }
-            
+
             Console.WriteLine(string.Join(", ", queue));
         }
     }

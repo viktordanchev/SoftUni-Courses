@@ -7,10 +7,10 @@ namespace _02.StackSum
     internal class Program
     {
         static void Main(string[] args)
-        { 
+        {
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             Stack<int> stack = new Stack<int>(numbers);
-            
+
             string[] input = Console.ReadLine().Split();
 
             while (true)
