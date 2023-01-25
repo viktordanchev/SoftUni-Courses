@@ -18,15 +18,5 @@ namespace _03.CountUppercaseWords
                 Console.WriteLine(word);
             }
         }
-
-        static string GetWord(Func<string, bool> checkForUpper, string w)
-        {
-            if (checkForUpper(w))
-            {
-                return w;
-            }
-
-            return null;
-        }
     }
 }

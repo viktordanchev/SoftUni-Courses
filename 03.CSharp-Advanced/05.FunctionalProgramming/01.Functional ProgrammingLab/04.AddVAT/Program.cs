@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _04.AddVAT
 {
@@ -6,7 +7,16 @@ namespace _04.AddVAT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double[] numbers = Console.ReadLine()
+                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(double.Parse)
+                .Select(n => n * 1.2)
+                .ToArray();
+
+            foreach (var number in numbers) 
+            {
+                Console.WriteLine($"{number:f2}");
+            }
         }
     }
 }
