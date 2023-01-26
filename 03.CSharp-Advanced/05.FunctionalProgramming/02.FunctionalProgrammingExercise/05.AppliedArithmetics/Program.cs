@@ -7,9 +7,9 @@ namespace _05.AppliedArithmetics
     {
         static void Main(string[] args)
         {
-            Func<int[], int[]> add = n => n.Select(n => n + 1).ToArray();
-            Func<int[], int[]> multiply = n => n.Select(n => n * 2).ToArray();
-            Func<int[], int[]> subtract = n => n.Select(n => n - 1).ToArray();
+            Func<int[], int[]> add = arr => arr.Select(n => n + 1).ToArray();
+            Func<int[], int[]> multiply = arr => arr.Select(n => n * 2).ToArray();
+            Func<int[], int[]> subtract = arr => arr.Select(n => n - 1).ToArray();
             Action<int[]> print = n => Console.WriteLine(string.Join(' ', n)); 
             
             int[] numbers = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();

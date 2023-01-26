@@ -8,12 +8,9 @@ namespace _01.ActionPrint
         {
             string[] names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            Action<string> printName = n => Console.WriteLine(n);
+            Action<string[]> printName = names => Console.WriteLine(string.Join(Environment.NewLine, names));
 
-            foreach (var name in names)
-            {
-                printName(name);
-            }
+            printName(names);
         }
     }
 }
