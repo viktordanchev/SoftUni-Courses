@@ -6,7 +6,14 @@ namespace _02.KnightsOfHonor
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            Action<string> printName = n => Console.WriteLine($"Sir {n}");
+
+            foreach (string name in names) 
+            {
+                printName(name);
+            }
         }
     }
 }

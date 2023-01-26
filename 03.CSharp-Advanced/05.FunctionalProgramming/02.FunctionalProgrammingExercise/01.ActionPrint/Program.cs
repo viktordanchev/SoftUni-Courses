@@ -6,7 +6,7 @@ namespace _01.ActionPrint
     {
         static void Main(string[] args)
         {
-            string[] names = Console.ReadLine().Split();
+            string[] names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             Action<string> printName = n => Console.WriteLine(n);
 
