@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace CarManufacturer
 {
@@ -10,8 +9,8 @@ namespace CarManufacturer
         private int year;
         private double fuelQuantity;
         private double fuelConsumption;
-        private Engine engine;
-        private Tire[] tires;
+        private int engineIndex;
+        private int tiresIndex;
 
         public Car()
         {
@@ -37,15 +36,15 @@ namespace CarManufacturer
             FuelConsumption = fuelConsumption;
         }
 
-        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, Engine engine, Tire[] tires)
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption, int engineIndex, int tiresIndex)
         : this(make, model, year, fuelQuantity, fuelConsumption)
         {
-            Engine = engine;
-            Tires = tires;
+            EngineIndex = engineIndex;
+            TiresIndex = tiresIndex;
         }
 
-        public Tire[] Tires { get { return tires; } set { tires = value; } }
-        public Engine Engine { get { return engine; } set { engine = value; } }
+        public int TiresIndex { get { return tiresIndex; } set { tiresIndex = value; } }
+        public int EngineIndex { get { return engineIndex; } set { engineIndex = value; } }
         public string Make { get { return make; } set { make = value; } }
         public string Model { get { return model; } set { model = value; } }
         public int Year { get { return year; } set { year = value; } }
@@ -62,18 +61,6 @@ namespace CarManufacturer
             {
                 Console.WriteLine("Not enough fuel to perform this trip!");
             }
-        }
-
-        public string WhoAmI()
-        {
-            StringBuilder car = new StringBuilder();
-
-            car.AppendLine($"Make: {Make}");
-            car.AppendLine($"Model: {Model}");
-            car.AppendLine($"Year: {Year}");
-            car.AppendLine($"Fuel: {FuelQuantity:f2}");
-
-            return car.ToString().Trim();
         }
     }
 }
