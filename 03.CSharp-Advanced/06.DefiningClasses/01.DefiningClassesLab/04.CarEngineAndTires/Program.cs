@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _04.CarEngineAndTires
+namespace CarManufacturer
 {
-    internal class Program
+    public class StartUp
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
