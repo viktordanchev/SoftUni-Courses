@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace _02.CreatingConstructors
+namespace DefiningClasses
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person person = new Person("pesho", 23);
+            Console.WriteLine($"{person.Name} - {person.Age}");
         }
     }
 }
