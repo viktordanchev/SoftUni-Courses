@@ -6,7 +6,11 @@ namespace _05.DateModifier
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int i = 0;
+            int b = 0;
+
+            Console.WriteLine(b++);
+            Console.WriteLine(b++);
         }
     }
 }
