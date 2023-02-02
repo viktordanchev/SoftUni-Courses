@@ -1,12 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _05.DateModifier
 {
-    internal class DateModifier
+    public static class DateModifier
     {
+        public static int GetDifference(string firstDate, string secondDate)
+        {
+            DateTime firstDateTime = DateTime.Parse(firstDate);
+            DateTime secondDateTime = DateTime.Parse(secondDate);
+
+            TimeSpan difference = firstDateTime - secondDateTime;
+
+            return Math.Abs(difference.Days);
+        }
     }
 }

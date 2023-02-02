@@ -2,15 +2,16 @@
 
 namespace _05.DateModifier
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            int b = 0;
+            string firstDate = Console.ReadLine();
+            string secondDate = Console.ReadLine();
 
-            Console.WriteLine(b++);
-            Console.WriteLine(b++);
+            int difference = DateModifier.GetDifference(firstDate, secondDate);
+
+            Console.WriteLine(difference);
         }
     }
 }
