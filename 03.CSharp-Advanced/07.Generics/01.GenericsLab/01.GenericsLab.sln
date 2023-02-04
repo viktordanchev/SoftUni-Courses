@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Box", "01.Box\01.Box.csproj", "{4E9711BC-4463-4E61-BAED-2C0C2E8D3601}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxOfT", "01.Box\BoxOfT.csproj", "{4E9711BC-4463-4E61-BAED-2C0C2E8D3601}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ArrayCreator", "02.ArrayCreator\02.ArrayCreator.csproj", "{E32FC00A-697C-4FEB-9410-0FF90F2685FC}"
 EndProject
