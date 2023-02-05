@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace BoxOfT
-{
-    public class StartUp
+namespace GenericArrayCreator
+{ 
+    public class Program
     {
         static void Main(string[] args)
         {

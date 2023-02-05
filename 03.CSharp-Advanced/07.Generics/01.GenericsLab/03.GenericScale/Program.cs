@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _03.GenericScale
+namespace GenericScale
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxOfT", "01.Box\BoxOfT.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericArrayCreator", "02.ArrayCreator\GenericArrayCreator.csproj", "{E32FC00A-697C-4FEB-9410-0FF90F2685FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.GenericScale", "03.GenericScale\03.GenericScale.csproj", "{55AFA3EA-2828-4E76-A3A5-A26219E14FE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericScale", "03.GenericScale\GenericScale.csproj", "{55AFA3EA-2828-4E76-A3A5-A26219E14FE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
