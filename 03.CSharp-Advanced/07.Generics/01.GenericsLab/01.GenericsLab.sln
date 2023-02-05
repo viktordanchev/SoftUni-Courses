@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxOfT", "01.Box\BoxOfT.csproj", "{4E9711BC-4463-4E61-BAED-2C0C2E8D3601}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ArrayCreator", "02.ArrayCreator\02.ArrayCreator.csproj", "{E32FC00A-697C-4FEB-9410-0FF90F2685FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericArrayCreator", "02.ArrayCreator\GenericArrayCreator.csproj", "{E32FC00A-697C-4FEB-9410-0FF90F2685FC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.GenericScale", "03.GenericScale\03.GenericScale.csproj", "{55AFA3EA-2828-4E76-A3A5-A26219E14FE9}"
 EndProject

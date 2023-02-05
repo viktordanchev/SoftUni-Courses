@@ -6,7 +6,7 @@ namespace GenericArrayCreator
     {
         static void Main(string[] args)
         {
-            
+           
         }
     }
 }
