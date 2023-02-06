@@ -8,63 +8,111 @@ namespace _08.CarSalesman
         static void Main(string[] args)
         {
             List<Engine> engines = new List<Engine>();
+            GetAllEngines(engines);
+
             List<Car> cars = new List<Car>();
+            GetAllCars(cars, engines);
 
-            int numOfEngines = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < numOfEngines; i++)
+            foreach (var car in cars)
             {
-                string[] data = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-                if (data.Length == 2)
-                {
-                    Engine engine = new Engine(data[0], int.Parse(data[1]));
-                    engines.Add(engine);
-                }
-                else if (data.Length == 3)
-                {
-                    Engine engine = new Engine(data[0], int.Parse(data[1]), int.Parse(data[2]));
-                    engines.Add(engine);
-                }
-                else
-                {
-                    Engine engine = new Engine(data[0], int.Parse(data[1]), int.Parse(data[2]), data[3]);
-                    engines.Add(engine);
-                }
+                Console.WriteLine(car.ToString());
             }
+        }
 
+        private static void GetAllCars(List<Car> cars, List<Engine> engines)
+        {
             int numOfCars = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < numOfCars; i++)
             {
-                string[] data = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                Engine engine = null;
+                Car car = new Car();
 
-                foreach (var currEngine in engines)
+                car.Model = input[0];
+                car.Engine = GetEngine(input[1], engines);
+
+                if (input.Length == 3)
                 {
-                    if (currEngine.Model == data[1])
+                    if (char.IsDigit(input[2][0]))
                     {
-                        engine = currEngine;
-                        break;
+                        car.Weight = int.Parse(input[2]);
+                    }
+                    else
+                    {
+                        car.Color = input[2];
+                    }
+                }
+                else if (input.Length == 4)
+                {
+                    if (char.IsDigit(input[2][0]))
+                    {
+                       car.Weight = int.Parse(input[2]);
+                       car.Color = input[3];
+                    }
+                    else
+                    {
+                        car.Color = input[2];
+                        car.Weight = int.Parse(input[3]);
                     }
                 }
 
-                if (data.Length == 2)
+                cars.Add(car);
+            }
+        }
+
+        private static Engine GetEngine(string engineType, List<Engine> engines)
+        {
+            foreach (var engine in engines)
+            {
+                if (engine.Model == engineType)
                 {
-                    Car car = new Car(data[0], engine);
-                    cars.Add(car);
+                    return engine;
                 }
-                else if (data.Length == 3)
+            }
+
+            return null;
+        }
+
+        private static void GetAllEngines(List<Engine> engines)
+        {
+            int numOfEngines = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < numOfEngines; i++)
+            {
+                string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                Engine engine = new Engine();
+
+                engine.Model = input[0];
+                engine.Power = int.Parse(input[1]);
+
+                if (input.Length == 3)
                 {
-                    Car car = new Car(data[0], engine, int.Parse(data[2]));
-                    cars.Add(car);
+                    if (char.IsDigit(input[2][0]))
+                    {
+                        engine.Displacement = int.Parse(input[2]);
+                    }
+                    else
+                    {
+                        engine.Efficiency = input[2];
+                    }
                 }
-                else
+                else if (input.Length == 4)
                 {
-                    Car car = new Car(data[0], engine, int.Parse(data[2]), data[3]);
-                    cars.Add(car);
+                    if (char.IsDigit(input[2][0]))
+                    {
+                        engine.Displacement = int.Parse(input[2]);
+                        engine.Efficiency = input[3];
+                    }
+                    else
+                    {
+                        engine.Efficiency = input[2];
+                        engine.Displacement = int.Parse(input[3]);
+                    }
                 }
+
+                engines.Add(engine);
             }
         }
     }

@@ -1,37 +1,26 @@
-﻿namespace _08.CarSalesman
+﻿using System;
+
+namespace _08.CarSalesman
 {
     public class Engine
     {
-        public Engine()
-        {
-            Model = null;
-            Power = 0;
-            Displacement = 0;
-            Efficiency = null;
-        }
-
-        public Engine(string model, int power)
-        : this()
-        {
-            Model = model;
-            Power = power;
-        }
-
-        public Engine(string model, int power, int displacement)
-        : this(model, power)
-        {
-            Displacement = displacement;
-        }
-
-        public Engine(string model, int power, int displacement, string efficiency)
-        : this(model, power, displacement)
-        {
-            Efficiency = efficiency;
-        }
-
         public string Model { get; set; }
         public int Power { get; set; }
         public int Displacement { get; set; }
         public string Efficiency { get; set; }
+
+        public override string ToString()
+        {
+            string displacement = Displacement == 0 ? "n/a" : Displacement.ToString();
+            string efficiency = Efficiency == null ? "n/a" : Efficiency;
+
+            string result =
+                $"{Model}:{Environment.NewLine}" +
+                $"    Power: {Power}{Environment.NewLine}" +
+                $"    Displacement: {displacement}{Environment.NewLine}" +
+                $"    Efficiency: {efficiency}";
+
+            return result;
+        }
     }
 }

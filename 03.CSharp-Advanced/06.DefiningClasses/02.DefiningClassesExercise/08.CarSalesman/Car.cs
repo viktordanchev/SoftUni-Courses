@@ -1,37 +1,27 @@
-﻿namespace _08.CarSalesman
+﻿using System;
+using System.Diagnostics;
+
+namespace _08.CarSalesman
 {
     public class Car
     {
-        public Car()
-        {
-            Model = string.Empty;
-            Engine = null;
-            Weight= 0;
-            Color = string.Empty;
-        }
-
-        public Car(string model, Engine engine)
-        : this()
-        {
-            Model = model;
-            Engine = engine;
-        }
-
-        public Car(string model, Engine engine, int weight) 
-        : this(model, engine)
-        {
-            Weight = weight;
-        }
-
-        public Car(string model, Engine engine, int weight, string color)
-        : this(model, engine, weight)
-        {
-            Color = color;
-        }
-
         public string Model { get; set; }
         public Engine Engine { get; set; }
         public int Weight { get; set; }
         public string Color { get; set; }
+
+        public override string ToString()
+        {
+            string weight = Weight == 0 ? "n/a" : Weight.ToString();
+            string color = Color == null ? "n/a" : Color; 
+
+            string result =
+                $"{Model}:{Environment.NewLine}" +
+                $"  {Engine}{Environment.NewLine}" +
+                $"  Weight: {weight}{Environment.NewLine}" +
+                $"  Color: {color}";
+
+            return result;
+        }
     }
 }
