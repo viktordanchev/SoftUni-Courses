@@ -65,101 +65,34 @@ namespace _09.PokemonTrainer
             {
                 bool doesItHave;
 
-                switch (command)
+                foreach (var trainer in trainers)
                 {
-                    case "Fire":
-                        foreach (var trainer in trainers)
+                    doesItHave = false;
+
+                    foreach (var pokemon in trainer.CollectionOfPokemons)
+                    {
+                        if (pokemon.Element == command)
                         {
-                            doesItHave = false;
-
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Element == "Fire")
-                                {
-                                    doesItHave = true;
-                                }
-                            }
-
-                            if (doesItHave)
-                            {
-                                trainer.NumberOfBadges++;
-                                continue;
-                            }
-
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Health - 10 <= 0)
-                                {
-                                    trainer.CollectionOfPokemons.Remove(pokemon);
-                                    break;
-                                }
-
-                                pokemon.Health -= 10;
-                            }
+                            doesItHave = true;
                         }
-                        break;
-                    case "Water":
-                        foreach (var trainer in trainers)
+                    }
+
+                    if (doesItHave)
+                    {
+                        trainer.NumberOfBadges++;
+                        continue;
+                    }
+
+                    foreach (var pokemon in trainer.CollectionOfPokemons)
+                    {
+                        if (pokemon.Health - 10 <= 0)
                         {
-                            doesItHave = false;
-
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Element == "Water")
-                                {
-                                    doesItHave = true;
-                                }
-                            }
-
-                            if (doesItHave)
-                            {
-                                trainer.NumberOfBadges++;
-                                continue;
-                            }
-
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Health - 10 <= 0)
-                                {
-                                    trainer.CollectionOfPokemons.Remove(pokemon);
-                                    break;
-                                }
-
-                                pokemon.Health -= 10;
-                            }
+                            trainer.CollectionOfPokemons.Remove(pokemon);
+                            break;
                         }
-                        break;
-                    case "Electricity":
-                        foreach (var trainer in trainers)
-                        {
-                            doesItHave = false;
 
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Element == "Electricity")
-                                {
-                                    doesItHave = true;
-                                }
-                            }
-
-                            if (doesItHave)
-                            {
-                                trainer.NumberOfBadges++;
-                                continue;
-                            }
-
-                            foreach (var pokemon in trainer.CollectionOfPokemons)
-                            {
-                                if (pokemon.Health - 10 <= 0)
-                                {
-                                    trainer.CollectionOfPokemons.Remove(pokemon);
-                                    break;
-                                }
-
-                                pokemon.Health -= 10;
-                            }
-                        }
-                        break;
+                        pokemon.Health -= 10;
+                    }
                 }
 
                 command = Console.ReadLine();
