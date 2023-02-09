@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _01.Library
+namespace IteratorsAndComparators
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
