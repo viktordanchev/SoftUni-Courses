@@ -20,15 +20,15 @@
  <details>
  <summary><h3> Fundamentals </summary>
 
-1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/01.%20Basic%20Syntax)
-2. [**Data Types and Variables**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/02.%20Data%20Types%20%26%20Variables)
-3. [**Arrays**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/03.%20Arrays)
-4. [**Methods**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/04.%20Methods)
-5. [**Lists**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/05.%20Lists)  
-6. [**Objects and Classes**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/06.%20Objects%20and%20Classes)
-7. [**Associative Arrays**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/07.%20Associative%20Arrays)  
-8. [**Text Processing**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/08.%20Text%20Processing)
-9. [**Regular Expressions**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Fundamentals/09.%20Regular%20Expressions)
+1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/01.Basics)
+2. [**Data Types and Variables**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/02.DataTypesAndVariables)
+3. [**Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/03.Arrays)
+4. [**Methods**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/04.Methods)
+5. [**Lists**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/05.Lists)  
+6. [**Objects and Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/06.ObjectsAndClasses)
+7. [**Associative Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/07.AssociativeArrays)  
+8. [**Text Processing**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/08.TextProcessing)
+9. [**Regular Expressions**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/09.RegularExpressions)
   </details>
   
 ***
