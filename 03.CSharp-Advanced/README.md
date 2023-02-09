@@ -1,4 +1,5 @@
-### <h1> 📌Csharp Advanced </h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Csharp-Advanced&fontSize=90" />
+
 ### <h2> 📑Course Description </h2>
 The module provides an opportunity to study the **.NET** platform and the C# language in various aspects. 
 The focus is on building **algorithmic thinking** and learning the principles of **object-oriented programming.**
