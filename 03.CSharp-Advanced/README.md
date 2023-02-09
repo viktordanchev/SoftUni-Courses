@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Csharp-Advanced&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Advanced&fontSize=90" />
 
 ### <h2> 📑Course Description </h2>
 The module provides an opportunity to study the **.NET** platform and the C# language in various aspects. 
