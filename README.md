@@ -35,13 +35,13 @@
  <details>
  <summary><h3> Advanced </summary>
 
-1. [**Stacks and Queues**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/01.%20Stacks%20and%20Queues)
-2. [**Multidimentional Arrays**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/02.%20Multidimensional%20Arrays)
-3. [**Sets and Dictionaries**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/03.%20Sets%20and%20Dictionaries%20Advanced)
+1. [**Stacks and Queues**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/01.StacksAndQueues)
+2. [**Multidimentional Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/02.MultidimensionalArrays)
+3. [**Sets and Dictionaries**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/03.SetsAndDictionariesAdvanced)
 4. [**Streams, Files and Directories**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/04.%20Streams%2C%20Files%20and%20Directories)
-5. [**Functional Programming**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/05.%20Functional%20Programming)
-6. [**Defining Classes**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/06.%20Defining%20Classes)
-7. [**Generics**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/07.%20Generics)
+5. [**Functional Programming**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/05.FunctionalProgramming)
+6. [**Defining Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/06.DefiningClasses)
+7. [**Generics**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/07.Generics)
   </details>
   
 ***
