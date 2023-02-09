@@ -9,11 +9,11 @@
 <summary><h3> Basics </summary>
 
 1. [**First Steps In Coding**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/01.FirstStepsInCoding)
-2. [**Conditional Statements**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Basics/02.%20Conditional%20Statements)
+2. [**Conditional Statements**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/02.ConditionalStatements)
 3. [**Nested Conditional Statements**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Basics/03.%20Conditional%20Statements%20Advanced)
-4. [**For Loop**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Basics/04.%20For%20Loop)
-5. [**While Loop**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Basics/05.%20While%20Loop)
-6. [**Nested Loops**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Basics/06.%20Nested%20Loops)
+4. [**For Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/04.ForLoops)
+5. [**While Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/05.WhileLoops)
+6. [**Nested Loops**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/06.NestedLoops)
  </details>
  
 ***
