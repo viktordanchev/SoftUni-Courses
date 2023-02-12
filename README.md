@@ -41,7 +41,8 @@
 4. [**Streams, Files and Directories**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/04.%20Streams%2C%20Files%20and%20Directories)
 5. [**Functional Programming**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/05.FunctionalProgramming)
 6. [**Defining Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/06.DefiningClasses)
-7. [**Generics**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/07.Generics)
+7. [**Generics**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/07.Generics) 
+8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/ExamPreparation)
   </details>
   
 ***
