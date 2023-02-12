@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BaristaContest", "01.BaristaContest\01.BaristaContest.csproj", "{67539158-BD92-4831-A62A-B3A3F483A6B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.BaristaContest", "01.BaristaContest\01.BaristaContest.csproj", "{67539158-BD92-4831-A62A-B3A3F483A6B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.HelpAMole", "02.HelpAMole\02.HelpAMole.csproj", "{5EBEBB32-1CB6-4122-BFD8-ABEA58B320BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.HelpAMole", "02.HelpAMole\02.HelpAMole.csproj", "{5EBEBB32-1CB6-4122-BFD8-ABEA58B320BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Basketball", "03.Basketball\03.Basketball.csproj", "{7CDB8107-E668-4729-9153-C1147731FBD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Basketball", "03.Basketball\03.Basketball.csproj", "{7CDB8107-E668-4729-9153-C1147731FBD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
