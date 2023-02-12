@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Basketball
 {
@@ -102,6 +103,7 @@ namespace Basketball
 
             // Report
             Console.WriteLine("----------------------Report----------------------");
+            Console.WriteLine(team.Report());
             Console.WriteLine(team.Report());
             /*
             Active players competing for Team BHTC from Group A:
