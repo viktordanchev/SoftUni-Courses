@@ -13,7 +13,7 @@
 //Player
 
 //You are given a class Player,  create the following properties:
-//·Name: string
+//· Name: string
 //·	Position: string
 //·	Rating: double
 //·	Games: int
