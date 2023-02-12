@@ -11,26 +11,26 @@
 //The program ends when the "End" command is given or when the Mole collects at least 25 points.
 
 //Input
-//·	On the first line, you are given the integer n – the size of the matrix (playing field).
-//·	The next n lines hold the values for every row.
-//·	On each of the next lines, until you receive the "End" command, you will get a move command.
+//· On the first line, you are given the integer n – the size of the matrix (playing field).
+//· The next n lines hold the values for every row.
+//· On each of the next lines, until you receive the "End" command, you will get a move command.
 
 //Output
-//·	On the first line print:
+//· On the first line print:
 //    o If the Mole collected 25 points or more: "Yay! The Mole survived another game!"
 //    o If the Mole didn't collect 25 points or more: "Too bad! The Mole lost this battle!"
-//·	On the second line, depending on whether the Mole won the game or not, print:
+//· On the second line, depending on whether the Mole won the game or not, print:
 //    o If the Mole won the game: "The Mole managed to survive with a total of {totalAmountOfCollectedPoints} points."
 //    o If the Mole lost the game: "The Mole lost the game with a total of {totalAmountOfCollectedPoints} points."
-//·	If the direction commands guide the Mole out of the playing field, print "Don't try to escape the playing field!".
+//· If the direction commands guide the Mole out of the playing field, print "Don't try to escape the playing field!".
 //· At the end, print the final state of the matrix (playing field) with the Mole's position on it.
 
 //Constraints
-//·	The size of the square matrix (playing field) will be between [2…10].
-//·	There will always be 2 special places on the wall, marked with 'S'.
-//·	The Mole's starting position will always be marked with an 'M'.
-//·	There may be cases where the given directions will be outside of the wall.
-//·	There will be no cases, in which the Mole's points will be below zero (0).
-//·	There will be always two output scenarios: 
+//· The size of the square matrix (playing field) will be between [2…10].
+//· There will always be 2 special places on the wall, marked with 'S'.
+//· The Mole's starting position will always be marked with an 'M'.
+//· There may be cases where the given directions will be outside of the wall.
+//· There will be no cases, in which the Mole's points will be below zero (0).
+//· There will be always two output scenarios: 
 //    o The Mole collects at least 25 points and the program ends;
 //    o The program receives the "End" command before the Mole manages to collect 25 points.
