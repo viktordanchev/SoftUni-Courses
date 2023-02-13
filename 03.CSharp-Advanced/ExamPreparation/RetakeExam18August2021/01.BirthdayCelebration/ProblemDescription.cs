@@ -9,15 +9,15 @@
 //If you have managed to fill up all of the guests, print the remaining prepared plates of food, from the last entered – to the first, otherwise you must print the remaining guests, by order of entrance – from the first entered – to the last. 
 
 //Input
-//•	On the first line of input you will receive the integers, representing the guests' capacity, separated by a single space. 
-//•	On the second line of input you will receive the integers, representing the prepared plates of food, separated by a single space.
+//• On the first line of input you will receive the integers, representing the guests' capacity, separated by a single space. 
+//• On the second line of input you will receive the integers, representing the prepared plates of food, separated by a single space.
 
 //Output
-//•	On the first line of output you must print the remaining plates, or the remaining guests, depending on the case you are in. Just keep the orders of printing exactly as specified. 
+//• On the first line of output you must print the remaining plates, or the remaining guests, depending on the case you are in. Just keep the orders of printing exactly as specified. 
 //    o	"Plates: {remainingPlates}" or "Guests: {remainingGuests}"
-//•	On the second line print the wasted grams of food in the following format: "Wasted grams of food: {wastedGramsOfFood}"
+//• On the second line print the wasted grams of food in the following format: "Wasted grams of food: {wastedGramsOfFood}"
 
 //Constraints
-//•	All of the given numbers will be valid integers in the range [1, 500].
-//•	It is safe to assume that there will be NO case in which the food is exactly as much as the guests' values, so that at the end there are no guests and no food on the plates.
-//•	Allowed time / memory: 100ms / 16MB.
+//• All of the given numbers will be valid integers in the range [1, 500].
+//• It is safe to assume that there will be NO case in which the food is exactly as much as the guests' values, so that at the end there are no guests and no food on the plates.
+//• Allowed time / memory: 100ms / 16MB.
