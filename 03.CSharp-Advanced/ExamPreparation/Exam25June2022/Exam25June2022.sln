@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TilesMaster", "01.TilesMaster\01.TilesMaster.csproj", "{79BE102B-5444-4561-AE68-42706F804468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.TilesMaster", "01.TilesMaster\01.TilesMaster.csproj", "{79BE102B-5444-4561-AE68-42706F804468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.WallDestroyer", "02.WallDestroyer\02.WallDestroyer.csproj", "{DC23640C-C191-45F7-91AF-2CD115BC0788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.WallDestroyer", "02.WallDestroyer\02.WallDestroyer.csproj", "{DC23640C-C191-45F7-91AF-2CD115BC0788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Renovators", "03.Renovators\03.Renovators.csproj", "{AB51423F-7038-4266-941D-CB89AC04534B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Renovators", "03.Renovators\03.Renovators.csproj", "{AB51423F-7038-4266-941D-CB89AC04534B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
