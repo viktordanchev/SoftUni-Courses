@@ -20,31 +20,31 @@ namespace _01.MealPlan
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries));
             int numberOfMeals = meals.Count;
 
-            Stack<int> caloriesForDays = new Stack<int>(Console.ReadLine()
+            Stack<int> calories = new Stack<int>(Console.ReadLine()
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
 
             int mealCalories = 0;
-            while (meals.Count > 0 && caloriesForDays.Count > 0)
+            while (meals.Count > 0 && calories.Count > 0)
             {
                 string meal = meals.Peek();
                 if (mealCalories == 0)
                 {
                     mealCalories = GetCaloriesForCurrMeal(mealByCalories, meal);
                 }
-                int dailyCalories = caloriesForDays.Pop();
+                int dailyCalories = calories.Pop();
                 
                 if (dailyCalories - mealCalories > 0)
                 {
                     meals.Dequeue();
                     dailyCalories -= mealCalories;
-                    caloriesForDays.Push(dailyCalories);
+                    calories.Push(dailyCalories);
                     mealCalories = 0;
                     continue;
                 }
 
                 mealCalories -= dailyCalories;
 
-                if (caloriesForDays.Count == 0)
+                if (calories.Count == 0)
                 {
                     meals.Dequeue();
                     break;
@@ -54,7 +54,7 @@ namespace _01.MealPlan
             if (meals.Count == 0)
             {
                 Console.WriteLine($"John had {numberOfMeals} meals.");
-                Console.WriteLine($"For the next few days, he can eat {string.Join(", ", caloriesForDays)} calories.");
+                Console.WriteLine($"For the next few days, he can eat {string.Join(", ", calories)} calories.");
             }
             else
             {
