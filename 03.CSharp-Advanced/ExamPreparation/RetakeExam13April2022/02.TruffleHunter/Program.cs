@@ -22,7 +22,7 @@ namespace _02.TruffleHunter
             int blackTrufflesCount = 0;
             int summerTrufflesCount = 0;
             int whiteTrufflesCount = 0;
-            int wildBoarAtes = 0;
+            int trufflesEatenByWildBoar = 0;
 
             string data = Console.ReadLine();
             while (data != "Stop the hunt")
@@ -70,7 +70,7 @@ namespace _02.TruffleHunter
                                 {
                                     if (forest[currRow, currCol] != '-')
                                     {
-                                        wildBoarAtes++;
+                                        trufflesEatenByWildBoar++;
                                         forest[currRow, currCol] = '-';
                                     }
 
@@ -82,7 +82,7 @@ namespace _02.TruffleHunter
                                 {
                                     if (forest[currRow, currCol] != '-')
                                     {
-                                        wildBoarAtes++;
+                                        trufflesEatenByWildBoar++;
                                         forest[currRow, currCol] = '-';
                                     }
 
@@ -94,7 +94,7 @@ namespace _02.TruffleHunter
                                 {
                                     if (forest[currRow, currCol] != '-')
                                     {
-                                        wildBoarAtes++;
+                                        trufflesEatenByWildBoar++;
                                         forest[currRow, currCol] = '-';
                                     }
 
@@ -106,7 +106,7 @@ namespace _02.TruffleHunter
                                 {
                                     if (forest[currRow, currCol] != '-')
                                     {
-                                        wildBoarAtes++;
+                                        trufflesEatenByWildBoar++;
                                         forest[currRow, currCol] = '-';
                                     }
 
@@ -121,7 +121,7 @@ namespace _02.TruffleHunter
             }
 
             Console.WriteLine($"Peter manages to harvest {blackTrufflesCount} black, {summerTrufflesCount} summer, and {whiteTrufflesCount} white truffles.");
-            Console.WriteLine($"The wild boar has eaten {wildBoarAtes} truffles.");
+            Console.WriteLine($"The wild boar has eaten {trufflesEatenByWildBoar} truffles.");
 
             PrintForest(forest);
         }
