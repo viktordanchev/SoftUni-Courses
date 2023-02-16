@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BakeryShop", "01.BakeryShop\01.BakeryShop.csproj", "{912DAAA0-BB87-41B9-96AD-FC96D5961469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.BakeryShop", "01.BakeryShop\01.BakeryShop.csproj", "{912DAAA0-BB87-41B9-96AD-FC96D5961469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.BeaverAtWork", "02.BeaverAtWork\02.BeaverAtWork.csproj", "{884D580C-5382-4688-9534-CF187963B547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.BeaverAtWork", "02.BeaverAtWork\02.BeaverAtWork.csproj", "{884D580C-5382-4688-9534-CF187963B547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FishingNet", "03.FishingNet\03.FishingNet.csproj", "{F55D4040-B159-4509-8B59-FB9E85CF0334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingNet", "03.FishingNet\FishingNet.csproj", "{F55D4040-B159-4509-8B59-FB9E85CF0334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
