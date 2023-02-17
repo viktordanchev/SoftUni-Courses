@@ -43,7 +43,7 @@
 6. [**Defining Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/06.DefiningClasses)
 7. [**Generics**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/07.Generics) 
 8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/ExamPreparation)
-8. [**Final Exam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/FinalExam)
+9. [**Final Exam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/FinalExam)
   </details>
   
 ***
