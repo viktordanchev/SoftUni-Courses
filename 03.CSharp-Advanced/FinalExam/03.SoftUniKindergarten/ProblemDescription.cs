@@ -31,11 +31,11 @@
 //The class constructor should receive name and capacity, also it should initialize the Registry with a new instance of the collection.
 
 //Implement the following features:
-//•	Method AddChild(Child child) - Adds a child to the Registry if there is room for it and returns True. If there is no room for another child, returns False
-//•	Method RemoveChild(string childFullName) - removes a Child by a given full name. The childFullName will be a composition of the first name and the last name of the Child, separated by a single space.If removal is successful, returns True, otherwise, returns False.
-//•	Getter ChildrenCount - Returns the number of all children registered
-//•	Method GetChild(string childFullName) – Returns the Child with the given full name. . The childFullName will be a composition of the first name and the last name of the child, separated by a single space.If no child with the given childFullName is found, return null.
-//•	Method RegistryReport() – Orders the children by age descending, then by last name ascending, then by first name ascending, and returns a String in the following format:	
+//• Method AddChild(Child child) - Adds a child to the Registry if there is room for it and returns True. If there is no room for another child, returns False
+//• Method RemoveChild(string childFullName) - removes a Child by a given full name. The childFullName will be a composition of the first name and the last name of the Child, separated by a single space.If removal is successful, returns True, otherwise, returns False.
+//• Getter ChildrenCount - Returns the number of all children registered
+//• Method GetChild(string childFullName) – Returns the Child with the given full name. . The childFullName will be a composition of the first name and the last name of the child, separated by a single space.If no child with the given childFullName is found, return null.
+//• Method RegistryReport() – Orders the children by age descending, then by last name ascending, then by first name ascending, and returns a String in the following format:	
 //    o "Registered children in {kindergartenName}:
 //      {child1}
 //      {child2}

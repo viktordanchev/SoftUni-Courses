@@ -17,12 +17,12 @@
 //"Touched opponents: {count} Moves made: {count}"
 
 //Input
-//•	On the first line, you'll receive the dimensions of the playground in format: "N M", where N is the number of rows, and M is the number of columns. They'll be separated by a single space (" ").
-//•	On the next N lines, you will receive a string representing the respective row of the playground. The positions in every string will be separated by a single space (" ").
-//•	On the next few lines, until you receive the command "Finish", you will be given directions (up, down, right, left). 
+//• On the first line, you'll receive the dimensions of the playground in format: "N M", where N is the number of rows, and M is the number of columns. They'll be separated by a single space (" ").
+//• On the next N lines, you will receive a string representing the respective row of the playground. The positions in every string will be separated by a single space (" ").
+//• On the next few lines, until you receive the command "Finish", you will be given directions (up, down, right, left). 
 
 //Output
-//•	When the game is over, the following output should be printed on the Console:
+//• When the game is over, the following output should be printed on the Console:
 //"Game over!"
 //"Touched opponents: {count} Moves made: {count}"
 

@@ -7,8 +7,8 @@
 //___________________________________
 //| Healing item | Resources needed |
 //|     Patch    |        30        |
-//|    Bandage   |	      40        |
-//|    MedKit    |	     100        |
+//|    Bandage   |        40        |
+//|    MedKit    |       100        |
 //‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 //In the end, you should print on the console message for the sequence that has ended, then the created items, and in the end the remaining items (if any).
