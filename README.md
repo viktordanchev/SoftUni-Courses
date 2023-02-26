@@ -1,5 +1,5 @@
 # SoftUni Software Engineering C#
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=SoftUni-Courses&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=SoftUni&fontSize=90&fontAlignY=25&desc=Courses&descSize=60&descAlignY=50"/>
 
 <h2>All courses that I have completed at @SoftUni</h2>
 
