@@ -14,6 +14,7 @@
 4. [**For Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/04.ForLoops)
 5. [**While Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/05.WhileLoops)
 6. [**Nested Loops**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/06.NestedLoops)
+7. [**Final Exam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/FinalExam)
  </details>
  
 ***
