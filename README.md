@@ -1,5 +1,5 @@
 # SoftUni Software Engineering C#
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=SoftUni-Courses&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=SoftUni&fontSize=90&fontAlignY=25&desc=Courses&descSize=60&descAlignY=50"/>
 
 <h2>All courses that I have completed at @SoftUni</h2>
 
@@ -14,6 +14,7 @@
 4. [**For Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/04.ForLoops)
 5. [**While Loop**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/05.WhileLoops)
 6. [**Nested Loops**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/06.NestedLoops)
+7. [**Final Exam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/01.CSharp-Basics/FinalExam)
  </details>
  
 ***
