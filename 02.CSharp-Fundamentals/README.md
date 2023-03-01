@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7600bc&height=300&section=header&text=Fundamentals&fontSize=90&fontAlignY=40" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=Fundamentals&fontSize=90&fontAlignY=40" />
 
 ### <h2> 📑Course Description </h2>
 
