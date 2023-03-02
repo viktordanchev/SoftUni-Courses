@@ -48,3 +48,8 @@
   </details>
   
 ***
+<details>
+<summary><h3> Object-oriented Programming </summary>
+
+1. [**Inheritance**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/01.Inheritance)
+ </details>
