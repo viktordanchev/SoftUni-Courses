@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.WorkingHours", "07.Worki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CinemaTicket", "08.CinemaTicket\08.CinemaTicket.csproj", "{DBDB9AE9-14CF-4DA6-9C8F-02D4C231DDF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.FruitOrVegetable", "09.FruitOrVegetable\09.FruitOrVegetable.csproj", "{393EA262-5B1B-47F5-824E-62D088CF33EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.InvalidNumber", "10.InvalidNumber\10.InvalidNumber.csproj", "{83D37869-B6B6-4960-A225-BC31022F4283}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{DBDB9AE9-14CF-4DA6-9C8F-02D4C231DDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBDB9AE9-14CF-4DA6-9C8F-02D4C231DDF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBDB9AE9-14CF-4DA6-9C8F-02D4C231DDF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393EA262-5B1B-47F5-824E-62D088CF33EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393EA262-5B1B-47F5-824E-62D088CF33EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393EA262-5B1B-47F5-824E-62D088CF33EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393EA262-5B1B-47F5-824E-62D088CF33EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D37869-B6B6-4960-A225-BC31022F4283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D37869-B6B6-4960-A225-BC31022F4283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D37869-B6B6-4960-A225-BC31022F4283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D37869-B6B6-4960-A225-BC31022F4283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
