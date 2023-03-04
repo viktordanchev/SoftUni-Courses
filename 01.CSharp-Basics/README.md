@@ -11,3 +11,6 @@ The course provides the **initial programming skills** necessary for all technol
 - Work with more **complex logical checks**
 - Working with **loops (for-loops, while-loops)**
 - Working with more **complex loops (nested for-loops and while-loops)**
+
+### <h2> 🎓My Certificate </h2>
+![Programming Basics January 2022 - Certificate](https://user-images.githubusercontent.com/115632936/222919663-71a1c242-fc6a-4624-9739-812e262f4ebb.jpg)
