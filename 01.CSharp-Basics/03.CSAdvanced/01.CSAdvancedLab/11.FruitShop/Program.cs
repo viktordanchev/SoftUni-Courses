@@ -79,14 +79,15 @@ namespace _11.FruitShop
                         price = 4.20;
                     }
                     break;
-                default:
-                    Console.WriteLine("error");
-                    break;
             }
 
             if (price != 0)
             {
                 Console.WriteLine($"{quantity * price:f2}");
+            }
+            else
+            {
+                Console.WriteLine("error");
             }
         }
     }
