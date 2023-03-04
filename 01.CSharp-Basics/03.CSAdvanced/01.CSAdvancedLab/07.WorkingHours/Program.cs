@@ -6,7 +6,31 @@ namespace _07.WorkingHours
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int hour = int.Parse(Console.ReadLine());
+            string dayOfWeek = Console.ReadLine();
+
+            switch (dayOfWeek)
+            {
+                case "Monday":
+                case "Tuesday":
+                case "Wednesday":
+                case "Thursday":
+                case "Friday":
+                case "Saturday":
+                    if (hour >= 10 && hour <= 18)
+                    {
+                        Console.WriteLine("open");
+                    }
+                    else
+                    {
+                        Console.WriteLine("closed");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("closed");
+                    break;
+            }
+
         }
     }
 }
