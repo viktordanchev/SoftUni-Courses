@@ -2,7 +2,7 @@
 
 namespace _04.Team
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
