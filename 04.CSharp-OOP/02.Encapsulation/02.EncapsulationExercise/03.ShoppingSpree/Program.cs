@@ -31,8 +31,6 @@ namespace _03.ShoppingSpree
                 }
             }
 
-
-
             for (int i = 0; i < allProducts.Length; i++)
             {
                 string[] nameAndCost = allProducts[i].Split('=', StringSplitOptions.RemoveEmptyEntries);

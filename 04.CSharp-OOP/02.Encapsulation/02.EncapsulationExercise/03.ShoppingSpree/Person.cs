@@ -25,8 +25,8 @@ namespace _03.ShoppingSpree
         public decimal Money
         {
             get { return money; }
-            set
-            {
+            private set
+            { 
                 if (value < 0)
                 {
                     throw new ArgumentException("Money cannot be negative");
@@ -39,7 +39,7 @@ namespace _03.ShoppingSpree
         public string Name
         {
             get { return name; }
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 {
