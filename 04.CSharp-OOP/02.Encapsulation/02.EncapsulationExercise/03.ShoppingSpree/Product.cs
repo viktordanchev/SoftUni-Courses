@@ -1,12 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _03.ShoppingSpree
 {
-    internal class Product
+    public class Product
     {
-    }
+		private string name;
+		private decimal cost;
+
+        public Product(string name, decimal cost)
+        {
+			Name = name;
+			Cost = cost;
+        }
+
+        public decimal Cost
+		{
+			get { return cost; }
+			set { cost = value; }
+		}
+
+		public string Name
+		{
+			get { return name; }
+			set
+			{
+				if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+				{
+					throw new ArgumentException("Name cannot be empty");
+				}
+
+				name = value; 
+			}
+		}
+	}
 }
