@@ -67,7 +67,7 @@ namespace _03.ShoppingSpree
                 command = Console.ReadLine();
             }
 
-            foreach (var person in people) 
+            foreach (var person in people)
             {
                 Console.WriteLine(person.ToString());
             }

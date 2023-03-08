@@ -34,7 +34,7 @@ namespace AnimalFarm.Models
             get { return this.age; }
             private set
             {
-                if (value < 0 || value > 15)
+                if (value < MinAge || value > MaxAge)
                 {
                     throw new ArgumentException("Age should be between 0 and 15.");
                 }

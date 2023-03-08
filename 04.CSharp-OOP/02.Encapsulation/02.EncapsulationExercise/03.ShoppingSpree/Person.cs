@@ -17,16 +17,11 @@ namespace _03.ShoppingSpree
             bagOfProducts = new List<Product>();
         }
 
-        public IReadOnlyCollection<Product> BagOfProducts
-        {
-            get { return bagOfProducts.AsReadOnly(); }
-        }
-
         public decimal Money
         {
             get { return money; }
             private set
-            { 
+            {
                 if (value < 0)
                 {
                     throw new ArgumentException("Money cannot be negative");
@@ -41,7 +36,7 @@ namespace _03.ShoppingSpree
             get { return name; }
             private set
             {
-                if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Name cannot be empty");
                 }
