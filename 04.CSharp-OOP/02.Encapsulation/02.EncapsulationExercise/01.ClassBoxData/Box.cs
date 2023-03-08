@@ -15,10 +15,10 @@ namespace _01.ClassBoxData
             Height = height;
         }
 
-        public double Length
+        private double Length
         {
             get { return length; }
-            private set
+            set
             {
                 if (value <= 0)
                 {
@@ -28,10 +28,10 @@ namespace _01.ClassBoxData
                 length = value;
             }
         }
-        public double Width
+        private double Width
         {
             get { return width; }
-            private set
+            set
             {
                 if (value <= 0)
                 {
@@ -41,10 +41,10 @@ namespace _01.ClassBoxData
                 width = value;
             }
         }
-        public double Height
+        private double Height
         {
             get { return height; }
-            private set
+            set
             {
                 if (value <= 0)
                 {

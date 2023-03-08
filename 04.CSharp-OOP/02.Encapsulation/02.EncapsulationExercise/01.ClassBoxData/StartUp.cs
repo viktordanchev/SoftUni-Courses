@@ -2,7 +2,7 @@
 
 namespace _01.ClassBoxData
 {
-    public class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
