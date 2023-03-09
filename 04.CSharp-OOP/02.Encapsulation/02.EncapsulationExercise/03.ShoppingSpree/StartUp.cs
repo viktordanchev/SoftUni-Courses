@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace _03.ShoppingSpree
 {
-    public class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {

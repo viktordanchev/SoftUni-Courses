@@ -1,8 +1,9 @@
-﻿namespace AnimalFarm
+﻿using System;
+using AnimalFarm.Models;
+
+namespace AnimalFarm
 {
-    using System;
-    using AnimalFarm.Models;
-    class Program
+    class StartUp
     {
         static void Main(string[] args)
         {
