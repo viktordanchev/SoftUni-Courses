@@ -10,8 +10,8 @@ namespace Cars
             Color = color;
         }
 
-        public string Model { get; set; }
-        public string Color { get; set; }
+        public string Model { get; }
+        public string Color { get; }
 
         public string Start()
         {

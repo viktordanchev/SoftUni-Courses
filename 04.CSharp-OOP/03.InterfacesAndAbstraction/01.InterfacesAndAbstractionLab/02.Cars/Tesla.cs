@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Text;
 
 namespace Cars
 {
-    public class Tesla : ICar, IElectricCar
+    public class Tesla : IElectricCar
     {
         public Tesla(string model, string color, int battery)
         {
@@ -12,9 +11,9 @@ namespace Cars
             Battery = battery;
         }
 
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public int Battery { get; set; }
+        public string Model { get; }
+        public string Color { get; }
+        public int Battery { get; }
 
         public string Start()
         {
