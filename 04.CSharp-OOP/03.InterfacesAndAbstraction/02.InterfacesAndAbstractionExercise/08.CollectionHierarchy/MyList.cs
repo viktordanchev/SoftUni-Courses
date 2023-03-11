@@ -1,7 +1,7 @@
-﻿using _08.CollectionHierarchy.Interfaces;
+﻿using CollectionHierarchy.Interfaces;
 using System.Collections.Generic;
 
-namespace _08.CollectionHierarchy
+namespace CollectionHierarchy
 {
     public class MyList<T> : IAddable<T>, IRemoveable<T>
     {

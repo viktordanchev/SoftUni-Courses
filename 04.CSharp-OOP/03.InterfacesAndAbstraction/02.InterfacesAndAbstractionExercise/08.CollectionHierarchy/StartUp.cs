@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _08.CollectionHierarchy
+namespace CollectionHierarchy
 {
     public class StartUp
     {

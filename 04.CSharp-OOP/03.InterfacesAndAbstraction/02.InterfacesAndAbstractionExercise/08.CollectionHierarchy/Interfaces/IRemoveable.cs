@@ -1,4 +1,4 @@
-﻿namespace _08.CollectionHierarchy.Interfaces
+﻿namespace CollectionHierarchy.Interfaces
 {
     public interface IRemoveable<T>
     {
