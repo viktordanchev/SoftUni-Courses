@@ -1,6 +1,6 @@
-﻿using _05.BirthdayCelebrations.Interfaces;
+﻿using BirthdayCelebrations.Interfaces;
 
-namespace _05.BirthdayCelebrations
+namespace BirthdayCelebrations
 {
     public class Pet : INameable, IBirthable
     {

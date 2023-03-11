@@ -1,4 +1,4 @@
-﻿namespace _05.BirthdayCelebrations.Interfaces
+﻿namespace BirthdayCelebrations.Interfaces
 {
     public interface IIdentifiable
     {

@@ -1,8 +1,8 @@
-﻿using _05.BirthdayCelebrations.Interfaces;
+﻿using BirthdayCelebrations.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace _05.BirthdayCelebrations
+namespace BirthdayCelebrations
 {
     public class StartUp
     {
