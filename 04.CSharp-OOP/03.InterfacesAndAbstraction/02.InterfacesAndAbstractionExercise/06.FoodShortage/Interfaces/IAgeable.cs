@@ -1,4 +1,4 @@
-﻿namespace _06.FoodShortage.Interfaces
+﻿namespace FoodShortage.Interfaces
 {
     public interface IAgeable
     {

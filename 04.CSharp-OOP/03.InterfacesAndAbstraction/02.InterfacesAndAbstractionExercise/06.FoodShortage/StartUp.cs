@@ -1,9 +1,9 @@
-﻿using _06.FoodShortage.Interfaces;
+﻿using FoodShortage.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _06.FoodShortage
+namespace FoodShortage
 {
     public class StartUp
     {

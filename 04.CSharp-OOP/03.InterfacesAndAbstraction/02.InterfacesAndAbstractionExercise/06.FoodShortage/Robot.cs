@@ -1,6 +1,6 @@
-﻿using _06.FoodShortage.Interfaces;
+﻿using FoodShortage.Interfaces;
 
-namespace _05.BirthdayCelebrations
+namespace BirthdayCelebrations
 {
     public class Robot : IIdentifiable
     {

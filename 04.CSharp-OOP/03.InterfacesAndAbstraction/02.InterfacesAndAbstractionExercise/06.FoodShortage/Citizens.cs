@@ -1,6 +1,6 @@
-﻿using _06.FoodShortage.Interfaces;
+﻿using FoodShortage.Interfaces;
 
-namespace _06.FoodShortage
+namespace FoodShortage
 {
     public class Citizens : IIdentifiable, INameable, IBirthable, IAgeable, IBuyer
     {
