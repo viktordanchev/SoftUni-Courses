@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_03.Telephony</RootNamespace>
+    <RootNamespace>Telephony</RootNamespace>
   </PropertyGroup>
 
 </Project>

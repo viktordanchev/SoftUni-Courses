@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using _03.Telephony.Interfaces;
+using Telephony.Interfaces;
 
-namespace _03.Telephony
+namespace Telephony
 {
     public class Smartphone : ISmartphone
     {

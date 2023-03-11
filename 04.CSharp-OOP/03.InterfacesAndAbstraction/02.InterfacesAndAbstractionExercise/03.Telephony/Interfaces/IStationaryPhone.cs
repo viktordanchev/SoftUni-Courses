@@ -1,4 +1,4 @@
-﻿namespace _03.Telephony.Interfaces
+﻿namespace Telephony.Interfaces
 {
     public interface IStationaryPhone
     {
