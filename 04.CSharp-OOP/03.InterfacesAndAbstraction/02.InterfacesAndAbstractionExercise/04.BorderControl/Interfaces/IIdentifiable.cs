@@ -1,4 +1,4 @@
-﻿namespace _04.BorderControl.Interfaces
+﻿namespace BorderControl.Interfaces
 {
     public interface IIdentifiable
     {

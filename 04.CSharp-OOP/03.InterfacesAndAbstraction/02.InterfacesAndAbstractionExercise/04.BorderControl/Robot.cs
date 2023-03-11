@@ -1,6 +1,6 @@
-﻿using _04.BorderControl.Interfaces;
+﻿using BorderControl.Interfaces;
 
-namespace _04.BorderControl
+namespace BorderControl
 {
     public class Robot : IIdentifiable
     {

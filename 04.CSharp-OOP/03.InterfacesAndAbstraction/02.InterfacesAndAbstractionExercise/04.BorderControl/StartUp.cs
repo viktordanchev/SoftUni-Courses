@@ -1,8 +1,8 @@
-﻿using _04.BorderControl.Interfaces;
+﻿using BorderControl.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace _04.BorderControl
+namespace BorderControl
 {
     public class StartUp
     {
