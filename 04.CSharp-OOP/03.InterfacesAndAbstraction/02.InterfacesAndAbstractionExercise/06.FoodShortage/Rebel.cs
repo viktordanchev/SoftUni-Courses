@@ -2,25 +2,23 @@
 
 namespace _06.FoodShortage
 {
-    public class Citizens : IIdentifiable, INameable, IBirthable, IAgeable, IBuyer
+    public class Rebel : INameable, IAgeable, IBuyer
     {
-        public Citizens(string name, int age, string id, string birthdate)
+        public Rebel(string name, int age, string group)
         {
             Name = name;
             Age = age;
-            Id = id;
-            Birthdate = birthdate;
+            Group = group;
         }
 
         public string Name { get; }
         public int Age { get; }
-        public string Id { get; }
-        public string Birthdate { get; }
+        public string Group { get; }
         public int Food { get; private set; }
 
         public void BuyFood()
         {
-            Food += 10;
+            Food += 5;
         }
     }
 }

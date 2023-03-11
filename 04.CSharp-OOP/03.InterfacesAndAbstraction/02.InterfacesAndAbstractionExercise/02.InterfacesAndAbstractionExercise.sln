@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.DefineAnInterfaceIPerson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.MultipleImplementation", "02.MultipleImplementation\02.MultipleImplementation.csproj", "{DCBF0EE7-3A60-41FA-B4A7-C7B6FF1C44AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Telephony", "03.Telephony\03.Telephony.csproj", "{B4F1D964-63DC-47D2-AE8F-ACACB6F5EBF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Telephony", "03.Telephony\03.Telephony.csproj", "{B4F1D964-63DC-47D2-AE8F-ACACB6F5EBF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BorderControl", "04.BorderControl\04.BorderControl.csproj", "{9B438327-D59F-4592-B0DD-57C90751A22A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.BorderControl", "04.BorderControl\04.BorderControl.csproj", "{9B438327-D59F-4592-B0DD-57C90751A22A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.BirthdayCelebrations", "05.BirthdayCelebrations\05.BirthdayCelebrations.csproj", "{B521ADB9-2A79-4A6F-B049-9A929D115399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.BirthdayCelebrations", "05.BirthdayCelebrations\05.BirthdayCelebrations.csproj", "{B521ADB9-2A79-4A6F-B049-9A929D115399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FoodShortage", "06.FoodShortage\06.FoodShortage.csproj", "{4538D131-9CC5-4FB9-89EC-17231B07EF88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.FoodShortage", "06.FoodShortage\06.FoodShortage.csproj", "{4538D131-9CC5-4FB9-89EC-17231B07EF88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.MilitaryElite", "07.MilitaryElite\07.MilitaryElite.csproj", "{5DC1178A-AE17-40F9-9F57-70C6D17AAA46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4538D131-9CC5-4FB9-89EC-17231B07EF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4538D131-9CC5-4FB9-89EC-17231B07EF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4538D131-9CC5-4FB9-89EC-17231B07EF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC1178A-AE17-40F9-9F57-70C6D17AAA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC1178A-AE17-40F9-9F57-70C6D17AAA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC1178A-AE17-40F9-9F57-70C6D17AAA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC1178A-AE17-40F9-9F57-70C6D17AAA46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

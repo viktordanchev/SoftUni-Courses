@@ -1,4 +1,4 @@
-﻿using _05.BirthdayCelebrations.Interfaces;
+﻿using _06.FoodShortage.Interfaces;
 
 namespace _05.BirthdayCelebrations
 {

@@ -1,42 +1,42 @@
-﻿using _05.BirthdayCelebrations.Interfaces;
+﻿using _06.FoodShortage.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace _05.BirthdayCelebrations
+namespace _06.FoodShortage
 {
     public class StartUp
     {
         static void Main(string[] args)
         {
-            HashSet<IBirthable> society = new();
+            HashSet<IBuyer> society = new();
 
-            string command = Console.ReadLine();
-            while (command != "End")
+            int numberOfPeople = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < numberOfPeople; i++)
             {
-                string[] data = command.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] data = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                switch (data[0])
+                switch (data.Length)
                 {
-                    case "Citizen":
-                        society.Add(new Citizens(data[1], int.Parse(data[2]), data[3], data[4]));
+                    case 3:
+                        society.Add(new Rebel(data[0], int.Parse(data[1]), data[2]));
                         break;
-                    case "Pet":
-                        society.Add(new Pet(data[1], data[2]));
+                    case 4:
+                        society.Add(new Citizens(data[0], int.Parse(data[1]), data[2], data[3]));
                         break;
                 }
-
-                command = Console.ReadLine();
             }
 
-            string specialYear = Console.ReadLine();
-
-            foreach (var person in society)
+            string name = Console.ReadLine();
+            while (name != "End")
             {
-                if (person.Birthdate.Substring(person.Birthdate.Length - specialYear.Length) == specialYear)
-                {
-                    Console.WriteLine(person.Birthdate);
-                }
+                society.FirstOrDefault(p => p.Name == name)?.BuyFood();
+
+                name = Console.ReadLine();
             }
+
+            Console.WriteLine(society.Sum(p => p.Food));
         }
     }
 }

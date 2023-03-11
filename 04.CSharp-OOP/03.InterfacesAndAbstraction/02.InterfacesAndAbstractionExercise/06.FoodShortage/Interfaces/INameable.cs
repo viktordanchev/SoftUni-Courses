@@ -1,4 +1,4 @@
-﻿namespace _05.BirthdayCelebrations.Interfaces
+﻿namespace _06.FoodShortage.Interfaces
 {
     public interface INameable
     {
