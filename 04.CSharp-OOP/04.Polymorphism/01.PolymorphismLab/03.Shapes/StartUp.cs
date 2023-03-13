@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace _03.Shapes
+namespace Shapes
 {
-    internal class Program
+    public class StartUp
     {
         static void Main(string[] args)
         {
