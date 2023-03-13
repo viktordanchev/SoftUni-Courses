@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _02.Animals
+namespace _03.Shapes
 {
     internal class Program
     {
