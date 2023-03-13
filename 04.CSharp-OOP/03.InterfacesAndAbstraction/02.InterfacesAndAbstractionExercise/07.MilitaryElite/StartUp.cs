@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace MilitaryElite
 {
@@ -32,9 +33,15 @@ namespace MilitaryElite
 
                         soldiers.Add(soldier);
 
-                        for (int i = 0; i < infoAboutSoldier.Count; i++)
+                        for (int i = infoAboutSoldier.Count; i >= 0; i--)
                         {
-                            soldier.AddPrivate(infoAboutSoldier.Dequeue());
+                            string currId = infoAboutSoldier.Dequeue();
+
+                            Private currPrivate = soldiers.A(s => s.Id == currId);
+                            if (soldiers.Any(s => s.Id == currId))
+                            {
+                                soldier.AddPrivate(soldier);
+                            }
                         }
 
                         break;
