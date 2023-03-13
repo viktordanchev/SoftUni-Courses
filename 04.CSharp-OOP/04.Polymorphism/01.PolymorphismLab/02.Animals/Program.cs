@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01.MathOperations
+namespace _02.Animals
 {
     internal class Program
     {
