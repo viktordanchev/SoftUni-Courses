@@ -8,8 +8,8 @@
             FavouriteFood = favouriteFood;
         }
 
-        public string Name { get; set; }
-        public string FavouriteFood { get; set; }
+        public string Name { get; }
+        public string FavouriteFood { get; }
 
         public virtual string ExplainSelf()
         => $"I am {Name} and my fovourite food is {FavouriteFood}";
