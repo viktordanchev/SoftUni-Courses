@@ -1,4 +1,6 @@
-﻿namespace Vehicles.Vehicles
+﻿using System;
+
+namespace VehiclesExtension.Vehicles
 {
     public class Car : Vehicle
     {

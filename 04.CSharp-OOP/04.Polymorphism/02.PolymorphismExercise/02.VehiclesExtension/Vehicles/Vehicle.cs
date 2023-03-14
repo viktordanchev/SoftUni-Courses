@@ -1,7 +1,7 @@
 ﻿using System;
-using Vehicles.Vehicles.Interfaces;
+using VehiclesExtension.Vehicles.Interfaces;
 
-namespace Vehicles.Vehicles
+namespace VehiclesExtension.Vehicles
 {
     public abstract class Vehicle : IVehicles
     {
@@ -9,10 +9,12 @@ namespace Vehicles.Vehicles
         {
             FuelQuantity = fuelQuantity;
             FuelConsumption = fuelConsumption;
+            //TankCapacity = tankCapacity;
         }
 
         public double FuelQuantity { get; set; }
         public double FuelConsumption { get; set; }
+        public double TankCapacity { get; set; }
 
         public void Drive(double distance)
         {
@@ -27,7 +29,13 @@ namespace Vehicles.Vehicles
             }
         }
 
-        public abstract void Refuel(double liters);
+        public virtual void Refuel(double liters)
+        {
+            if (liters > TankCapacity - FuelQuantity)
+            {
+                Console.WriteLine($"Cannot fit {liters} fuel in the tank");
+            }
+        }
 
         public override string ToString()
         {
