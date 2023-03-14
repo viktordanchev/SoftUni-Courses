@@ -14,5 +14,10 @@ namespace Vehicles.Vehicles
         public double FuelConsumption { get; set; }
         public abstract void Drive(double distance);
         public abstract void Refuel(double liters);
+
+        public override string ToString()
+        {
+            return $"{GetType().Name}: {FuelQuantity:f2}";
+        }
     }
 }

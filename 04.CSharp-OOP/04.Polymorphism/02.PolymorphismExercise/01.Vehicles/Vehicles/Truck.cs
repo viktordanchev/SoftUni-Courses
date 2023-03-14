@@ -27,10 +27,5 @@ namespace Vehicles.Vehicles
         {
             FuelQuantity += liters * 0.95;
         }
-
-        public override string ToString()
-        {
-            return $"Truck: {FuelQuantity:f2}";
-        }
     }
 }

@@ -20,7 +20,7 @@ namespace Vehicles
                 string[] data = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 string command = data[0];
                 string vehicleType = data[1];
-                double operation = double.Parse(data[2]);
+                double value = double.Parse(data[2]);
 
                 Vehicle vehicle;
 
@@ -29,16 +29,16 @@ namespace Vehicles
                     case "Car":
                         vehicle = car as Car;
                         if (command == "Drive")
-                            vehicle.Drive(operation);
+                            vehicle.Drive(value);
                         else
-                            vehicle.Refuel(operation);
+                            vehicle.Refuel(value);
                         break;
                     case "Truck":
                         vehicle = truck as Truck;
                         if (command == "Drive")
-                            vehicle.Drive(operation);
+                            vehicle.Drive(value);
                         else
-                            vehicle.Refuel(operation);
+                            vehicle.Refuel(value);
                         break;
                 }
             }
