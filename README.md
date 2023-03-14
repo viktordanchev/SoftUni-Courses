@@ -52,4 +52,7 @@
 <summary><h3> Object-oriented Programming </summary>
 
 1. [**Inheritance**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/01.Inheritance)
+2. [**Encapsulation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/02.Encapsulation)
+3. [**InterfacesAndAbstraction**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/03.InterfacesAndAbstraction)
+4. [**Polymorphism**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/04.Polymorphism)
  </details>
