@@ -11,8 +11,8 @@ namespace Vehicles.Vehicles
             FuelConsumption = fuelConsumption;
         }
 
-        public double FuelQuantity { get; set; }
-        public double FuelConsumption { get; set; }
+        public double FuelQuantity { get; protected set; }
+        public double FuelConsumption { get; protected set; }
 
         public void Drive(double distance)
         {

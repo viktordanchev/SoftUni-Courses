@@ -5,16 +5,25 @@ namespace VehiclesExtension.Vehicles
 {
     public abstract class Vehicle : IVehicles
     {
-        protected Vehicle(double fuelQuantity, double fuelConsumption)
+        private double tankCapacity;
+
+        protected Vehicle(double fuelQuantity, double fuelConsumption, double tankCapacity)
         {
             FuelQuantity = fuelQuantity;
             FuelConsumption = fuelConsumption;
-            //TankCapacity = tankCapacity;
+            TankCapacity = tankCapacity;
         }
 
         public double FuelQuantity { get; set; }
         public double FuelConsumption { get; set; }
-        public double TankCapacity { get; set; }
+        public double TankCapacity
+        {
+            get => tankCapacity;
+            private set
+            { 
+
+            }
+        }
 
         public void Drive(double distance)
         {

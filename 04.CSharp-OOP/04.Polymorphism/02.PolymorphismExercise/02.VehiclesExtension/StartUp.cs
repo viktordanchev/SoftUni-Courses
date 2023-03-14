@@ -13,6 +13,9 @@ namespace VehiclesExtension
             string[] truckInfo = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
             Vehicle truck = new Truck(double.Parse(truckInfo[1]), double.Parse(truckInfo[2]));
 
+            string[] busInfo = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            Vehicle bus = new Bus(double.Parse(busInfo[1]), double.Parse(busInfo[2]));
+
             int numOfCommands = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= numOfCommands; i++)
