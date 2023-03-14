@@ -5,11 +5,13 @@
         public Bus(double fuelQuantity, double fuelConsumption, double tankCapacity) 
             : base(fuelQuantity, fuelConsumption, tankCapacity)
         {
+            FuelConsumption += 1.4;
         }
 
-        public override void Drive(double distance)
+        public void DriveEmpty(double distance)
         {
-            throw new System.NotImplementedException();
+            FuelConsumption -= 1.4;
+            Drive(distance);
         }
     }
 }

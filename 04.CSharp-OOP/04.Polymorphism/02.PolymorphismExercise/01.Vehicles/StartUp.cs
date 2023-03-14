@@ -22,23 +22,21 @@ namespace Vehicles
                 string vehicleType = data[1];
                 double value = double.Parse(data[2]);
 
-                Vehicle vehicle;
-
                 switch (vehicleType)
                 {
                     case "Car":
-                        vehicle = car as Car;
+                        Car currCar = car as Car;
                         if (command == "Drive")
-                            vehicle.Drive(value);
+                            currCar.Drive(value);
                         else
-                            vehicle.Refuel(value);
+                            currCar.Refuel(value);
                         break;
                     case "Truck":
-                        vehicle = truck as Truck;
+                        Truck currTruck = truck as Truck;
                         if (command == "Drive")
-                            vehicle.Drive(value);
+                            currTruck.Drive(value);
                         else
-                            vehicle.Refuel(value);
+                            currTruck.Refuel(value);
                         break;
                 }
             }

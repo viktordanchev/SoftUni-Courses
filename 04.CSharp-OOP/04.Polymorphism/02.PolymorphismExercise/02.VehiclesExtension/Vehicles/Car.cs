@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VehiclesExtension.Vehicles
+﻿namespace VehiclesExtension.Vehicles
 {
     public class Car : Vehicle
     {
@@ -8,11 +6,6 @@ namespace VehiclesExtension.Vehicles
             : base(fuelQuantity, fuelConsumption, tankCapacity)
         {
             FuelConsumption += 0.9;
-        }
-
-        public override void Refuel(double liters)
-        {
-            FuelQuantity += liters;
         }
     }
 }

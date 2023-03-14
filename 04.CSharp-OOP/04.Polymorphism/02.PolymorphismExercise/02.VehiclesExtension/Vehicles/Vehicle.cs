@@ -14,14 +14,19 @@ namespace VehiclesExtension.Vehicles
             TankCapacity = tankCapacity;
         }
 
-        public double FuelQuantity { get; set; }
-        public double FuelConsumption { get; set; }
+        public double FuelQuantity { get; protected set; }
+        public double FuelConsumption { get; protected set; }
         public double TankCapacity
         {
             get => tankCapacity;
             private set
-            { 
+            {
+                if (FuelQuantity > value)
+                {
+                    FuelQuantity = 0;
+                }
 
+                tankCapacity = value;
             }
         }
 
@@ -34,15 +39,23 @@ namespace VehiclesExtension.Vehicles
             }
             else
             {
-                Console.WriteLine($"{GetType().Name} needs refueling");
+                throw new ArgumentException($"{GetType().Name} needs refueling");
             }
         }
 
         public virtual void Refuel(double liters)
         {
-            if (liters > TankCapacity - FuelQuantity)
+            if (liters <= 0)
             {
-                Console.WriteLine($"Cannot fit {liters} fuel in the tank");
+                throw new ArgumentException("Fuel must be a positive number");
+            }
+            else if (liters > TankCapacity - FuelQuantity)
+            {
+                throw new ArgumentException($"Cannot fit {liters} fuel in the tank");
+            }
+            else if (GetType().Name == "Car" || GetType().Name == "Bus")
+            {
+                FuelQuantity += liters;
             }
         }
 
