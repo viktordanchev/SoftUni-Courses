@@ -7,7 +7,6 @@ namespace WildFarm.Interfaces
         string Name { get; }
         double Weight { get; }
         int FoodEaten { get; }
-        void MakeSound();
         void Eat(Food food);
     }
 }

@@ -10,11 +10,6 @@ namespace WildFarm.Animals.Mammals
         {
         }
 
-        public override void MakeSound()
-        {
-            Console.WriteLine("Squeak");
-        }
-
         public override void Eat(Food food)
         {
             if (food.GetType().ToString() != "Fruit" && food.GetType().ToString() != "Vegetables")
@@ -23,6 +18,12 @@ namespace WildFarm.Animals.Mammals
             }
 
             Weight += food.Quantity * 0.10;
+            MakeSound();
+        }
+
+        protected override void MakeSound()
+        {
+            Console.WriteLine("Squeak");
         }
     }
 }

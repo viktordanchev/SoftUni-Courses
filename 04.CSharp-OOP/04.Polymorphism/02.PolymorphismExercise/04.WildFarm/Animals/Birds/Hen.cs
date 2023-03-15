@@ -10,14 +10,15 @@ namespace WildFarm.Animals.Birds
         { 
         }
 
-        public override void MakeSound()
-        {
-            Console.WriteLine("Cluck");
-        }
-
         public override void Eat(Food food)
         {
             Weight += food.Quantity * 0.35;
+            MakeSound();
+        }
+
+        protected override void MakeSound()
+        {
+            Console.WriteLine("Cluck");
         }
     }
 }

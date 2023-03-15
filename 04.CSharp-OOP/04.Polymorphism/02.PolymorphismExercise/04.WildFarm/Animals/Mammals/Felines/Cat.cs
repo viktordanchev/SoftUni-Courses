@@ -10,11 +10,6 @@ namespace WildFarm.Animals.Mammals.Felines
         {
         }
 
-        public override void MakeSound()
-        {
-            Console.WriteLine("Meow");
-        }
-
         public override void Eat(Food food)
         {
             if (food.GetType().ToString() != "Meat" && food.GetType().ToString() != "Vegetables")
@@ -23,6 +18,12 @@ namespace WildFarm.Animals.Mammals.Felines
             }
 
             Weight += food.Quantity * 0.30;
+            MakeSound();
+        }
+
+        protected override void MakeSound()
+        {
+            Console.WriteLine("Meow");
         }
     }
 }

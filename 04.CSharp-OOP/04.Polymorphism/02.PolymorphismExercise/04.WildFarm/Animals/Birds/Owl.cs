@@ -10,11 +10,6 @@ namespace WildFarm.Animals.Birds
         {
         }
 
-        public override void MakeSound()
-        {
-            Console.WriteLine("Hoot Hoot");
-        }
-
         public override void Eat(Food food)
         {
             if (food.GetType().ToString() != "Meat")
@@ -23,6 +18,12 @@ namespace WildFarm.Animals.Birds
             }
 
             Weight += food.Quantity * 0.25;
+            MakeSound();
+        }
+
+        protected override void MakeSound()
+        {
+            Console.WriteLine("Hoot Hoot");
         }
     }
 }

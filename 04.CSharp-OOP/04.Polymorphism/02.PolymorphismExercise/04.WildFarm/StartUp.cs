@@ -22,7 +22,7 @@ namespace WildFarm
                 string animalType = animalData[0];
 
                 string[] foodData = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                string foodType = animalData[0];
+                string foodType = foodData[0];
 
                 Animal animal = null;
                 switch (animalType)
@@ -56,9 +56,6 @@ namespace WildFarm
                     case "Vegetable": food = new Vegetable(int.Parse(foodData[1])); break;
                 }
 
-                animals.Add(animal);
-                animal.MakeSound();
-
                 try
                 {
                     animal.Eat(food);
@@ -68,6 +65,7 @@ namespace WildFarm
                     Console.WriteLine(e);
                 }
 
+                animals.Add(animal);
 
                 input = Console.ReadLine();
             }
@@ -77,5 +75,18 @@ namespace WildFarm
                 Console.WriteLine(animal.ToString());
             }
         }
+
+        //static Food GetFood(string[] foodData)
+        //{
+        //
+        //    Food food;
+        //    switch (foodType)
+        //    {
+        //        case "Fruit": food = new Fruit(int.Parse(foodData[1])); break;
+        //        case "Meat": food = new Meat(int.Parse(foodData[1])); break;
+        //        case "Seeds": food = new Seeds(int.Parse(foodData[1])); break;
+        //        case "Vegetable": food = new Vegetable(int.Parse(foodData[1])); break;
+        //    }
+        //}
     }
 }
