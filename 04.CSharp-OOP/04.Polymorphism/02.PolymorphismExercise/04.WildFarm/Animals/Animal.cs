@@ -14,7 +14,7 @@ namespace WildFarm.Animals
         public string Name { get; }
         public double Weight { get; protected set; }
         public int FoodEaten { get; protected set; }
-        protected abstract void MakeSound();
+        protected abstract void ProduceSound();
         public abstract void Eat(Food food);
     }
 }

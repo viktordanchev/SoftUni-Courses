@@ -12,7 +12,7 @@ namespace WildFarm.Animals.Mammals
 
         public override void Eat(Food food)
         {
-            MakeSound();
+            ProduceSound();
 
             if (food.GetType().Name != "Meat")
             {
@@ -23,7 +23,7 @@ namespace WildFarm.Animals.Mammals
             FoodEaten = food.Quantity;
         }
 
-        protected override void MakeSound()
+        protected override void ProduceSound()
         {
             Console.WriteLine("Woof!");
         }
