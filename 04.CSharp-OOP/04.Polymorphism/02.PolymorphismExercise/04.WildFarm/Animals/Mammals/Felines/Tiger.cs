@@ -8,18 +8,19 @@ namespace WildFarm.Animals.Mammals.Felines
         public Tiger(string name, double weight, string livingRegion, string breed) 
             : base(name, weight, livingRegion, breed)
         {
-            Console.WriteLine("ROAR!!!");
         }
 
         public override void Eat(Food food)
         {
-            if (food.GetType().ToString() != "Meat")
+            MakeSound();
+
+            if (food.GetType().Name != "Meat")
             {
-                throw new ArgumentException($"Tiger does not eat {food.GetType()}!");
+                throw new ArgumentException($"Tiger does not eat {food.GetType().Name}!");
             }
 
             Weight += food.Quantity * 1;
-            MakeSound();
+            FoodEaten = food.Quantity;
         }
 
         protected override void MakeSound()

@@ -62,7 +62,7 @@ namespace WildFarm
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine(e.Message);
                 }
 
                 animals.Add(animal);
@@ -75,18 +75,5 @@ namespace WildFarm
                 Console.WriteLine(animal.ToString());
             }
         }
-
-        //static Food GetFood(string[] foodData)
-        //{
-        //
-        //    Food food;
-        //    switch (foodType)
-        //    {
-        //        case "Fruit": food = new Fruit(int.Parse(foodData[1])); break;
-        //        case "Meat": food = new Meat(int.Parse(foodData[1])); break;
-        //        case "Seeds": food = new Seeds(int.Parse(foodData[1])); break;
-        //        case "Vegetable": food = new Vegetable(int.Parse(foodData[1])); break;
-        //    }
-        //}
     }
 }

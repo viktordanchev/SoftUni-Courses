@@ -12,13 +12,15 @@ namespace WildFarm.Animals.Mammals
 
         public override void Eat(Food food)
         {
-            if (food.GetType().ToString() != "Fruit" && food.GetType().ToString() != "Vegetables")
+            MakeSound();
+
+            if (food.GetType().Name != "Fruit" && food.GetType().Name != "Vegetable")
             {
-                throw new ArgumentException($"Mouse does not eat {food.GetType()}!");
+                throw new ArgumentException($"Mouse does not eat {food.GetType().Name}!");
             }
 
             Weight += food.Quantity * 0.10;
-            MakeSound();
+            FoodEaten = food.Quantity;
         }
 
         protected override void MakeSound()

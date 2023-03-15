@@ -12,13 +12,15 @@ namespace WildFarm.Animals.Birds
 
         public override void Eat(Food food)
         {
-            if (food.GetType().ToString() != "Meat")
+            MakeSound();
+
+            if (food.GetType().Name != "Meat")
             {
-                throw new ArgumentException($"Owl does not eat {food.GetType()}!");
+                throw new ArgumentException($"Owl does not eat {food.GetType().Name}!");
             }
 
             Weight += food.Quantity * 0.25;
-            MakeSound();
+            FoodEaten = food.Quantity;
         }
 
         protected override void MakeSound()

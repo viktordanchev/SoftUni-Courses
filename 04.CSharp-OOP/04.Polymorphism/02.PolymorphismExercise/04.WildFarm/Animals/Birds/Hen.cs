@@ -13,6 +13,7 @@ namespace WildFarm.Animals.Birds
         public override void Eat(Food food)
         {
             Weight += food.Quantity * 0.35;
+            FoodEaten = food.Quantity;
             MakeSound();
         }
 
