@@ -3,7 +3,7 @@ using VehiclesExtension.Vehicles.Interfaces;
 
 namespace VehiclesExtension.Vehicles
 {
-    public abstract class Vehicle : IVehicles
+    public abstract class Vehicle : IVehicle
     {
         private double tankCapacity;
 
