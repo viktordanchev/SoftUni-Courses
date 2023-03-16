@@ -1,6 +1,6 @@
 ﻿namespace VehiclesExtension.Vehicles.Interfaces
 {
-    public interface IVehicles
+    public interface IVehicle
     {
         double FuelQuantity { get; }
         double FuelConsumption { get; }

@@ -3,7 +3,7 @@ using Vehicles.Vehicles.Interfaces;
 
 namespace Vehicles.Vehicles
 {
-    public abstract class Vehicle : IVehicles
+    public abstract class Vehicle : IVehicle
     {
         protected Vehicle(double fuelQuantity, double fuelConsumption)
         {
