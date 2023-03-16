@@ -30,27 +30,27 @@ namespace VehiclesExtension
                     switch (vehicleType)
                     {
                         case "Car":
-                            Car currCar = car as Car;
                             if (command == "Drive")
-                                currCar.Drive(value);
+                                car.Drive(value);
                             else
-                                currCar.Refuel(value);
+                                car.Refuel(value);
                             break;
                         case "Truck":
-                            Truck currTruck = truck as Truck;
                             if (command == "Drive")
-                                currTruck.Drive(value);
+                                truck.Drive(value);
                             else
-                                currTruck.Refuel(value);
+                                truck.Refuel(value);
                             break;
                         case "Bus":
-                            Bus currBus = bus as Bus;
                             if (command == "Drive")
-                                currBus.Drive(value);
+                                bus.Drive(value);
                             else if (command == "DriveEmpty")
+                            {
+                                Bus currBus = bus as Bus;
                                 currBus.DriveEmpty(value);
+                            }
                             else
-                                currBus.Refuel(value);
+                                bus.Refuel(value);
                             break;
                     }
                 }
