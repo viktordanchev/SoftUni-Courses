@@ -25,18 +25,16 @@ namespace Vehicles
                 switch (vehicleType)
                 {
                     case "Car":
-                        Car currCar = car as Car;
                         if (command == "Drive")
-                            currCar.Drive(value);
+                            car.Drive(value);
                         else
-                            currCar.Refuel(value);
+                            car.Refuel(value);
                         break;
                     case "Truck":
-                        Truck currTruck = truck as Truck;
                         if (command == "Drive")
-                            currTruck.Drive(value);
+                            truck.Drive(value);
                         else
-                            currTruck.Refuel(value);
+                            truck.Refuel(value);
                         break;
                 }
             }
