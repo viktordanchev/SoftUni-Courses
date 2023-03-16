@@ -12,7 +12,7 @@ namespace Vehicles
 
             string[] truckInfo = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
             Vehicle truck = new Truck(double.Parse(truckInfo[1]), double.Parse(truckInfo[2]));
-
+            int a = 0;
             int numOfCommands = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= numOfCommands; i++)
