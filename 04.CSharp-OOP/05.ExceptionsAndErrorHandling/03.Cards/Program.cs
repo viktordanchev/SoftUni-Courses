@@ -20,7 +20,7 @@ namespace Cards
 
                 try
                 {
-                    Card card = new(face, suit);
+                    Card card = Card.CreateCard(face, suit);
                     deck.Add(card);
                 }
                 catch (ArgumentException ex)
@@ -35,58 +35,42 @@ namespace Cards
 
     class Card
     {
-        private string face;
-        private string suit;
-
-        public Card(string face, string suit)
+        private Card(string face, string suit)
         {
             Face = face;
             Suit = suit;
         }
 
-        private string Face 
-        { 
-            get => face;
-            set
-            {
-                List<string> validFaces = new() { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
+        private string Face { get; }
+        private string Suit { get; }
 
-                if (!validFaces.Any(f => f == value))
-                {
-                    throw new ArgumentException("Invalid card!");
-                }
-
-                face = value;
-            }
-        }
-        private string Suit
+        public static Card CreateCard(string face, string suit)
         {
-            get => suit;
-            set
+            List<string> validFaces = new() { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
+            List<string> validSuits = new() { "S", "H", "D", "C" };
+
+            if (!validFaces.Any(f => f == face) || !validSuits.Any(s => s == suit))
             {
-                List<string> validSuits = new() { "S", "H", "D", "C" };
-
-                if (!validSuits.Any(s => s == value))
-                {
-                    throw new ArgumentException("Invalid card!");
-                }
-
-                switch (value)
-                {
-                    case "S":
-                        suit = "\u2660";
-                        break;
-                    case "H":
-                        suit = "\u2665";
-                        break;
-                    case "D":
-                        suit = "\u2666";
-                        break;
-                    case "C":
-                        suit = "\u2663";
-                        break;
-                }
+                throw new ArgumentException("Invalid card!");
             }
+
+            switch (suit)
+            {
+                case "S":
+                    suit = "\u2660";
+                    break;
+                case "H":
+                    suit = "\u2665";
+                    break;
+                case "D":
+                    suit = "\u2666";
+                    break;
+                case "C":
+                    suit = "\u2663";
+                    break;
+            }
+
+            return new(face, suit);
         }
 
         public override string ToString()
