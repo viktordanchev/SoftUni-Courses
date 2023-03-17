@@ -24,7 +24,7 @@ namespace Cards
                     deck.Add(card);
                 }
                 catch (ArgumentException ex)
-                { 
+                {
                     Console.WriteLine(ex.Message);
                 }
             }
@@ -35,14 +35,8 @@ namespace Cards
 
     class Card
     {
-        private Card(string face, string suit)
-        {
-            Face = face;
-            Suit = suit;
-        }
-
-        private string Face { get; }
-        private string Suit { get; }
+        private string Face { get; set; }
+        private string Suit { get; set; }
 
         public static Card CreateCard(string face, string suit)
         {
@@ -70,7 +64,7 @@ namespace Cards
                     break;
             }
 
-            return new(face, suit);
+            return new() { Face = face, Suit = suit };
         }
 
         public override string ToString()
