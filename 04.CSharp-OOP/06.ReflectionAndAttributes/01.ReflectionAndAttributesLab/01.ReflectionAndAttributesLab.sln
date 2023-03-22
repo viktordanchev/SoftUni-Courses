@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MissionPrivateImpossible
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Collector", "04.Collector\04.Collector.csproj", "{686F7341-5049-4C05-A230-FC9DF4B35EF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CreateAttribute", "05.CreateAttribute\05.CreateAttribute.csproj", "{280A3950-4CD8-4B30-B7B4-59CB20E6D97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CodeTracker", "06.CodeTracker\06.CodeTracker.csproj", "{04EF8B38-5930-4A9A-9E64-FCB0500F0946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{686F7341-5049-4C05-A230-FC9DF4B35EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{686F7341-5049-4C05-A230-FC9DF4B35EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{686F7341-5049-4C05-A230-FC9DF4B35EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280A3950-4CD8-4B30-B7B4-59CB20E6D97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280A3950-4CD8-4B30-B7B4-59CB20E6D97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280A3950-4CD8-4B30-B7B4-59CB20E6D97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280A3950-4CD8-4B30-B7B4-59CB20E6D97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EF8B38-5930-4A9A-9E64-FCB0500F0946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EF8B38-5930-4A9A-9E64-FCB0500F0946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EF8B38-5930-4A9A-9E64-FCB0500F0946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EF8B38-5930-4A9A-9E64-FCB0500F0946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
