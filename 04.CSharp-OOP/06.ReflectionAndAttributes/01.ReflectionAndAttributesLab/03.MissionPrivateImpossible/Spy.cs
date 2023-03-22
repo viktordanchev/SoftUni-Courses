@@ -22,6 +22,9 @@ namespace Stealer
             {
                 if (!property.GetMethod.IsPublic)
                     sb.AppendLine($"{property.GetMethod.Name} have to be public!");
+            }
+            foreach(PropertyInfo property in propertiesInfo)
+            {
                 if (property.SetMethod.IsPublic)
                     sb.AppendLine($"{property.SetMethod.Name} have to be private!");
             }
