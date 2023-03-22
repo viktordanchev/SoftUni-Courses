@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -7,19 +6,29 @@ namespace Stealer
 {
     public class Spy
     {
-        public string StealFieldInfo(string className, params string[] fieldsNames)
+        public string AnalyzeAccessModifiers(string className)
         {
             Type type = Type.GetType(className);
             FieldInfo[] fieldsInfo = type.GetFields((BindingFlags)60);
-            Object obj = Activator.CreateInstance(type);
-            StringBuilder sb = new();
+            PropertyInfo[] propertiesInfo = type.GetProperties((BindingFlags)60);
+            StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Class under investigation: {className}");
-            foreach (FieldInfo field in fieldsInfo.Where(f => fieldsNames.Contains(f.Name)))
+            foreach (FieldInfo field in fieldsInfo) 
             {
-                sb.AppendLine($"{field.Name} = {field.GetValue(obj)}");
+                if (!field.IsPrivate)
+                    sb.AppendLine($"{field.Name} must be private!");
             }
-
+            foreach (PropertyInfo property in propertiesInfo)
+            {
+                if (!property.GetMethod.IsPublic)
+                    sb.AppendLine($"{property.GetMethod.Name} have to be public!");
+            }
+            foreach(PropertyInfo property in propertiesInfo)
+            {
+                if (property.SetMethod.IsPublic)
+                    sb.AppendLine($"{property.SetMethod.Name} have to be private!");
+            }
+        
             return sb.ToString().Trim();
         }
     }
