@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01.CommandPattern
+namespace _01.TestAxe
 {
     internal class Program
     {
