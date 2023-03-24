@@ -7,15 +7,12 @@ namespace Skeleton.Tests
     {
         Axe axe;
         Dummy dummy;
-        int attackPoints;
-        int durabilityPoints;
 
         [SetUp]
         public void Startup()
         {
-            attackPoints = 10;
-            durabilityPoints = 10;
-            dummy = new(attackPoints, durabilityPoints);
+            axe = new(10, 10);
+            dummy = new(10, 10);
         }
 
         [Test]
@@ -29,8 +26,6 @@ namespace Skeleton.Tests
         [Test]
         public void AxeLoosesDurabilityAfterAttack()
         {
-            axe = new(10, 10);
-
             axe.Attack(dummy);
 
             Assert.That(axe.DurabilityPoints, Is.EqualTo(9));
