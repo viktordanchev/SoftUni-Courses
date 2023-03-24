@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.TestAxe", "01.TestAxe\01
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.DummyTests", "02.DummyTests\02.DummyTests.csproj", "{A91F16AA-8E8B-4638-AE5C-D69F2E4058A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{432B71A7-BC0F-4223-8E72-02901C92735E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeTests", "Tests\AxeTests.csproj", "{432B71A7-BC0F-4223-8E72-02901C92735E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
