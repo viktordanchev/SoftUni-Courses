@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\02.DummyTests\02.DummyTests.csproj" />
+    <ProjectReference Include="..\01.TestAxe\01.TestAxe.csproj" />
   </ItemGroup>
 
 </Project>
