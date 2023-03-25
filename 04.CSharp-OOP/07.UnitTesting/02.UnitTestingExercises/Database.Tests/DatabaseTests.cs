@@ -16,7 +16,7 @@ namespace Database.Tests
         }
 
         [Test]
-        public void CreateDatabaseWith()
+        public void CreateDatabaseWithIntegers()
         {
             Assert.AreEqual(16, fullDatabase.Count);
         }
