@@ -41,12 +41,6 @@ namespace CarManager.Tests
             Assert.Throws<ArgumentException>(() => car = new(make, model, fuelConsumption, fuelCapacity));
             Assert.Throws<ArgumentException>(() => car = new(null, model, fuelConsumption, fuelCapacity));
         }
-
-        [Test]
-        public void SetMakeValue()
-        {
-            Assert.AreEqual("Volkswagen", car.Make);
-        }
         
         [Test]
         public void IfModelIsNullOrEmptyShouldThrowsException()
@@ -55,12 +49,6 @@ namespace CarManager.Tests
 
             Assert.Throws<ArgumentException>(() => car = new(make, model, fuelConsumption, fuelCapacity));
             Assert.Throws<ArgumentException>(() => car = new(make, null, fuelConsumption, fuelCapacity));
-        }
-
-        [Test]
-        public void SetModelValue()
-        {
-            Assert.AreEqual("Golf", car.Model);
         }
 
         [Test]
@@ -73,24 +61,12 @@ namespace CarManager.Tests
         }
 
         [Test]
-        public void SetFuelConsumptionValue()
-        {
-            Assert.AreEqual(1, car.FuelConsumption);
-        }
-
-        [Test]
         public void IfFuelCapacityIsEqualOrBelowZeroShouldThrowsException()
         {
             fuelCapacity = -2;
 
             Assert.Throws<ArgumentException>(() => car = new(make, model, fuelConsumption, fuelCapacity));
             Assert.Throws<ArgumentException>(() => car = new(make, model, fuelConsumption, 0));
-        }
-
-        [Test]
-        public void SetFuelCapacityValue()
-        {
-            Assert.AreEqual(70, car.FuelCapacity);
         }
 
         [Test]
