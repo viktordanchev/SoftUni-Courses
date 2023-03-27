@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Person", "01.Person\01.Person.csproj", "{E864BDF7-D5DD-46F2-B345-241AB3A7B3D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Person", "01.Person\01.Person.csproj", "{E864BDF7-D5DD-46F2-B345-241AB3A7B3D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Zoo", "02.Zoo\02.Zoo.csproj", "{2358DC8E-5393-4961-8F5E-ADCD81C935AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Zoo", "02.Zoo\02.Zoo.csproj", "{2358DC8E-5393-4961-8F5E-ADCD81C935AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PlayersAndMonsters", "03.PlayersAndMonsters\03.PlayersAndMonsters.csproj", "{52F66B80-7509-4E7E-A2A3-054CB5E43A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.PlayersAndMonsters", "03.PlayersAndMonsters\03.PlayersAndMonsters.csproj", "{52F66B80-7509-4E7E-A2A3-054CB5E43A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.NeedForSpeed", "04.NeedForSpeed\04.NeedForSpeed.csproj", "{3D12CAA0-54FE-455F-9E5E-7F37BBA93F84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.NeedForSpeed", "04.NeedForSpeed\04.NeedForSpeed.csproj", "{3D12CAA0-54FE-455F-9E5E-7F37BBA93F84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Restaurant", "05.Restaurant\05.Restaurant.csproj", "{37248C4C-4AF1-4E45-82D7-D715F7CB3B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Restaurant", "05.Restaurant\05.Restaurant.csproj", "{37248C4C-4AF1-4E45-82D7-D715F7CB3B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Animals", "06.Animals\06.Animals.csproj", "{654EA0F2-039B-4959-B3FE-E3FB826912C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Animals", "06.Animals\06.Animals.csproj", "{654EA0F2-039B-4959-B3FE-E3FB826912C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
