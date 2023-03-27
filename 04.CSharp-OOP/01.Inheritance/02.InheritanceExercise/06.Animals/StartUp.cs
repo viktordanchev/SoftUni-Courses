@@ -22,7 +22,7 @@ namespace Animals
 
                 try
                 {
-                    switch(input)
+                    switch (input)
                     {
                         case "Cat":
                             animal = new Cat(name, age, gender);
