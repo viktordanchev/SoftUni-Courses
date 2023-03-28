@@ -1,11 +1,12 @@
-﻿namespace Animals
+﻿namespace Animals.Animals.Cats
 {
     public class Tomcat : Cat
     {
-        public Tomcat(string name, int age, string gender)
-            : base(name, age, gender)
+        private const string TomcatGender = "Male";
+
+        public Tomcat(string name, int age)
+            : base(name, age, TomcatGender)
         {
-            Gender = "Male";
         }
 
         public override string ProduceSound()

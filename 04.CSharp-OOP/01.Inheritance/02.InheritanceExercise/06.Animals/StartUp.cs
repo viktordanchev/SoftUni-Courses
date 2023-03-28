@@ -34,10 +34,10 @@ namespace Animals
                             animal = new Frog(name, age, gender);
                             break;
                         case "Tomcat":
-                            animal = new Tomcat(name, age, gender);
+                            animal = new Tomcat(name, age);
                             break;
                         case "Kitten":
-                            animal = new Kitten(name, age, gender);
+                            animal = new Kitten(name, age);
                             break;
                         default:
                             throw new ArgumentException("Invalid input!");

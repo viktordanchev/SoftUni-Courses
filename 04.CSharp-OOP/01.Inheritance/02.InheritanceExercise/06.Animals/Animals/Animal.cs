@@ -42,7 +42,7 @@ namespace Animals.Animals
             get => gender;
             set
             {
-                if (value != "Male" && value != "Female")
+                if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Invalid input!");
 
                 gender = value;

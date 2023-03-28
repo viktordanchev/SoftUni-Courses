@@ -2,10 +2,11 @@
 {
     public class Kitten : Cat
     {
-        public Kitten(string name, int age, string gender) 
-            : base(name, age, gender)
+        private const string KittenGender = "Female";
+
+        public Kitten(string name, int age)
+            : base(name, age, KittenGender)
         {
-            Gender = "Female";
         }
 
         public override string ProduceSound()
