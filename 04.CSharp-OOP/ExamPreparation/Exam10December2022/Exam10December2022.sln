@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.StructureAndBusinessLogic", "01.StructureAndBusinessLogic\01.StructureAndBusinessLogic.csproj", "{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChristmasPastryShop", "01.StructureAndBusinessLogic\ChristmasPastryShop.csproj", "{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballTeam", "FootballTeam\FootballTeam.csproj", "{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballTeam", "FootballTeam\FootballTeam.csproj", "{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballTeam.Tests", "FootballTeam.Tests\FootballTeam.Tests.csproj", "{972CE6E5-4CD0-4908-8258-3F9E578B16FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballTeam.Tests", "FootballTeam.Tests\FootballTeam.Tests.csproj", "{972CE6E5-4CD0-4908-8258-3F9E578B16FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
