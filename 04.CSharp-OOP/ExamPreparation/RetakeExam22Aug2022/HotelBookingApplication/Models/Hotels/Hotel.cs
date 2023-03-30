@@ -13,7 +13,6 @@ namespace BookingApp.Models.Hotels
     {
         private string fullName;
         private int category;
-        private double turnover;
         private IRepository<IRoom> rooms;
         private IRepository<IBooking> bookings;
 
@@ -51,7 +50,7 @@ namespace BookingApp.Models.Hotels
 
         public double Turnover
         {
-            get { return turnover = Math.Round(Bookings.All().Sum(h => h.ResidenceDuration * h.Room.PricePerNight), 2); }
+            get { return Math.Round(Bookings.All().Sum(h => h.ResidenceDuration * h.Room.PricePerNight)); }
         }
 
         public IRepository<IRoom> Rooms
