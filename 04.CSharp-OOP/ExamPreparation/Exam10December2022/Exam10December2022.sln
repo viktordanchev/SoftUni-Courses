@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChristmasPastryShop", "01.StructureAndBusinessLogic\ChristmasPastryShop.csproj", "{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballTeam", "FootballTeam\FootballTeam.csproj", "{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootballTeam.Tests", "FootballTeam.Tests\FootballTeam.Tests.csproj", "{972CE6E5-4CD0-4908-8258-3F9E578B16FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChristmasPastryShop", "ChristmasPastryShop\ChristmasPastryShop.csproj", "{8C54EE91-C6D9-4C34-824F-693B5030BBC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F827EF5-FC2C-4F6B-80D4-A038C62E4DA4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE7D5D19-48DD-488D-9847-CF0C9BC3C42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{972CE6E5-4CD0-4908-8258-3F9E578B16FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{972CE6E5-4CD0-4908-8258-3F9E578B16FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{972CE6E5-4CD0-4908-8258-3F9E578B16FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C54EE91-C6D9-4C34-824F-693B5030BBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C54EE91-C6D9-4C34-824F-693B5030BBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C54EE91-C6D9-4C34-824F-693B5030BBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C54EE91-C6D9-4C34-824F-693B5030BBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
