@@ -140,9 +140,15 @@ namespace PlanetWars.Core
             else
             {
                 if (firstPlanet.Weapons.Any(w => w.GetType().Name == "NuclearWeapon"))
+                {
                     winnerPlanet = firstPlanet;
+                    losingPlanet = secondPlanet;
+                }
                 else if (secondPlanet.Weapons.Any(w => w.GetType().Name == "NuclearWeapon"))
+                {
                     winnerPlanet = secondPlanet;
+                    losingPlanet = firstPlanet;
+                }
                 else
                     return string.Format(OutputMessages.NoWinner);
             }
@@ -178,8 +184,8 @@ namespace PlanetWars.Core
             if (planet.Army.Count == 0)
                 return string.Format(ExceptionMessages.NoUnitsFound);
 
-            planet.TrainArmy();
             planet.Spend(1.25);
+            planet.TrainArmy();
 
             return string.Format(OutputMessages.ForcesUpgraded, planetName);
         }
