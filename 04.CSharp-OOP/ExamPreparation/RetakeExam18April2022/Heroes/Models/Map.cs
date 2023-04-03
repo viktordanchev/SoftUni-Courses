@@ -17,10 +17,9 @@ namespace Heroes.Models
             knights = players.Where(p => p.GetType().Name == "Knight").ToList();
             barbarians = players.Where(p => p.GetType().Name == "Barbarian").ToList();
 
-            while (knights.Count > knightCorpses && barbarians.Count > barbarianCorpses)
+            while (knights.Count > 0 && barbarians.Count > 0)
             {
                 barbarianCorpses += KnightsAttack(knights, barbarians);
-
                 knightCorpses += BarbariansAttack(barbarians, knights);
             }
 
@@ -33,24 +32,18 @@ namespace Heroes.Models
         static int KnightsAttack(List<IHero> knights, List<IHero> barbarians)
         {
             int barbarianCorpses = 0;
-            int index = 0;
 
             foreach (var knight in knights)
             {
-                if (index == barbarians.Count)
-                    break;
-
-                if (knight.IsAlive)
+                for (int i = 0; i < barbarians.Count; i++)
                 {
-                    barbarians[index].TakeDamage(knight.Weapon.DoDamage());
+                    barbarians[i].TakeDamage(knight.Weapon.DoDamage());
 
-                    if (!barbarians[index].IsAlive)
+                    if (!barbarians[i].IsAlive)
                     {
-                        barbarians.RemoveAt(index--);
                         barbarianCorpses++;
+                        barbarians.RemoveAt(i--);
                     }
-
-                    index++;
                 }
             }
 
@@ -60,24 +53,18 @@ namespace Heroes.Models
         static int BarbariansAttack(List<IHero> barbarians, List<IHero> knights)
         {
             int knightCorpses = 0;
-            int index = 0;
 
             foreach (var barbarian in barbarians)
             {
-                if (index == knights.Count)
-                    break;
-
-                if (barbarian.IsAlive)
+                for (int i = 0; i < knights.Count; i++)
                 {
-                    knights[index].TakeDamage(barbarian.Weapon.DoDamage());
+                    knights[i].TakeDamage(barbarian.Weapon.DoDamage());
 
-                    if (!knights[index].IsAlive)
+                    if (!knights[i].IsAlive)
                     {
-                        knights.RemoveAt(index--);
                         knightCorpses++;
+                        knights.RemoveAt(i--);
                     }
-
-                    index++;
                 }
             }
 
