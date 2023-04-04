@@ -19,8 +19,8 @@ namespace Heroes.Models
 
             while (knights.Count > 0 && barbarians.Count > 0)
             {
-                barbarianCorpses += KnightsAttack(knights, barbarians);
-                knightCorpses += BarbariansAttack(barbarians, knights);
+                barbarianCorpses += Attack(knights, barbarians);
+                knightCorpses += Attack(barbarians, knights);
             }
 
             if (knights.Count > 0)
@@ -29,46 +29,25 @@ namespace Heroes.Models
             return string.Format(OutputMessages.MapFigthBarbariansWin, barbarianCorpses);
         }
 
-        static int KnightsAttack(List<IHero> knights, List<IHero> barbarians)
+        private int Attack(List<IHero> attackers, List<IHero> defenders)
         {
-            int barbarianCorpses = 0;
+            int corpses = 0;
 
-            foreach (var knight in knights)
+            foreach (var attacker in attackers)
             {
-                for (int i = 0; i < barbarians.Count; i++)
+                for (int i = 0; i < defenders.Count; i++)
                 {
-                    barbarians[i].TakeDamage(knight.Weapon.DoDamage());
+                    defenders[i].TakeDamage(attacker.Weapon.DoDamage());
 
-                    if (!barbarians[i].IsAlive)
+                    if (!defenders[i].IsAlive)
                     {
-                        barbarianCorpses++;
-                        barbarians.RemoveAt(i--);
+                        corpses++;
+                        defenders.RemoveAt(i--);
                     }
                 }
             }
 
-            return barbarianCorpses;
-        }
-
-        static int BarbariansAttack(List<IHero> barbarians, List<IHero> knights)
-        {
-            int knightCorpses = 0;
-
-            foreach (var barbarian in barbarians)
-            {
-                for (int i = 0; i < knights.Count; i++)
-                {
-                    knights[i].TakeDamage(barbarian.Weapon.DoDamage());
-
-                    if (!knights[i].IsAlive)
-                    {
-                        knightCorpses++;
-                        knights.RemoveAt(i--);
-                    }
-                }
-            }
-
-            return knightCorpses;
+            return corpses;
         }
     }
 }
