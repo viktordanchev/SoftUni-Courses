@@ -35,7 +35,7 @@ namespace NavalVessels.Models
 
         public override void RepairVessel()
         {
-            if (ArmorThickness < 0)
+            if (ArmorThickness < BattleshipArmorThickness)
                 ArmorThickness = BattleshipArmorThickness;
         }
 
