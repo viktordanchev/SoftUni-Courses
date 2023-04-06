@@ -12,4 +12,4 @@ The "C# Advanced" course builds on the skills of working with the C# language an
 - Work with data streams, files and directories
 
 ### <h2> 🎓My Certificate </h2>
-![Programming Basics January 2022 - Certificate](https://user-images.githubusercontent.com/115632936/230386295-3caed16e-b412-40cb-8f20-2b9faf23c41f.jpeg)
+![Programming Basics January 2022 - Certificate](https://user-images.githubusercontent.com/115632936/230387314-354326b2-c9ab-4ffd-9dc7-c10c27e65db2.jpg)
