@@ -56,3 +56,5 @@
 3. [**InterfacesAndAbstraction**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/03.InterfacesAndAbstraction)
 4. [**Polymorphism**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/04.Polymorphism)
  </details>
+
+(https://user-images.githubusercontent.com/115632936/230386295-3caed16e-b412-40cb-8f20-2b9faf23c41f.jpeg)
