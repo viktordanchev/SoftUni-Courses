@@ -11,3 +11,5 @@ The "C# Advanced" course builds on the skills of working with the C# language an
 - Application of basic algorithms
 - Application of functional programming
 - Work with data streams, files and directories
+
+(https://user-images.githubusercontent.com/115632936/230386295-3caed16e-b412-40cb-8f20-2b9faf23c41f.jpeg)
