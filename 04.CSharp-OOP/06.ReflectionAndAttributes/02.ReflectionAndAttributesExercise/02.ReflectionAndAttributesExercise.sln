@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CommandPattern", "01.CommandPattern\01.CommandPattern.csproj", "{B820DDB5-272D-4CF8-9541-0123B8F0926D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.CommandPattern", "01.CommandPattern\01.CommandPattern.csproj", "{B820DDB5-272D-4CF8-9541-0123B8F0926D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ValidationAttributes", "02.ValidationAttributes\02.ValidationAttributes.csproj", "{8669737F-EE45-421A-98AF-82C408647680}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ValidationAttributes", "02.ValidationAttributes\02.ValidationAttributes.csproj", "{8669737F-EE45-421A-98AF-82C408647680}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
