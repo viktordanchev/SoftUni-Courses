@@ -103,7 +103,7 @@ namespace RobotFactory.Tests
         }
         
         [Test]
-        public void SellRobotMethod_ReturnNull()
+        public void SellRobotMethod_ReturnNullIfTheRobotIsExpensive()
         {
             factory.ProduceRobot("R2-D2", 1000, 5);
 
