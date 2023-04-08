@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotService", "RobotService\RobotService.csproj", "{C9AD4D52-4CCD-466E-B3F6-6329F2072E3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotFactory", "RobotFactory\RobotFactory.csproj", "{3BD5C7EC-C5AC-4E53-A28E-19571C0AF39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotFactory.Tests", "RobotFactory.Tests\RobotFactory.Tests.csproj", "{95145AF2-7901-4AF2-94C9-69DC309A1B01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C9AD4D52-4CCD-466E-B3F6-6329F2072E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9AD4D52-4CCD-466E-B3F6-6329F2072E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9AD4D52-4CCD-466E-B3F6-6329F2072E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD5C7EC-C5AC-4E53-A28E-19571C0AF39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD5C7EC-C5AC-4E53-A28E-19571C0AF39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD5C7EC-C5AC-4E53-A28E-19571C0AF39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD5C7EC-C5AC-4E53-A28E-19571C0AF39B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95145AF2-7901-4AF2-94C9-69DC309A1B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95145AF2-7901-4AF2-94C9-69DC309A1B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95145AF2-7901-4AF2-94C9-69DC309A1B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95145AF2-7901-4AF2-94C9-69DC309A1B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
