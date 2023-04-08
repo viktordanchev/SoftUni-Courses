@@ -1,11 +1,11 @@
-﻿namespace RobotService.Models
+﻿namespace RobotService.Models.Supplements
 {
     public class SpecializedArm : Supplement
     {
         private const int SpecializedArmInterfaceStandard = 10045;
         private const int SpecializedArmBatteryUsage = 10000;
 
-        public SpecializedArm() 
+        public SpecializedArm()
             : base(SpecializedArmInterfaceStandard, SpecializedArmBatteryUsage)
         {
         }

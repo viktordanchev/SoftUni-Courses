@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RobotService.Models
+namespace RobotService.Models.Robots
 {
     public abstract class Robot : IRobot
     {
@@ -54,9 +54,9 @@ namespace RobotService.Models
 
         public int ConvertionCapacityIndex { get; private set; }
 
-        public IReadOnlyCollection<int> InterfaceStandards 
-        { 
-            get { return interfaceStandards.AsReadOnly(); } 
+        public IReadOnlyCollection<int> InterfaceStandards
+        {
+            get { return interfaceStandards.AsReadOnly(); }
         }
 
         public void Eating(int minutes)
@@ -78,7 +78,7 @@ namespace RobotService.Models
                 BatteryLevel -= consumedEnergy;
                 return true;
             }
-            
+
             return false;
         }
 

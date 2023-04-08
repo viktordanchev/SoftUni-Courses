@@ -1,4 +1,4 @@
-﻿namespace RobotService.Models
+﻿namespace RobotService.Models.Robots
 {
     public class IndustrialAssistant : Robot
     {
@@ -6,7 +6,7 @@
         private const int IndustrialAssistantConversionCapacityIndex = 5000;
 
 
-        public IndustrialAssistant(string model) 
+        public IndustrialAssistant(string model)
             : base(model, IndustrialAssistantBatteryCapacity, IndustrialAssistantConversionCapacityIndex)
         {
         }

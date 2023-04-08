@@ -1,6 +1,6 @@
 ﻿using RobotService.Models.Contracts;
 
-namespace RobotService.Models
+namespace RobotService.Models.Supplements
 {
     public abstract class Supplement : ISupplement
     {
