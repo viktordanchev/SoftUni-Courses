@@ -12,4 +12,4 @@ The "C# OOP" course will teach you the principles of object-oriented programming
 - Unit Testing
 
 ### <h2> 🎓My Certificate </h2>
-![C# Advanced January 2023 - Certificate](https://user-images.githubusercontent.com/115632936/230387314-354326b2-c9ab-4ffd-9dc7-c10c27e65db2.jpg)
+![C# OOP February 2023 - Certificate](https://user-images.githubusercontent.com/115632936/230941450-c1cdc9fd-7bbc-4fb5-b8dd-61198112a434.jpg)
