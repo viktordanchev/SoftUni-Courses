@@ -30,6 +30,8 @@
 7. [**Associative Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/07.AssociativeArrays)  
 8. [**Text Processing**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/08.TextProcessing)
 9. [**Regular Expressions**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/09.RegularExpressions)
+10. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/ExamPreparation)
+11. [**FinalExam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/FinalExam)
   </details>
   
 ***
