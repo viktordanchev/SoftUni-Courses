@@ -14,3 +14,6 @@ The basics of **web development** are covered, as well as one of the **most comm
 - Understanding the **interrelationship** between different IT concepts
 - Analysis of **complex problems** and **reduction** to computer-executable steps
 - Working with **different structures (arrays, lists, methods, objects, classes)**
+
+### <h2> 🎓My Certificate </h2> 
+![Programming Fundamentals with C# January 2023 - Certificate](https://user-images.githubusercontent.com/115632936/231412130-4ce7dd45-c260-4701-95e5-264a628ef200.jpg)
