@@ -53,13 +53,13 @@
 <details>
 <summary><h3> Object-oriented programming </summary>
 
-1. [**Inheritance**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/01.Inheritance)
-2. [**Encapsulation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/02.Encapsulation)
-3. [**InterfacesAndAbstraction**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/03.InterfacesAndAbstraction)
-4. [**Polymorphism**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/04.Polymorphism)
-5. [**ExceptionsAndErrorHandling**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/05.ExceptionsAndErrorHandling)
-6. [**ReflectionAndAttributes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/06.ReflectionAndAttributes)
-7. [**UnitTesting**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/07.UnitTesting)
-8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/ExamPreparation)
-9. [**FinalExam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/FinalExam)
+1. [**Inheritance**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/01.Inheritance)
+2. [**Encapsulation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/02.Encapsulation)
+3. [**InterfacesAndAbstraction**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/03.InterfacesAndAbstraction)
+4. [**Polymorphism**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/04.Polymorphism)
+5. [**ExceptionsAndErrorHandling**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/05.ExceptionsAndErrorHandling)
+6. [**ReflectionAndAttributes**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/06.ReflectionAndAttributes)
+7. [**UnitTesting**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/07.UnitTesting)
+8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/ExamPreparation)
+9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
  </details>
