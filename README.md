@@ -21,17 +21,17 @@
  <details>
  <summary><h3> Fundamentals </summary>
 
-1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/01.Basics)
-2. [**Data Types and Variables**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/02.DataTypesAndVariables)
-3. [**Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/03.Arrays)
-4. [**Methods**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/04.Methods)
-5. [**Lists**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/05.Lists)  
-6. [**Objects and Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/06.ObjectsAndClasses)
-7. [**Associative Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/07.AssociativeArrays)  
-8. [**Text Processing**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/08.TextProcessing)
-9. [**Regular Expressions**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/09.RegularExpressions)
-10. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/ExamPreparation)
-11. [**FinalExam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/02.CSharp-Fundamentals/FinalExam)
+1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/01.Basics)
+2. [**Data Types and Variables**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/02.DataTypesAndVariables)
+3. [**Arrays**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/03.Arrays)
+4. [**Methods**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/04.Methods)
+5. [**Lists**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/05.Lists)  
+6. [**Objects and Classes**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/06.ObjectsAndClasses)
+7. [**Associative Arrays**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/07.AssociativeArrays)  
+8. [**Text Processing**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/08.TextProcessing)
+9. [**Regular Expressions**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/09.RegularExpressions)
+10. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/ExamPreparation)
+11. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/02.Fundamentals/FinalExam)
   </details>
   
 ***
