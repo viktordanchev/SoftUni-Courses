@@ -51,7 +51,7 @@
   
 ***
 <details>
-<summary><h3> Object-oriented Programming </summary>
+<summary><h3> Object-oriented programming </summary>
 
 1. [**Inheritance**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/01.Inheritance)
 2. [**Encapsulation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/04.CSharp-OOP/02.Encapsulation)
