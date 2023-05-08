@@ -38,15 +38,15 @@
  <details>
  <summary><h3> Advanced </summary>
 
-1. [**Stacks and Queues**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/01.StacksAndQueues)
-2. [**Multidimentional Arrays**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/02.MultidimensionalArrays)
-3. [**Sets and Dictionaries**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/03.SetsAndDictionariesAdvanced)
-4. [**Streams, Files and Directories**](https://github.com/viktordanchev/Softuni-Software-Engineering-CSharp/tree/main/C%23%20Advanced/04.%20Streams%2C%20Files%20and%20Directories)
-5. [**Functional Programming**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/05.FunctionalProgramming)
-6. [**Defining Classes**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/06.DefiningClasses)
-7. [**Generics**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/07.Generics) 
-8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/ExamPreparation)
-9. [**Final Exam**](https://github.com/viktordanchev/SoftUni-CSharp/tree/main/03.CSharp-Advanced/FinalExam)
+1. [**Stacks and Queues**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/01.StacksAndQueues)
+2. [**Multidimentional Arrays**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/02.MultidimensionalArrays)
+3. [**Sets and Dictionaries**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/03.SetsAndDictionariesAdvanced)
+4. [**Streams, Files and Directories**](https://github.com/viktordanchev/Softuni/tree/main/CSharp/03.Advanced/04.%20Streams%2C%20Files%20and%20Directories)
+5. [**Functional Programming**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/05.FunctionalProgramming)
+6. [**Defining Classes**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/06.DefiningClasses)
+7. [**Generics**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/07.Generics) 
+8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/ExamPreparation)
+9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/FinalExam)
   </details>
   
 ***
