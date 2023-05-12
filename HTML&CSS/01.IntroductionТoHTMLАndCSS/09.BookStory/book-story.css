@@ -1,0 +1,16 @@
+main {
+    width: 400px;
+    background: #dddddd;
+    border: 1px solid #000000;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1{
+    text-align: center;
+}
+
