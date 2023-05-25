@@ -1,0 +1,16 @@
+body {
+    background: lightslategray;
+}
+
+p {
+    width: 300px;
+    padding: 20px;
+    background: #0F4069;
+    color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 2px solid #e6eaef;
+    margin: auto;
+}
