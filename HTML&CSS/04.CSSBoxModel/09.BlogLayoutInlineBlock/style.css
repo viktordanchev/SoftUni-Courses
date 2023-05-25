@@ -1,0 +1,9 @@
+.block{
+    background: red;
+    margin: 5px;
+    padding: 40px;
+}
+
+.inline{
+    background: green;
+}
