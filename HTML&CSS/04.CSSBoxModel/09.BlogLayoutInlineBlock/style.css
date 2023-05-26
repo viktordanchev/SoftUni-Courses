@@ -1,9 +1,27 @@
-.block{
-    background: red;
-    margin: 5px;
-    padding: 40px;
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 40px;
+    background: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
 }
 
-.inline{
-    background: green;
+article {
+    width: 60%;
+    display: inline-block;
+}
+
+img {
+    width: 500px;
+    height: 350px;
+}
+
+aside {
+    display: inline-block;
+    width: 295px;
+    vertical-align: top;
+}
+
+h1, h2 {
+    font-size: 40px;
+    font-family: serif;
 }
