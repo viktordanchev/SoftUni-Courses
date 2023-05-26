@@ -2,8 +2,41 @@ html {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    padding: 40px;
+    margin: 40px;
 }
 
-.heading{
+.heading {
     font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+blockquote {
+    border-left: 3px solid rgb(221, 221, 221);
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.name {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    text-align: left;
+    background: grey;
+    border: 1px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+}
+
+table tbody tr:nth-child(odd) {
+    background: lightgrey;
 }
