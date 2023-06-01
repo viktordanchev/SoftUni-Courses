@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    max-width: 65vw;
+}
+
+section {
+    display: flex;
+}
+
+span {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.notes {
+    flex-direction: column;
+    width: 15%;
+}
+
+.week {
+    width: 85%;
+    flex-wrap: wrap;
+}
+
+.notes span {
+    height: 200px;
+}
+
+.name {
+    width: 100%;
+}
+
+.work {
+    width: 20%;
+}
+
+.holyday {
+    width: 50%;
+}
+
+.name,
+.notes span {
+    font-weight: bold;
+}
