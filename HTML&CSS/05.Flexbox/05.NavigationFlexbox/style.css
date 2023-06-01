@@ -1,0 +1,35 @@
+body {
+    margin: 60px;
+}
+
+body header{
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: Helvetica, sans-serif;
+}
+
+header ul {
+    display: flex;
+    align-items: end;
+    width: 25%;
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+}
+
+header h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    width: 75%;
+}
