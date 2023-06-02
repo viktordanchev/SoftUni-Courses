@@ -1,0 +1,35 @@
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(238, 238, 238);
+    flex-direction: column;
+    padding: 60px 100px;
+}
+
+main h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.page>header {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border-bottom: 3px solid black;
+    font-size: 20px;
+}
+
+article {
+    background: red;
+    width: 45%;
+}
+
+p {
+    display: inline-block;
+    width: 400px;
+}

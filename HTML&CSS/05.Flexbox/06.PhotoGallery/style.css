@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul,
+li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    justify-content: space-between;
+    width: 70%;
+}
+
+li {
+    align-items: center;
+    border: 10px solid black;
+    margin: 5px;
+    padding: 20px 10px;
+}
