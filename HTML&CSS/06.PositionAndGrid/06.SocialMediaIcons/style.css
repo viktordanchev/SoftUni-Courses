@@ -1,0 +1,39 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    margin: 5px;
+    background-color: lightgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fa-facebook-square:hover {
+    color: #3b5998 !important;
+}
+
+.fa-twitter:hover {
+    color: #00acee !important;
+}
+
+.fa-google-plus:hover {
+    color: #db4a39 !important;
+}
+
+.fa-linkedin:hover {
+    color: #0072b1 !important;
+}
+
+.fa-instagram:hover {
+    color: grey !important;
+}
