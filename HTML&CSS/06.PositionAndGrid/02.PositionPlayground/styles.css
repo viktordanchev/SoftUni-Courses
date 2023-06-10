@@ -1,0 +1,28 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+div {
+    height: 800px;
+    position: relative;
+}
+
+.viewport {
+    background-image: linear-gradient(to right, lightblue, lightgreen);
+}
+
+.viewport.second {
+    background-image: linear-gradient(to right, purple, orange);
+}
+
+.card {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+i {
+    position: absolute;
+    left: 475px;
+    bottom: 12px;
+}
