@@ -1,35 +1,83 @@
 .page {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(238, 238, 238);
-    flex-direction: column;
-    padding: 60px 100px;
+    margin: 50px 150px;
 }
 
-main h1,
-h2 {
-    font-family: Georgia, serif;
+body {
+    background-color: rgb(238, 238, 238);
 }
 
 img {
     background-color: rgb(255, 255, 255);
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    border-left: 3px solid lightgray;
+    float: right;
+    width: 40%;
+    font-style: italic;
+}
+
+a {
+    color: rgb(0, 153, 0);
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+header>h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+header {
+    border-bottom: 3px solid black;
+    width: 100%;
+}
+
+img {
     border: 3px solid black;
     padding: 5px;
 }
 
-.page>header {
-    text-transform: uppercase;
-    font-family: sans-serif;
-    border-bottom: 3px solid black;
-    font-size: 20px;
+main {
+    width: 70%;
+    margin-right: 20px;
 }
 
-article {
-    background: red;
-    width: 45%;
+.first-image {
+    float: right;
+    margin-left: 10px;
 }
 
-p {
-    display: inline-block;
-    width: 400px;
+.second-image {
+    float: left;
+    margin-right: 10px;
+}
+
+article p {
+    font-size: 18px;
+}
+
+.author {
+    text-align: end;
+    vertical-align: bottom;
+}
+
+blockquote>p {
+    margin: 0px 0px 20px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    margin-bottom: 5px;
 }
