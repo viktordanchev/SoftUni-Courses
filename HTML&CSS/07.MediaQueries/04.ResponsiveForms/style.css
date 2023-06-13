@@ -1,0 +1,115 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 385px;
+    height: 175px;
+    box-shadow: rgba(27, 31, 35, 1) 0px 0px 0px 1px;
+    border-radius: 3px;
+}
+
+section>p {
+    width: 35%;
+    height: 33px;
+    position: absolute;
+    top: -18px;
+    box-shadow: rgba(27, 31, 35, 1) 0px 0px 0px 1px;
+    border-radius: 3px;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    padding: 7px 0px 7px 10px;
+}
+
+form {
+    margin: 35px 20px;
+    text-align: start;
+}
+
+form>div {
+    margin: 15px 0px;
+}
+
+form>div>label {
+    font-weight: bold;
+}
+
+form>div>span {
+    display: inline-block;
+    width: 260px;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.02) 1px 1px 3px 0px, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+    border-radius: 3px;
+    text-align: end;
+}
+
+form>div>span>input {
+    border: none;
+    width: 85%;
+    height: 90%;
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    height: 30px;
+    width: 60px;
+    border: 0px;
+    background-color: rgb(48, 45, 45);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form>div>span>i {
+    margin: 6px 9px;
+}
+
+form>div>span>input:focus {
+    outline: none;
+}
+
+@media (max-width: 800px) {
+    section {
+        width: 385px;
+        height: 220px;
+    }
+
+    form>div>span {
+        width: 100%;
+        height: 30px;
+    }
+
+    form>div>span>i {
+        margin: 7px 22px 7px 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        width: 325px;
+        height: 220px;
+    }
+
+    form>div>span {
+        width: 100%;
+        height: 30px;
+    }
+
+    form>div>span>i {
+        margin: 7px 15px 7px 0px;
+    }
+}
