@@ -1,0 +1,178 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: "Arial", sans-serif;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header>h1 {
+    width: 20%;
+    text-align: center;
+}
+
+header>nav {
+    width: 31%;
+}
+
+header>nav>ul>li {
+    display: inline-block;
+    font-size: 27px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+section.home {
+    display: flex;
+    height: 600px;
+    background-color: #85dcff;
+    justify-content: space-between;
+}
+
+section.home img {
+    margin-right: 150px;
+}
+
+section.home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 150px;
+    padding: 0px 40px;
+}
+
+section.home .container h3 {
+    font-size: 40px;
+}
+
+section.home .container p {
+    font-size: 19px;
+    margin: 35px 0px;
+    padding-right: 50px;
+}
+
+button {
+    border: 1px solid black;
+    height: 70px;
+    border-radius: 10px;
+}
+
+section.home .container button.donation {
+    margin-right: 30px;
+    width: 35%;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+section.home .container button.join {
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: black;
+}
+
+section.info {
+    height: 600px;
+    margin: 30px 0px;
+}
+
+section.info>h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+section.info>p {
+    text-align: center;
+    font-size: 21px;
+    margin: 40px 600px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+section.info .container {
+    display: flex;
+    justify-content: space-around;
+    height: 60%;
+}
+
+section.info .container article {
+    text-align: center;
+    width: 415px;
+}
+
+section.info .container article i {
+    font-size: 150px;
+    margin: 40px 0px;
+    color: #85dcff;
+}
+
+section.info .container article h4 {
+    font-size: 25px;
+}
+
+section.info .container article p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 19px;
+    margin-top: 40px;
+}
+
+section.mission {
+    height: 700px;
+    padding: 50px 0px;
+    text-align: center;
+    background-color: #85dcff;
+}
+
+section.mission h3 {
+    text-align: center;
+    font-size: 36px;
+}
+
+section.mission ul {
+    display: grid;
+    grid-template-areas:
+        "first-col second-col"
+        "first-col second-col"
+        "first-col second-col";
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0px;
+    gap: 20px;
+}
+
+section.mission ul li.first-col{
+    grid-area: first-col;
+}
+
+section.mission ul li.second-col{
+    grid-area: second-col;
+}
+
+section.mission ul li {
+    font-size: 21px;
+}
+
+section.mission button {
+    color: white;
+    font-size: 20px;
+    vertical-align: middle;
+    background-color: black;
+    width: 15%;
+}
