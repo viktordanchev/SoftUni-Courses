@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Inter";
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.container {
+    position: relative;
+    width: 70%;
+    height: 620px;
+    margin: 30px auto;
+}
+
+section.container .plans {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+section.container .plans .plan {
+    padding: 25px;
+    width: 395px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.container .plans .plan button {
+    background-color: #000000;
+    border: none;
+    width: 110px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+button a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+section.container .plans .plan h2 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+span {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+section.container .plans .plan p.info {
+    
+    font-size: 12px;
+    color: #5e5e5e;
+}
+
+section.container .plans .plan ul li {
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+i {
+    margin-right: 5px;
+}
+
+section.container .plans .plan.basic {
+    height: 465px;
+}
+
+section.container .plans .plan.standard {
+    height: 510px;
+}
+
+section.container .plans .plan.premium {
+    height: 480px;
+}
