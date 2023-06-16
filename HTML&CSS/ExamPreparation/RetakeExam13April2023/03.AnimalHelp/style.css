@@ -148,21 +148,13 @@ section.mission h3 {
 section.mission ul {
     display: grid;
     grid-template-areas:
-        "first-col second-col"
-        "first-col second-col"
-        "first-col second-col";
+        "first fourth"
+        "second fifth"
+        "third sixth";
     flex-wrap: wrap;
     justify-content: center;
     padding: 40px 0px;
     gap: 20px;
-}
-
-section.mission ul li.first-col{
-    grid-area: first-col;
-}
-
-section.mission ul li.second-col{
-    grid-area: second-col;
 }
 
 section.mission ul li {
