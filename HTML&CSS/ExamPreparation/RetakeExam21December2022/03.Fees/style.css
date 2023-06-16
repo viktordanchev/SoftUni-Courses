@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('taxes.css');
+@import url('type.css');
+@import url('sponsor.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    max-width: 90%;
+    margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header img {
+    width: 400px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+header nav {
+    width: 25%;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #54546d;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #54546d;
+    height: 80px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 22px;
+    color: #8c8ba7;
+    padding: 24px;
+}

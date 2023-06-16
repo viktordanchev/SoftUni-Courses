@@ -1,0 +1,21 @@
+.sponsor {
+    margin: 120px 60px;
+    height: 300px;
+}
+
+.sponsor h2 {
+    font-size: 28px;
+    color: #54546d;
+}
+
+.sponsor p {
+    font-size: 21px;
+    margin-top: 20px;
+    color: #54546d;
+}
+
+.sponsor img {
+    display: inline-block;
+    float: right;
+    height: 150px;
+}

@@ -1,0 +1,191 @@
+.taxes {
+    position: relative;
+    background-color: #54546d;
+    height: 370px;
+}
+
+.taxes img {
+    position: absolute;
+    height: 230px;
+    top: 50%;
+    left: -4.7%;
+    transform: translate(+0%, -50%);
+}
+
+.taxes h2 {
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: normal;
+    padding-top: 65px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cards .course {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 14px;
+    width: 28.5%;
+    height: 370px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cards .course h3 {
+    margin-top: 35px;
+    font-size: 30px;
+    color: #54546d;
+}
+
+.cards .course p {
+    color: #6b6b6e;
+}
+
+.cards .course .price {
+    height: 30%;
+}
+
+.cards .course.basics>p {
+    position: relative;
+    bottom: 8%;
+    font-size: 23px;
+}
+
+.cards .course.basics button {
+    position: relative;
+    bottom: 5%;
+    font-size: 18px;
+    width: 46%;
+    margin: 0px auto;
+    border: none;
+    background-color: #9a5dc6;
+    height: 55px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cards .course.basics button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.cards .course.basics .price {
+    background: linear-gradient(to right, #029a3c, #4bd680);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards .course.basics .price h5 {
+    color: white;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.cards .course.basics .price p {
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.cards .course.fundamentals .course-info {
+    font-size: 20px;
+    padding: 0px 20px;
+}
+
+.cards .course.fundamentals .tax-info {
+    font-size: 19px;
+    padding: 0px 40px;
+}
+
+.cards .course.fundamentals .price {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    background: linear-gradient(to right, #4c6b87, #619acf);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards .course.fundamentals .price .first-price, .second-price {
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.cards .course.fundamentals .price .first-price h5 {
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.cards .course.fundamentals .price .first-price p {
+    color: white;
+    font-size: 17px;
+}
+
+.cards .course.fundamentals .price .second-price h5 {
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.cards .course.fundamentals .price .second-price p {
+    color: white;
+    font-size: 17px;
+}
+
+.cards .course.professional .course-info {
+    font-size: 20px;
+    padding: 0px 29px;
+}
+
+.cards .course.professional .tax-info {
+    font-size: 19px;
+    padding: 0px 40px;
+}
+
+.cards .course.professional .price {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    background: linear-gradient(to right, #4a37a5, #8c7de1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards .course.professional .price .first-price, .second-price {
+    width: 50%;
+    padding: 10px 0px;
+}
+
+.cards .course.professional .price .first-price h5 {
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.cards .course.professional .price .first-price p {
+    color: white;
+    font-size: 17px;
+}
+
+.cards .course.professional .price .second-price h5 {
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.cards .course.professional .price .second-price p {
+    color: white;
+    font-size: 17px;
+}
