@@ -1,0 +1,42 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background: url('image/fitness-main.jpg');
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    color: white;
+}
+
+.home-page ul {
+    font-size: 12px;
+    display: flex;
+    align-self: flex-end;
+    gap: 25px;
+    margin: 15px 30px;
+}
+
+.home-page h1 {
+    font-size: 37px;
+    letter-spacing: 6px;
+    margin-top: 50px;
+}
+
+.home-page p {
+    font-size: 12px;
+    padding: 0px 280px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-page button {
+    margin-top: 20px;
+    background-color: #d01919;
+    border: none;
+    height: 22px;
+    width: 85px;
+    font-size: 9px;
+    color: white;
+    border-radius: 5px;
+}

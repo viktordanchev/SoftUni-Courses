@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('homepage.css');
+@import url('welcome.css');
+@import url('coaches.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'PT Sans', 'PT Serif', sans-serif;
+}
+
+body{
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #d01919;
+    padding: 0px 30px;
+    font-size: 13px;
+}
+
+header nav ul {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+header p, li {
+    color: white;
+}
+
+header p i {
+    margin-right: 5px;
+}
+
+footer p {
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
+    background-color: #d01919;
+    height: 25px;
+}
+
+hr {
+    border: 1px solid #d01919;
+    margin: 0px 435px;
+}

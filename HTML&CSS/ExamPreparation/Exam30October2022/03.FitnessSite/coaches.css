@@ -1,0 +1,53 @@
+.coaches {
+    background-color: #efefef;
+}
+
+.coaches h2 {
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+    padding: 20px 0px;
+}
+
+.coaches .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.coaches .container article {
+    width: 30%;
+    text-align: center;
+}
+
+.coaches .container img {
+    width: 210px;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.coaches .container article h3 {
+    font-size: 13px;
+    margin: 5px;
+}
+
+.coaches .container article h3:after {
+    display: block;
+    content: ' ';
+    width: 2px;
+    height: 6px;
+    border: 2px;
+    color: #d01919;
+}
+
+.coaches .container article h4 {
+    font-size: 11px;
+    margin: 5px;
+    color: #d01919;
+}
+
+.coaches .container article p {
+    font-size: 11px;
+    padding: 0px 40px;
+    margin-bottom: 40px;
+    color: #abaaad;
+}

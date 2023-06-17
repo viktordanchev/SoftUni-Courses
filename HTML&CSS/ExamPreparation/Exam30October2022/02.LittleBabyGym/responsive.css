@@ -1,0 +1,34 @@
+@media (max-width:600px) {
+    .site-main {
+        margin: 0px;
+    }
+
+    .site-navigation ul {
+        display: none;
+    }
+
+    .site-logos {
+        max-width: 600px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        flex-shrink: 3;
+        flex-grow: 1;
+    }
+
+    .site-logo-container {
+        display: flex;
+        
+    }
+
+    .site-logo:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    .site-logo {
+        width: 300px;
+    }
+}

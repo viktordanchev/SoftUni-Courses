@@ -1,0 +1,39 @@
+.welcome h2 {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.welcome .container article {
+    width: 30%;
+    text-align: center;
+}
+
+.welcome .container img {
+    width: 40px;
+    height: 40px;
+}
+
+.welcome .container article h3 {
+    color: #d01919;
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+.welcome .container article h3:after {
+    display: block;
+    content: ' ';
+    width: 2px;
+    height: 6px;
+    border: 2px;
+    color: #d01919;
+}
+
+.welcome .container article p {
+    font-size: 15px;
+}
