@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    font-family: 'Open Sans';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    display: flex;
+    max-width: 1000px;
+    height: 500px;
+    border: 1px solid rgb(148, 148, 148);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.45);
+}
+
+section img {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+section .container {
+    text-align: center;
+    position: relative;
+    width: 50%;
+}
+
+section .container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 40px 0px;
+}
+
+section .container form {
+    text-align: center;
+}
+
+section .container label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+section .container form.gender input,
+select {
+    width: 30%;
+    margin: 0px 15px;
+}
+
+section .container form.weight input {
+    width: 80%;
+    height: 27px;
+    padding-left: 5px;
+}
+
+section .container form.height input {
+    width: 42%;
+    height: 23px;
+    padding: 5px;
+    margin: 0px 7px;
+    border-radius: 5px;
+    border: 1px solid #969595;
+}
+
+section .container button.calculate {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 88%;
+    border: none;
+    height: 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #05a2d3;
+    box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.45);
+}
+
+section .container button.green {
+    width: 33%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #86d862;
+    font-size: 16px;
+    gap:10px;
+}
+
+section .container button.normal {
+    width: 30%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+section .container .buttons {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
