@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('info-page.css');
+@import url('statistic.css');
+@import url('site-info.css');
+@import url('download-links.css');
+@import url('plans-info.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Inter';
+}
+
+body {
+    width: 80%;
+    margin: 0px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 170px;
+    height: 100px;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header .buttons button {
+    border: none;
+    font-size: 16px;
+}
+
+header .buttons button a {
+    text-decoration: none;
+    color: black;
+}
+
+header button.signup {
+    background-color: #ade2df;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+header button.login {
+    background-color: white;
+}
+
+footer {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+}
+
+footer ul li {
+    font-size: 17px;
+}
+
+footer ul li a {
+    color: black;
+}

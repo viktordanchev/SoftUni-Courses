@@ -1,0 +1,25 @@
+.statistic {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistic article {
+    height: 55%;
+    text-align: center;
+    border-left: 1px solid rgb(224, 224, 224);
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.statistic article h2 {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.statistic article p{
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+}

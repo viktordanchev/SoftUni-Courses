@@ -1,0 +1,154 @@
+.plans-info {
+    height: 800px;
+    padding: 55px 0px;
+    background-color: #f3f5fa;
+}
+
+.plans-info header {
+    display: flex;
+    flex-direction: column;
+}
+
+.plans-info header h1 {
+    background-color: #ade2df;
+    width: 130px;
+    height: 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px;
+}
+
+.plans-info header p {
+    font-size: 42px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.plans-info>article {
+    display: flex;
+    height: 70%;
+    margin-top: 60px;
+    border-radius: 8px;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.plans-info article .container {
+    display: flex;
+    width: 60%;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.plans-info article .container article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 0px;
+    padding: 0px 30px;
+    border-left: 1px solid rgb(224, 224, 224);
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.plans-info article .container article h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.plans-info article .container article p {
+    font-size: 17px;
+}
+
+.plans-info article .container article p.price {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.plans-info article .container article p span {
+    font-size: 17px;
+    margin-left: 10px;
+    font-weight: 500;
+
+}
+
+.plans-info article .container article hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgb(224, 224, 224);
+}
+
+.plans-info article .container article ul {
+    margin: 20px 0px;
+}
+
+.plans-info article .container article ul li {
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.plans-info article .container article ul li i {
+    margin-right: 5px;
+}
+
+.plans-info article .container article button {
+    border: none;
+    height: 65px;
+    background-color: #ade2df;
+    border-radius: 8px;
+}
+
+.plans-info article .container article button a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.plans-info article .expand {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 30px;
+    background-color: #ade2df;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.plans-info article .expand h1 {
+    text-align: center;
+}
+
+.plans-info article .expand p {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.plans-info article .expand ul {
+    margin-top: 30px;
+}
+
+.plans-info article .expand ul li {
+    margin: 10px 0px;
+}
+
+.plans-info article .expand ul li i {
+    margin-right: 5px;
+}
+
+.plans-info article .expand button {
+    border: none;
+    height: 65px;
+    background-color: black;
+    border-radius: 8px;
+    margin-top: 145px;
+}
+
+.plans-info article .expand button a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+}
