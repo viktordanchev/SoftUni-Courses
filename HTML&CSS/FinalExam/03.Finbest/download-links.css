@@ -1,0 +1,46 @@
+.download-links {
+    height: 500px;
+    background-color: #ade2df;
+    text-align: center;
+    padding: 0px 400px;
+}
+
+.download-links h1 {
+    font-size: 64px;
+    padding-top: 80px;
+    font-weight: 600;
+}
+
+.download-links p {
+    font-size: 21px;
+    margin-bottom: 40px;
+    padding: 0px 20px;
+}
+
+.download-links button {
+    border: none;
+    background-color: black;
+    height: 60px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.download-links button a {
+    text-decoration: none;
+    color: white;
+}
+
+.download-links button i {
+    color: white;
+    margin-right: 10px;
+}
+
+.download-links button.ios {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.download-links button.android {
+    width: 250px;
+}

@@ -1,0 +1,84 @@
+@media (max-width:600px) {
+    .home-cta-btn {
+        padding: 0px;
+        font-size: 18px;
+        width: 190px;
+        height: 45px;
+    }
+
+    .home-links-container {
+        margin-left: 35px;
+    }
+
+    .home-hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-hero-text-container {
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .home-image1 {
+        width: 95%;
+        object-fit: contain;
+    }
+
+    .home-text {
+        width: 100%;
+    }
+
+    .home-cta-btn2 {
+        padding: 0px;
+        width: 37%;
+        height: 50px;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .home-features {
+        height: 1500px;
+    }
+
+    .home-feature-card,
+    .home-feature-card1,
+    .home-feature-card2 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .home-text05,
+    .home-text06,
+    .home-text07 {
+        font-size: 16px;
+    }
+
+    .home-container {
+    }
+
+    .home-heading-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+
+    .home-cards-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home-stats {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
