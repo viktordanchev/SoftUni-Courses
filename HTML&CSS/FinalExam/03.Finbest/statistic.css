@@ -21,5 +21,5 @@
 .statistic article p{
     width: 90%;
     font-size: 18px;
-    text-align: center;
+    margin: 0px auto;
 }
