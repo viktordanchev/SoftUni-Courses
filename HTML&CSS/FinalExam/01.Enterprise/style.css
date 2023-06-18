@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #d9d9d9;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px;
+    gap: 40px;
+}
+
+.cards img {
+    width: 100%;
+    height: 40%;
+}
+
+.cards .card {
+    display: flex;
+    flex-direction: column;
+    height: 760px;
+    box-shadow: 9px 5px 16px 0px rgba(0,0,0,0.15);
+}
+
+.cards .card .container {
+    margin: 50px;
+}
+
+.cards .card .container h1 {
+    font-size: 20px;
+    color: #656666;
+}
+
+.cards .card .container h2 {
+    font-weight: 300;
+    font-size: 29px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.cards .card .container>p {
+    color: #616161;
+    font-size: 20px;
+    padding-bottom: 35px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid black;
+}
+
+.cards .card .container .person{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .card .container .person img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.cards .card .container .person p {
+    font-size: 20px;
+    align-self: center;
+    font-weight: 300;
+    color: #afb2b8;
+}
+
+.cards .card .container .person p.name {
+    color: black;
+    margin-right: 180px;
+}
