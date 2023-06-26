@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=HTMLCSS&fontSize=70&fontAlignY=25&descSize=70&descAlignY=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=HTML and CSS&fontSize=90&fontAlignY=40"/>
 
 ### <h2> 📑Course Description </h2>
 The "C# OOP" course will teach you the principles of object-oriented programming (OOP), working with classes and objects, using object-oriented modeling, and building class hierarchies. Basic principles of OOP such as abstraction (interfaces, abstract classes), encapsulation, inheritance and polymorphism will be studied. We will go into the most commonly used design patterns (creational, structural and behavioral design patterns). We will be introduced to SOLID principles for object-oriented software design. We will look at various debugging techniques. We will learn how to create and use decorators. We will focus on unit testing (writing unit tests) and the concept of Test Driven Development (TDD).
