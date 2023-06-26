@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=HTMLandCSS&fontSize=70&fontAlignY=40"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=HTML&nbsp&nbspCSS&fontSize=90&fontAlignY=40"/>
 
 ### <h2> 📑Course Description </h2>
 The aim of the course is to provide basic knowledge of web technologies and, more specifically, familiarity with HTML5 and CSS3. Basic HTML tags, paragraphs, lists, tables, forms, controls, and semantic HTML tags are studied. Emphasis is on basic CSS selectors and styles, working with classes, presentation rules, positioning and layout rules in CSS. The course emphasizes hands-on HTML and CSS exercises that involve you in real-world web design projects, implementing site fragments, and creating complete modern websites with a good look, modern structure, and mobile support.
