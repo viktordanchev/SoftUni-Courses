@@ -63,3 +63,16 @@
 8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/ExamPreparation)
 9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
  </details>
+
+<summary><h3> HTML&CSS </summary>
+
+1. [**Introduction to HTML & CSS**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/01.Introduction%D0%A2oHTML%D0%90ndCSS)
+2. [**HTML Structure**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/02.HTMLStructure)
+3. [**CSS & Typography**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/03.CSS%26Typography)
+4. [**CSS Box Model**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/04.CSSBoxModel)
+5. [**Flexbox**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/05.Flexbox)
+6. [**Position & Grid**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/06.PositionAndGrid)
+7. [**Media Queries**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/07.MediaQueries)
+8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/ExamPreparation)
+9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/FinalExam)
+ </details>
