@@ -30,8 +30,8 @@
 7. [**Associative Arrays**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/07.AssociativeArrays)  
 8. [**Text Processing**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/08.TextProcessing)
 9. [**Regular Expressions**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/09.RegularExpressions)
-10. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/ExamPreparation)
-11. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/FinalExam)
+10. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/ExamPreparation)
+11. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/02.Fundamentals/FinalExam)
   </details>
   
 ***
@@ -55,13 +55,13 @@
 
 1. [**Inheritance**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/01.Inheritance)
 2. [**Encapsulation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/02.Encapsulation)
-3. [**InterfacesAndAbstraction**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/03.InterfacesAndAbstraction)
+3. [**Interfaces and Abstraction**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/03.InterfacesAndAbstraction)
 4. [**Polymorphism**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/04.Polymorphism)
-5. [**ExceptionsAndErrorHandling**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/05.ExceptionsAndErrorHandling)
-6. [**ReflectionAndAttributes**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/06.ReflectionAndAttributes)
-7. [**UnitTesting**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/07.UnitTesting)
-8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/ExamPreparation)
-9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
+5. [**Exception Handling**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/05.ExceptionsAndErrorHandling)
+6. [**Reflection and Attributes**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/06.ReflectionAndAttributes)
+7. [**Unit Testing**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/07.UnitTesting)
+8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/ExamPreparation)
+9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
  </details>
 
 ***
@@ -75,6 +75,6 @@
 5. [**Flexbox**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/05.Flexbox)
 6. [**Position & Grid**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/06.PositionAndGrid)
 7. [**Media Queries**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/07.MediaQueries)
-8. [**ExamPreparation**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/ExamPreparation)
-9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/FinalExam)
+8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/ExamPreparation)
+9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/FinalExam)
  </details>
