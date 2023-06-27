@@ -64,6 +64,8 @@
 9. [**FinalExam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
  </details>
 
+***
+<details>
 <summary><h3> HTML&CSS </summary>
 
 1. [**Introduction to HTML & CSS**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/01.Introduction%D0%A2oHTML%D0%90ndCSS)
