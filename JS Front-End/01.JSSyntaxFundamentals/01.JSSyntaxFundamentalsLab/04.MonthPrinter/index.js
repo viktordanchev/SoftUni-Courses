@@ -1,5 +1,5 @@
 function printMonth(num) {
-  let month = "Error!";
+  let month;
 
   switch (num) {
     case 1:
@@ -37,6 +37,9 @@ function printMonth(num) {
       break;
     case 12:
       month = "December";
+      break;
+    default:
+      month = "Error!";
       break;
   }
 
