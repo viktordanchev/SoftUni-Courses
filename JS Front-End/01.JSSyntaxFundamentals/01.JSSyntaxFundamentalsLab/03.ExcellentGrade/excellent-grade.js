@@ -1,11 +1,11 @@
 function checkGrade(grade) {
-    let output = 'Excellent';
+  let output = "Excellent";
 
-    if (grade < 5.50) {
-        output = 'Not excellent';
-    }
+  if (grade < 5.5) {
+    output = "Not excellent";
+  }
 
-    console.log(output);
+  console.log(output);
 }
 
 checkGrade(5.49);
