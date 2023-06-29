@@ -1,11 +1,7 @@
 function solve(text, startIndex, count) {
-  let array = "";
-  let output;
-  for (let index = startIndex; index <= count; index++) {
-    array += text[index];
-  }
+  let result = text.substring(startIndex, startIndex + count);
 
-  console.log(array);
+  console.log(result);
 }
 
 solve("ASentence", 1, 8);
