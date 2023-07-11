@@ -1,15 +1,46 @@
 function solve(arr) {
   class Movie {
     constructor(name, director, date) {
-      name, director, date;
+      this.name = name;
+      this.director = director;
+      this.date = date;
     }
   }
-  const movies = {};
+
+  const movies = [];
 
   while (arr.length > 0) {
-    const line = arr.shift().split(" ");
-    const command = line[0];
+    const line = arr.shift();
+
+    if (line.includes("addMovie")) {
+      const name = line.substring(9);
+      movies.push(new Movie(name));
+    } else if (line.includes("directedBy")) {
+      const data = line.replace("directedBy", "|").split(" | ");
+      const name = data[0];
+      const director = data[1];
+      const movie = movies.find((movie) => movie.name === name);
+
+      if (movie !== undefined) {
+        movie.director = director;
+      }
+    } else {
+      const data = line.replace("onDate", "|").split(" | ");
+      const name = data[0];
+      const date = data[1];
+      const movie = movies.find((movie) => movie.name === name);
+
+      if (movie !== undefined) {
+        movie.date = date;
+      }
+    }
   }
+
+  movies.forEach((movie) => {
+    if (movie.director !== undefined || movie.director !== undefined) {
+      console.log(JSON.stringify(movie));
+    }
+  });
 }
 
 solve([
