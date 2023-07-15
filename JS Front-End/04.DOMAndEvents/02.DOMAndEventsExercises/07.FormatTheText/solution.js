@@ -4,11 +4,16 @@ function solve() {
     document.getElementById("input").value.split(".")
   ).filter((sentence) => sentence.length > 1);
 
-  for (let index = 0; index < sentences.length; index++) {
+  const end = Math.ceil(sentences.length / 3);
+  for (let index = 0; index < end; index++) {
     const p = output.appendChild(document.createElement("p"));
 
-    if (index % 3 === 1) {
-      p.appendChild(document.createTextNode(sentences.shift()));
+    for (let index = 0; index < 3; index++) {
+      p.appendChild(document.createTextNode(sentences.shift() + "."));
+
+      if (sentences.length == 0) {
+        break;
+      }
     }
   }
 }
