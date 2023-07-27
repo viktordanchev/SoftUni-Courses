@@ -1,5 +1,7 @@
 function attachEvents() {
   const url = "http://localhost:3030/jsonstore/messenger";
+  const textarea = document.getElementById("messages");
+
   document.getElementById("submit").addEventListener("click", send);
   document.getElementById("refresh").addEventListener("click", get);
 
@@ -20,18 +22,17 @@ function attachEvents() {
   }
 
   function get() {
+    textarea.value = "";
+
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-        const textarea = document.getElementById("messages");
-
+        const array = [];
         for (const key in res) {
-          const author = Object.entries(res[key])[0][1];
-          const content = Object.entries(res[key])[1][1];
-
-          textarea.value += `${author}: ${content}` + "\n";
+          array.push(`${res[key]["author"]}: ${res[key]["content"]}`);
         }
+
+        textarea.value += array.join("\n");
       });
   }
 }
