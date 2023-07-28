@@ -31,25 +31,25 @@ function attachEvents() {
     });
   }
 
-  async function loadContacts() {
+  function loadContacts() {
     ul.innerHTML = "";
 
-    try {
-      const res = await (await fetch(url)).json();
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        for (const key in res) {
+          const li = ul.appendChild(document.createElement("li"));
+          li.id = res[key]["_id"];
+          li.textContent = `${res[key]["person"]}: ${res[key]["phone"]}`;
+        }
 
-      for (const key in res) {
-        const li = ul.appendChild(document.createElement("li"));
-        li.id = res[key]["_id"];
-        li.textContent = `${res[key]["person"]}: ${res[key]["phone"]}`;
-      }
-    } catch (error) {}
+        Array.from(document.querySelectorAll("#phonebook li")).forEach((li) => {
+          const button = li.appendChild(document.createElement("button"));
+          button.textContent = "Delete";
 
-    Array.from(document.querySelectorAll("#phonebook li")).forEach((li) => {
-      const button = li.appendChild(document.createElement("button"));
-      button.textContent = "Delete";
-
-      button.addEventListener("click", deleteContact);
-    });
+          button.addEventListener("click", deleteContact);
+        });
+      });
   }
 }
 
