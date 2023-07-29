@@ -1,3 +1,3 @@
 function lockedProfile() {
-    console.log('TODO...')
+  console.log("TODO...");
 }
