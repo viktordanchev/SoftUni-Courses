@@ -1,11 +1,18 @@
-function lockedProfile() {
+async function lockedProfile() {
   const url = "http://localhost:3030/jsonstore/advanced/profiles";
   const main = document.getElementById("main");
   main.innerHTML = "";
 
-  solve();
+  await loadData();
 
-  async function solve() {
+  Array.from(document.querySelectorAll("div.profile")).forEach((profile) => {
+    const button = profile.getElementsByTagName("button")[0];
+    button.addEventListener("click", () => {
+      action(profile, button);
+    });
+  });
+
+  async function loadData() {
     let count = 1;
     const res = await (await fetch(url)).json();
 
@@ -32,6 +39,22 @@ function lockedProfile() {
 
       main.innerHTML += profileHtml;
       count++;
+    }
+  }
+
+  function action(profile, button) {
+    if (button.textContent === "Show more") {
+      if (!profile.querySelector([`input[value="unlock"]`]).checked) {
+        return;
+      }
+      profile.querySelector(".profile>div").classList.remove("hiddenInfo");
+      button.textContent = "Hide it";
+    } else {
+      if (!profile.querySelector([`input[value="unlock"]`]).checked) {
+        return;
+      }
+      profile.querySelector(".profile>div").classList.add("hiddenInfo");
+      button.textContent = "Show more";
     }
   }
 }
