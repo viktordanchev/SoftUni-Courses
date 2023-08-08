@@ -15,7 +15,7 @@
 5. [**While Loop**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/01.Basics/05.WhileLoops)
 6. [**Nested Loops**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/01.Basics/06.NestedLoops)
 7. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/01.Basics/FinalExam)
- </details>
+</details>
  
 ***
  <details>
@@ -47,7 +47,7 @@
 7. [**Generics**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/07.Generics) 
 8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/ExamPreparation)
 9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/03.Advanced/FinalExam)
-  </details>
+ </details>
   
 ***
 <details>
@@ -78,3 +78,17 @@
 8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/ExamPreparation)
 9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/HTML%26CSS/FinalExam)
  </details>
+
+ ***
+ <details>
+ <summary><h3> JS Front-End </summary>
+
+1. [**JS Syntax Fundamentals**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/01.JSSyntaxFundamentals)
+2. [**Functions and Statements**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/02.FunctionsAndStatements)
+3. [**Objects and Classes**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/03.ObjectsAndClasses)
+4. [**DOM and Events**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/04.DOMAndEvents)
+5. [**HTTP and REST**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/05.HTTPAndREST)
+6. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/ExamPreparation)
+7. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/FinalExam)
+ </details>
+
