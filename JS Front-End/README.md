@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=JSFront-End&fontSize=90&fontAlignY=40"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=JS&nbsp;Front-End&fontSize=90&fontAlignY=40"/>
 
 ### <h2> 📑Course Description </h2>
 This course will provide basic knowledge of the JavaScript language, such as the basics of syntax, working with arrays, matrices, objects, classes, and writing functions. The course will develop algorithmic thinking. After successfully completing this course, you will be able to work with the DOM tree, manipulate it and work with "events". Functional and OOP approaches to JavaScript programming will be covered. HTTP and REST data transfer concepts will be studied.
