@@ -1,5 +1,6 @@
 function solve() {
   const url = "http://localhost:3030/jsonstore/tasks";
+  let currId = "";
 
   const inputItems = {
     name: document.querySelector("#name"),
@@ -16,6 +17,9 @@ function solve() {
 
   items["loadButton"].addEventListener("click", printAllVacations);
   items["addButton"].addEventListener("click", addVacation);
+  items["editButton"].addEventListener("click", (event) => {
+    editVacation(event);
+  });
 
   function addVacation() {
     if (Object.values(inputItems).some((value) => value.value == "")) {
@@ -29,11 +33,13 @@ function solve() {
 
     fetch(url, { method: "post", body: JSON.stringify({ name, days, date }) });
 
+    printAllVacations();
     clearInputs();
   }
 
   async function printAllVacations() {
-    const res = await (await fetch(url)).json();
+    const res = await getAllVacations(url);
+    console.log(res);
     items["divList"].innerHTML = "";
 
     for (const key in res) {
@@ -48,7 +54,7 @@ function solve() {
         createElement("button", "change-btn", "Change")
       );
       changeButton.addEventListener("click", () => {
-        edit(divContainer, res[key]["_id"]);
+        change(divContainer, res[key]["_id"]);
       });
 
       const doneButton = divContainer.appendChild(
@@ -60,33 +66,45 @@ function solve() {
     }
   }
 
+  async function getAllVacations(url) {
+    return await (await fetch(url)).json();
+  }
+
+  async function editVacation(event) {
+    event.preventDefault();
+    items["addButton"].disabled = false;
+    items["editButton"].disabled = true;
+
+    await fetch(`${url}/${currId}`, {
+      method: "put",
+      body: JSON.stringify({
+        name: inputItems["name"].value,
+        days: inputItems["days"].value,
+        date: inputItems["date"].value,
+        _id: currId,
+      }),
+    });
+
+    printAllVacations();
+    clearInputs();
+  }
+
   function del(divContainer, id) {
     divContainer.remove();
     fetch(`${url}/${id}`, { method: "delete" });
   }
 
-  function edit(divContainer, id) {
+  function change(divContainer, id) {
     inputItems["name"].value = divContainer.querySelector("h2").textContent;
-    inputItems["date"].value = divContainer.querySelectorAll("h3")[0].textContent;
-    inputItems["days"].value = divContainer.querySelectorAll("h3")[1].textContent;
+    inputItems["date"].value =
+      divContainer.querySelectorAll("h3")[0].textContent;
+    inputItems["days"].value =
+      divContainer.querySelectorAll("h3")[1].textContent;
 
+    currId = id;
     divContainer.remove();
     items["addButton"].disabled = true;
     items["editButton"].disabled = false;
-    items["editButton"].addEventListener("click", (event) => {
-      event.preventDefault();
-      items["addButton"].disabled = true;
-      items["editButton"].disabled = false;
-
-      fetch(`${url}/${id}`, {
-        method: "put",
-        body: JSON.stringify({
-          name: inputItems["name"].value,
-          days: inputItems["days"].value,
-          date: inputItems["date"].value,
-        }),
-      });
-    });
   }
 
   function clearInputs() {
