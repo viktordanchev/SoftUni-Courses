@@ -17,9 +17,7 @@ function solve() {
 
   items["loadButton"].addEventListener("click", printAllVacations);
   items["addButton"].addEventListener("click", addVacation);
-  items["editButton"].addEventListener("click", (event) => {
-    editVacation(event);
-  });
+  items["editButton"].addEventListener("click", editVacation);
 
   function addVacation() {
     if (Object.values(inputItems).some((value) => value.value == "")) {
@@ -39,7 +37,6 @@ function solve() {
 
   async function printAllVacations() {
     const res = await getAllVacations(url);
-    console.log(res);
     items["divList"].innerHTML = "";
 
     for (const key in res) {
@@ -70,8 +67,7 @@ function solve() {
     return await (await fetch(url)).json();
   }
 
-  async function editVacation(event) {
-    event.preventDefault();
+  async function editVacation() {
     items["addButton"].disabled = false;
     items["editButton"].disabled = true;
 
