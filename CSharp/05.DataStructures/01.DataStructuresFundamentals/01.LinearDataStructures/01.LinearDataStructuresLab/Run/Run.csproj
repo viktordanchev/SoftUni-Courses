@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem01.List\Problem01.List.csproj" />
+    <ProjectReference Include="C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem02.Stack\Problem02.Stack.csproj" />
+    <ProjectReference Include="C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem03.Queue\Problem03.Queue.csproj" />
+    <ProjectReference Include="C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem04.SinglyLinkedList\Problem04.SinglyLinkedList.csproj" />
+  </ItemGroup>
+
+</Project>
