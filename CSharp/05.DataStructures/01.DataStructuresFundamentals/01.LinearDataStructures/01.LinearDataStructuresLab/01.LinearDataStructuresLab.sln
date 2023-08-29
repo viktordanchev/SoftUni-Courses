@@ -3,31 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run", "Run\Run.csproj", "{045A146A-8D65-4CC2-9D6F-0011A57771F2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.List", "01.List", "{BB12F6B5-84E7-4362-9ABF-8CC350A6101D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.List", "01.List", "{523EF0D3-C0E5-40ED-98F5-28B7C0851183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem01.List", "Problem01.List\Problem01.List.csproj", "{D0E2F773-7145-49DB-93C9-1BFCF190897E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem01.List", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem01.List\Problem01.List.csproj", "{40E85E16-AC5D-4481-ADD7-2BED9B5853FE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem01.List.Tests", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem01.List.Tests\Problem01.List.Tests.csproj", "{C5346F25-90C4-400A-B4BD-945F2665C69F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Stack", "02.Stack", "{70E84916-FFA7-4EBE-AF09-16E9275637AC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem02.Stack", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem02.Stack\Problem02.Stack.csproj", "{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem02.Stack.Tests", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem02.Stack.Tests\Problem02.Stack.Tests.csproj", "{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Queue", "03.Queue", "{FB659F63-97F0-473F-8189-82CC0C8FBBC1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem03.Queue", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem03.Queue\Problem03.Queue.csproj", "{5070A5C2-9858-499F-A0B8-1BD4544F4AB6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem03.Queue.Tests", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem03.Queue.Tests\Problem03.Queue.Tests.csproj", "{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.SingleLinkedList", "04.SingleLinkedList", "{D4F2DA82-9527-4972-AC64-8E50CB80CA65}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem04.SinglyLinkedList", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\Problem04.SinglyLinkedList\Problem04.SinglyLinkedList.csproj", "{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem04.SinglyLinkedList.Tests", "C:\Users\vikto\Desktop\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\02. Data-Structures-Linear-Data-Structures-Lab-Skeleton\SinglyLinkedList.Tests\Problem04.SinglyLinkedList.Tests.csproj", "{09C5C773-E163-4D92-89C3-D1A3A45C8468}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem01.List.Tests", "Problem01.List.Tests\Problem01.List.Tests.csproj", "{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,57 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{045A146A-8D65-4CC2-9D6F-0011A57771F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{045A146A-8D65-4CC2-9D6F-0011A57771F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{045A146A-8D65-4CC2-9D6F-0011A57771F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{045A146A-8D65-4CC2-9D6F-0011A57771F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40E85E16-AC5D-4481-ADD7-2BED9B5853FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40E85E16-AC5D-4481-ADD7-2BED9B5853FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40E85E16-AC5D-4481-ADD7-2BED9B5853FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40E85E16-AC5D-4481-ADD7-2BED9B5853FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5346F25-90C4-400A-B4BD-945F2665C69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5346F25-90C4-400A-B4BD-945F2665C69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5346F25-90C4-400A-B4BD-945F2665C69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5346F25-90C4-400A-B4BD-945F2665C69F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487}.Release|Any CPU.Build.0 = Release|Any CPU
-		{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5070A5C2-9858-499F-A0B8-1BD4544F4AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5070A5C2-9858-499F-A0B8-1BD4544F4AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5070A5C2-9858-499F-A0B8-1BD4544F4AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5070A5C2-9858-499F-A0B8-1BD4544F4AB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09C5C773-E163-4D92-89C3-D1A3A45C8468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09C5C773-E163-4D92-89C3-D1A3A45C8468}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09C5C773-E163-4D92-89C3-D1A3A45C8468}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09C5C773-E163-4D92-89C3-D1A3A45C8468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E2F773-7145-49DB-93C9-1BFCF190897E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E2F773-7145-49DB-93C9-1BFCF190897E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E2F773-7145-49DB-93C9-1BFCF190897E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E2F773-7145-49DB-93C9-1BFCF190897E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{40E85E16-AC5D-4481-ADD7-2BED9B5853FE} = {523EF0D3-C0E5-40ED-98F5-28B7C0851183}
-		{C5346F25-90C4-400A-B4BD-945F2665C69F} = {523EF0D3-C0E5-40ED-98F5-28B7C0851183}
-		{A82B5C09-A5DE-4E9C-B6B5-9FBBB9EBF487} = {70E84916-FFA7-4EBE-AF09-16E9275637AC}
-		{062E1CC5-BB13-4B8E-9A94-7AE73CFD7911} = {70E84916-FFA7-4EBE-AF09-16E9275637AC}
-		{5070A5C2-9858-499F-A0B8-1BD4544F4AB6} = {FB659F63-97F0-473F-8189-82CC0C8FBBC1}
-		{E43C6ABB-94CE-49E7-B8E2-362725D1EDB2} = {FB659F63-97F0-473F-8189-82CC0C8FBBC1}
-		{5E78D4C5-22CA-4621-ADCA-3356BAFC6C3F} = {D4F2DA82-9527-4972-AC64-8E50CB80CA65}
-		{09C5C773-E163-4D92-89C3-D1A3A45C8468} = {D4F2DA82-9527-4972-AC64-8E50CB80CA65}
+		{D0E2F773-7145-49DB-93C9-1BFCF190897E} = {BB12F6B5-84E7-4362-9ABF-8CC350A6101D}
+		{232C496B-7E9E-4EF7-A3D4-0C7D21E50F27} = {BB12F6B5-84E7-4362-9ABF-8CC350A6101D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7F4FDBA6-AAEE-4DE8-8895-B2EE6F68C2D8}
+		SolutionGuid = {21CAB357-ABB1-477E-A8AC-D87500290278}
 	EndGlobalSection
 EndGlobal
