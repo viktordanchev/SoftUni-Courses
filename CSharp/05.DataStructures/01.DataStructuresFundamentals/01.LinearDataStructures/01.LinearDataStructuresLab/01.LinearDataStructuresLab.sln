@@ -11,15 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem01.List.Tests", "Pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Stack", "02.Stack", "{5C5D8C03-F8B5-486D-9C2C-01FDFF726E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem02.Stack", "Problem02.Stack\Problem02.Stack.csproj", "{509CD699-6D83-49DC-AFCD-E6232D084220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem02.Stack", "Problem02.Stack\Problem02.Stack.csproj", "{509CD699-6D83-49DC-AFCD-E6232D084220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem02.Stack.Tests", "Problem02.Stack.Tests\Problem02.Stack.Tests.csproj", "{138EDC9A-5165-40F8-BFD9-ACD2886C08A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem02.Stack.Tests", "Problem02.Stack.Tests\Problem02.Stack.Tests.csproj", "{138EDC9A-5165-40F8-BFD9-ACD2886C08A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Queue", "03.Queue", "{6AB0BE4E-CAE4-4116-8742-B8831B7D31CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem03.Queue", "Problem03.Queue\Problem03.Queue.csproj", "{92301545-AA54-4ED6-AF5C-4ADC2656199F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem03.Queue", "Problem03.Queue\Problem03.Queue.csproj", "{92301545-AA54-4ED6-AF5C-4ADC2656199F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem03.Queue.Tests", "Problem03.Queue.Tests\Problem03.Queue.Tests.csproj", "{CE1348D8-8289-424D-B0F1-F129F7D47346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problem03.Queue.Tests", "Problem03.Queue.Tests\Problem03.Queue.Tests.csproj", "{CE1348D8-8289-424D-B0F1-F129F7D47346}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
