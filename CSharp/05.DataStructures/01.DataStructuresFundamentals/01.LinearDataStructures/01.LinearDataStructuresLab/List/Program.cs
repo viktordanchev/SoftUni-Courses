@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problem01.List
+namespace List
 {
     internal class Program
     {

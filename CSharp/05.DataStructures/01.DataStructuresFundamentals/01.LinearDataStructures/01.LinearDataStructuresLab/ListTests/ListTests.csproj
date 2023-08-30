@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Problem02.Stack\Problem02.Stack.csproj" />
+    <ProjectReference Include="..\List\List.csproj" />
   </ItemGroup>
 
 </Project>
