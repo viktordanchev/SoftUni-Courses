@@ -24,40 +24,39 @@
 
         public void Enqueue(T item)
         {
-            head = new Node(item, head);
+            if (Count == 0)
+            {
+                head = new Node(item, head);
+            }
+            else
+            {
+                Node currHead = head;
+
+                while (currHead.Next != null)
+                {
+                    currHead = currHead.Next;
+                }
+
+                currHead.Next = new Node(item, null);
+            }
+
             Count++;
         }
 
         public T Dequeue()
         {
-            if (Count == 0)
-                throw new InvalidOperationException();
+            IsEmpty();
 
-            T element = GetHeadElement(Count);
-
-            Node currHead = head;
-
+            T currElement = head.Element;
+            head = head.Next;
             Count--;
-            for (int i = 1; i <= Count; i++)
-            {
-                if (i == Count)
-                {
-                    currHead.Next = null;
-                    break;
-                }
-
-                currHead = currHead.Next;
-            }
-
-            return element;
+            return currElement;
         }
 
         public T Peek()
         {
-            if (Count == 0)
-                throw new InvalidOperationException();
-
-            return GetHeadElement(Count);
+            IsEmpty();
+            return head.Element;
         }
 
         public bool Contains(T item)
@@ -77,9 +76,12 @@
 
         public IEnumerator<T> GetEnumerator()
         {
+            Node currHead = head;
+
             for (int i = Count; i > 0; i--)
             {
-                yield return GetHeadElement(i);
+                yield return currHead.Element;
+                currHead = currHead.Next;
             }
         }
 
@@ -88,16 +90,10 @@
             return GetEnumerator();
         }
 
-        private T GetHeadElement(int position)
+        private void IsEmpty()
         {
-            Node currHead = head;
-
-            for (int i = 0; i < position - 1; i++)
-            {
-                currHead = currHead.Next;
-            }
-
-            return currHead.Element;
+            if (Count == 0)
+                throw new InvalidOperationException();
         }
     }
 }

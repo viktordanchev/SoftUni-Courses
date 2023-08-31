@@ -111,7 +111,7 @@
 
         private void IsEmpty()
         {
-            if (node == null)
+            if (Count == 0)
                 throw new InvalidOperationException();
         }
 

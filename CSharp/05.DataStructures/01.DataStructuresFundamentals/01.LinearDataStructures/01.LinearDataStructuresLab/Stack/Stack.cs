@@ -30,8 +30,7 @@
 
         public T Pop()
         {
-            if (Count == 0)
-                throw new InvalidOperationException();
+            IsEmpty();
 
             T currElement = top.Element;
             top = top.Next;
@@ -41,9 +40,7 @@
 
         public T Peek()
         {
-            if (Count == 0)
-                throw new InvalidOperationException();
-
+            IsEmpty();
             return top.Element;
         }
 
@@ -76,6 +73,12 @@
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        private void IsEmpty()
+        {
+            if (Count == 0)
+                throw new InvalidOperationException();
         }
     }
 }
