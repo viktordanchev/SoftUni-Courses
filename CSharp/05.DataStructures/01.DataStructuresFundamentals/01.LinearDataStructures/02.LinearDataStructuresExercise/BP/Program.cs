@@ -6,7 +6,8 @@ namespace Problem04.BalancedParentheses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BalancedParenthesesSolve t = new BalancedParenthesesSolve();
+            Console.WriteLine(t.AreBalanced("())"));
         }
     }
 }
