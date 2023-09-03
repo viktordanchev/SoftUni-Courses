@@ -3,6 +3,7 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Security.Cryptography;
 
     public class CircularQueue<T> : IAbstractQueue<T>
     {
@@ -27,8 +28,7 @@
         {
             if (Count == items.Length)
             {
-                T[] newArray = new T[Count * 2];
-                Array.Copy(items, newArray, Count);
+                T[] newArray = CoppyAllELements(new T[Count * 2]);
                 items = newArray;
                 firstItemIndex = 0;
                 lastItemIndex = Count;
@@ -60,14 +60,7 @@
 
         public T[] ToArray()
         {
-            T[] result = new T[Count];
-
-            for (int i = 0; i < Count; i++)
-            {
-                int index = (firstItemIndex + i) % items.Length;
-                result[i] = items[index];
-            }
-
+            T[] result = CoppyAllELements(new T[Count]);
             return result;
         }
 
@@ -91,6 +84,17 @@
             {
                 throw new InvalidOperationException();
             }
+        }
+
+        private T[] CoppyAllELements(T[] resultArray)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                int index = (firstItemIndex + i) % items.Length;
+                resultArray[i] = items[index];
+            }
+
+            return resultArray;
         }
     }
 }
