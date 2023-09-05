@@ -27,7 +27,12 @@
 
         public void AddChild(T parentKey, Tree<T> child)
         {
-            throw new NotImplementedException();
+            var subtree = GetTree(parentKey);
+
+            if (subtree == null)
+                throw new ArgumentNullException();
+
+            subtree.children.Add(child);
         }
 
         public IEnumerable<T> OrderBfs()
@@ -73,12 +78,61 @@
 
         public void RemoveNode(T nodeKey)
         {
-            throw new NotImplementedException();
+            var subtree = GetTree(nodeKey);
+
+            if (subtree == null)
+                throw new ArgumentNullException();
+
+            if (subtree.parent == null)
+                throw new ArgumentException();
+
+            subtree.parent.children.Remove(subtree);
         }
 
         public void Swap(T firstKey, T secondKey)
         {
-            throw new NotImplementedException();
+            var firstSubtree = GetTree(firstKey);
+            var secondSubtree = GetTree(secondKey);
+
+            if (firstSubtree == null || secondSubtree == null)
+                throw new ArgumentNullException();
+
+            if (firstSubtree.parent == null || secondSubtree.parent == null)
+                throw new ArgumentException();
+
+            var firstSubtreeChildren = firstSubtree.parent.children;
+            var secondSubtreeChildren = secondSubtree.parent.children;
+            var firstIndex = firstSubtreeChildren.IndexOf(firstSubtree);
+            var secondIndex = secondSubtreeChildren.IndexOf(secondSubtree);
+
+            firstSubtreeChildren.RemoveAt(firstIndex);
+            firstSubtreeChildren.Insert(firstIndex, secondSubtree);
+
+            secondSubtreeChildren.RemoveAt(secondIndex);
+            secondSubtreeChildren.Insert(secondIndex, firstSubtree);
+        }
+
+        private Tree<T> GetTree(T key)
+        {
+            var items = new Queue<Tree<T>>();
+            items.Enqueue(this);
+
+            while (items.Count > 0)
+            {
+                var subtree = items.Dequeue();
+
+                if (subtree.value.Equals(key))
+                {
+                    return subtree;
+                }
+
+                foreach (var currChild in subtree.children)
+                {
+                    items.Enqueue(currChild);
+                }
+            }
+
+            return null;
         }
     }
 }
