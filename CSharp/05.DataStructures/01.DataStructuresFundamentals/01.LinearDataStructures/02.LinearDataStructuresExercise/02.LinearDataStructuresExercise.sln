@@ -5,27 +5,31 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.CircularQueue", "01.CircularQueue", "{89FBA0DB-800A-468E-8B03-DE82C41E5E38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{BB21DF86-7AAA-412E-9C44-2B6E69966814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{BB21DF86-7AAA-412E-9C44-2B6E69966814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTests", "QueueTests\QueueTests.csproj", "{EA5EC7E2-620F-4D7F-9EBD-154F97DCB499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueTests", "QueueTests\QueueTests.csproj", "{EA5EC7E2-620F-4D7F-9EBD-154F97DCB499}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.DoublyLinkedList", "02.DoublyLinkedList", "{9ADEA8D7-DF9B-463A-84A6-811E5CB08E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{E0F502EB-DFFE-428C-B88D-178A9B4686F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{E0F502EB-DFFE-428C-B88D-178A9B4686F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTests", "LinkedListTests\LinkedListTests.csproj", "{961D069C-FE3B-4263-935E-C08D5B2F6365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListTests", "LinkedListTests\LinkedListTests.csproj", "{961D069C-FE3B-4263-935E-C08D5B2F6365}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.ReversedList", "03.ReversedList", "{58751ED6-483E-4DAE-97DF-3815C7FB558D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListTests", "ListTests\ListTests.csproj", "{4E0CE0F3-2B1E-44A1-A830-9846848866B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListTests", "ListTests\ListTests.csproj", "{4E0CE0F3-2B1E-44A1-A830-9846848866B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "List\List.csproj", "{7EAA5FFC-15AE-49B0-8749-0D46B31CE6AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "List\List.csproj", "{7EAA5FFC-15AE-49B0-8749-0D46B31CE6AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.BalancedParentheses", "04.BalancedParentheses", "{A6F6C1B1-C6FD-44C7-BD86-0F64629277C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPTests", "BPTests\BPTests.csproj", "{804086FD-0D8B-41AD-8116-56041AA052A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPTests", "BPTests\BPTests.csproj", "{804086FD-0D8B-41AD-8116-56041AA052A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BP", "BP\BP.csproj", "{D99A4871-D069-46D5-A566-C3FBB5B42DDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BP", "BP\BP.csproj", "{D99A4871-D069-46D5-A566-C3FBB5B42DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ReverseNumbers", "ReverseNumbers\05.ReverseNumbers.csproj", "{7B014774-3A86-4D9E-A713-F330D2C0BFD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CalcSequence", "CalcSequence\06.CalcSequence.csproj", "{2C15D818-131C-4067-A4F6-64A6715D04AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,14 @@ Global
 		{D99A4871-D069-46D5-A566-C3FBB5B42DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D99A4871-D069-46D5-A566-C3FBB5B42DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D99A4871-D069-46D5-A566-C3FBB5B42DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B014774-3A86-4D9E-A713-F330D2C0BFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B014774-3A86-4D9E-A713-F330D2C0BFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B014774-3A86-4D9E-A713-F330D2C0BFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B014774-3A86-4D9E-A713-F330D2C0BFD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C15D818-131C-4067-A4F6-64A6715D04AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C15D818-131C-4067-A4F6-64A6715D04AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C15D818-131C-4067-A4F6-64A6715D04AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C15D818-131C-4067-A4F6-64A6715D04AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
