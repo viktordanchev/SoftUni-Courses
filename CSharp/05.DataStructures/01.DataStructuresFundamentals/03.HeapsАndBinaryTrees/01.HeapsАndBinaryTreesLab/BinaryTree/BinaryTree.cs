@@ -7,14 +7,16 @@
     {
         public BinaryTree(T element, IAbstractBinaryTree<T> left, IAbstractBinaryTree<T> right)
         {
-            throw new NotImplementedException();
+            Value = element;
+            LeftChild = left;
+            RightChild = right;
         }
 
-        public T Value => throw new NotImplementedException();
+        public T Value { get; }
 
-        public IAbstractBinaryTree<T> LeftChild => throw new NotImplementedException();
+        public IAbstractBinaryTree<T> LeftChild { get; }
 
-        public IAbstractBinaryTree<T> RightChild => throw new NotImplementedException();
+        public IAbstractBinaryTree<T> RightChild { get; }
 
         public string AsIndentedPreOrder(int indent)
         {
@@ -36,9 +38,30 @@
             throw new NotImplementedException();
         }
 
-        public IEnumerable<IAbstractBinaryTree<T>> PreOrder()
+        public IEnumerable<T> PreOrder()
         {
-            throw new NotImplementedException();
+            var result = new Queue<T>();
+            var tree = new Stack<IAbstractBinaryTree<T>>();
+
+            tree.Push(this);
+
+            while (tree.Count > 0)
+            {
+                var currTree = tree.Peek();
+                result.Enqueue(currTree.Value);
+
+                if (currTree.LeftChild != null)
+                    tree.Push(currTree.LeftChild);
+                else if (currTree.RightChild != null)
+                    tree.Push(currTree.RightChild);
+                else
+                {
+                    tree.Pop();
+                    tree.Push(currTree.RightChild);
+                }
+            }
+
+            return result;
         }
     }
 }
