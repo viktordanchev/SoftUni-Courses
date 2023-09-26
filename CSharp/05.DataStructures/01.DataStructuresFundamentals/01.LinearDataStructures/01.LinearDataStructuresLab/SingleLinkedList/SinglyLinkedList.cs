@@ -79,16 +79,12 @@
             Node currNode = node;
 
             Count--;
-            for (int i = 1; i <= Count; i++)
+            for (int i = 0; i < Count; i++)
             {
-                if (i == Count)
-                {
-                    currNode.Next = null;
-                    break;
-                }
-
                 currNode = currNode.Next;
             }
+
+            currNode.Next = null;
 
             return element;
         }
