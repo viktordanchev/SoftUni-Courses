@@ -38,30 +38,19 @@
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T> PreOrder()
+        public IEnumerable<IAbstractBinaryTree<T>> PreOrder()
         {
-            var result = new Queue<T>();
-            var tree = new Stack<IAbstractBinaryTree<T>>();
+            var result = new List<IAbstractBinaryTree<T>>();
 
-            tree.Push(this);
+            result.Add(this);
 
-            while (tree.Count > 0)
-            {
-                var currTree = tree.Peek();
-                result.Enqueue(currTree.Value);
+            if (this.LeftChild != null)
+                result.AddRange(this.LeftChild.PreOrder());
 
-                if (currTree.LeftChild != null)
-                    tree.Push(currTree.LeftChild);
-                else if (currTree.RightChild != null)
-                    tree.Push(currTree.RightChild);
-                else
-                {
-                    tree.Pop();
-                    tree.Push(currTree.RightChild);
-                }
-            }
+            if (this.RightChild != null)
+                result.AddRange(this.RightChild.PreOrder());
 
             return result;
         }
-    }
+}
 }
