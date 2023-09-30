@@ -10,7 +10,7 @@
         IAbstractBinaryTree<T> RightChild { get; }
 
         string AsIndentedPreOrder(int indent);
-        IEnumerable<T> PreOrder();
+        IEnumerable<IAbstractBinaryTree<T>> PreOrder();
         IEnumerable<IAbstractBinaryTree<T>> InOrder();
         IEnumerable<IAbstractBinaryTree<T>> PostOrder();
         void ForEachInOrder(Action<T> action);
