@@ -20,7 +20,7 @@ namespace BinaryTree
                             new BinaryTree<int>(7, null, null)
                         ));
 
-            Console.WriteLine(tree.AsIndentedPreOrder(0));
+            Console.WriteLine(tree.InOrder());
         }
     }
 }
