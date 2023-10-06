@@ -1,63 +1,92 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Exam.ViTube
 {
     public class ViTubeRepository : IViTubeRepository
     {
+        private Dictionary<string, User> users = new Dictionary<string, User>();
+        private Dictionary<string, Video> videos = new Dictionary<string, Video>();
+
         public bool Contains(User user)
         {
-            throw new NotImplementedException();
+            return users.ContainsKey(user.Id);
         }
 
         public bool Contains(Video video)
         {
-            throw new NotImplementedException();
+            return users.ContainsKey(video.Id);
         }
 
         public void DislikeVideo(User user, Video video)
         {
-            throw new NotImplementedException();
+            if (!users.ContainsKey(user.Id) || !videos.ContainsKey(video.Id))
+            {
+                throw new ArgumentException();
+            }
+
+            videos[video.Id].Dislikes++;
+            user.LikedOrDislikedVideos.Add(video);
         }
 
         public IEnumerable<User> GetPassiveUsers()
         {
-            throw new NotImplementedException();
+            return users.Values
+                .Where(u => u.WatchedVideos.Count == 0 & u.LikedOrDislikedVideos.Count == 0);
         }
 
         public IEnumerable<User> GetUsersByActivityThenByName()
         {
-            throw new NotImplementedException();
+            return users.Values
+                .OrderByDescending(u => u.WatchedVideos.Count)
+                .ThenByDescending(u => u.LikedOrDislikedVideos.Count)
+                .ThenBy(u => u.Username);
         }
 
         public IEnumerable<Video> GetVideos()
         {
-            throw new NotImplementedException();
+            return videos.Values;
         }
 
         public IEnumerable<Video> GetVideosOrderedByViewsThenByLikesThenByDislikes()
         {
-            throw new NotImplementedException();
+            return videos.Values
+                .OrderByDescending(v => v.Views)
+                .ThenByDescending(v => v.Likes)
+                .ThenBy(v => v.Dislikes);
         }
 
         public void LikeVideo(User user, Video video)
         {
-            throw new NotImplementedException();
+            if (!users.ContainsKey(user.Id) || !videos.ContainsKey(video.Id))
+            {
+                throw new ArgumentException();
+            }
+
+            videos[video.Id].Likes++;
+            user.LikedOrDislikedVideos.Add(video);
         }
 
         public void PostVideo(Video video)
         {
-            throw new NotImplementedException();
+            videos.Add(video.Id, video);
         }
 
         public void RegisterUser(User user)
         {
-            throw new NotImplementedException();
+            users.Add(user.Id, user);
         }
 
         public void WatchVideo(User user, Video video)
         {
-            throw new NotImplementedException();
+            if (!users.ContainsKey(user.Id) || !videos.ContainsKey(video.Id))
+            {
+                throw new ArgumentException();
+            }
+
+            videos[video.Id].Views++;
+            user.WatchedVideos.Add(video);
         }
     }
 }
