@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicTransportManagementSystem", "PublicTransportManagementSystem\PublicTransportManagementSystem.csproj", "{681D6349-5784-4075-B6EA-26EA112484AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicTransportManagementSystemTests", "PublicTransportManagementSystemTests\PublicTransportManagementSystemTests.csproj", "{1180E38A-C8A9-4494-8060-C590183173B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.PublicTransportManagementSystem", "01.PublicTransportManagementSystem", "{54052B4B-AD32-41C2-972A-8D23D555B893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.BitcoinWalletManager", "02.BitcoinWalletManager", "{2F4704DD-8A4B-47D1-AF22-A8B741E56A42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinWalletManager", "BitcoinWalletManager\BitcoinWalletManager.csproj", "{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinWalletManagerTests", "BitcoinWalletManagerTests\BitcoinWalletManagerTests.csproj", "{3DFE72D3-EC05-4125-B673-2C4621D1635B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{681D6349-5784-4075-B6EA-26EA112484AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681D6349-5784-4075-B6EA-26EA112484AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681D6349-5784-4075-B6EA-26EA112484AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681D6349-5784-4075-B6EA-26EA112484AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1180E38A-C8A9-4494-8060-C590183173B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1180E38A-C8A9-4494-8060-C590183173B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1180E38A-C8A9-4494-8060-C590183173B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1180E38A-C8A9-4494-8060-C590183173B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFE72D3-EC05-4125-B673-2C4621D1635B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFE72D3-EC05-4125-B673-2C4621D1635B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFE72D3-EC05-4125-B673-2C4621D1635B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFE72D3-EC05-4125-B673-2C4621D1635B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{681D6349-5784-4075-B6EA-26EA112484AB} = {54052B4B-AD32-41C2-972A-8D23D555B893}
+		{1180E38A-C8A9-4494-8060-C590183173B3} = {54052B4B-AD32-41C2-972A-8D23D555B893}
+		{00A1FE34-C75E-4200-94BB-BAF81A4DCC0A} = {2F4704DD-8A4B-47D1-AF22-A8B741E56A42}
+		{3DFE72D3-EC05-4125-B673-2C4621D1635B} = {2F4704DD-8A4B-47D1-AF22-A8B741E56A42}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {689EE289-C861-4B6E-99A8-150E481146A8}
+	EndGlobalSection
+EndGlobal
