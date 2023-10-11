@@ -64,6 +64,14 @@
 9. [**Final Exam**](https://github.com/viktordanchev/SoftUni/tree/main/CSharp/04.OOP/FinalExam)
  </details>
 
+  ***
+ <details>
+ <summary><h3> Data Structures </summary>
+
+1. [**Fundamentals**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.DataStructures/01.DataStructuresFundamentals)
+2. [**Advanced**]()
+ </details>
+
 ***
 <details>
 <summary><h3> HTML&CSS </summary>
@@ -91,4 +99,3 @@
 6. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/ExamPreparation)
 7. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/FinalExam)
  </details>
-
