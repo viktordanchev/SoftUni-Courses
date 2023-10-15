@@ -1,14 +1,14 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:552586,100:a82da8&height=300&section=header&text=MS%20%SQL&fontSize=70&fontAlignY=35&descSize=70&descAlignY=50"/>
 
 ### <h2> 📑Course Description </h2>
-The "C# OOP" course will teach you the principles of object-oriented programming (OOP), working with classes and objects, using object-oriented modeling, and building class hierarchies. Basic principles of OOP such as abstraction (interfaces, abstract classes), encapsulation, inheritance and polymorphism will be studied. We will go into the most commonly used design patterns (creational, structural and behavioral design patterns). We will be introduced to SOLID principles for object-oriented software design. We will look at various debugging techniques. We will learn how to create and use decorators. We will focus on unit testing (writing unit tests) and the concept of Test Driven Development (TDD).
+Databases are the standard way of using dynamic information in modern technology, making them an indispensable part of almost every application. The intensive course on the basics of databases will introduce students to one of the most widely used database management systems (DBMS) used in the development of modern information systems - Microsoft SQL Server. The course focuses heavily on the relational model, data modeling with ER diagrams (tables and relational relationships) and working with the SQL language (data extraction, selection, projection, joins, aggregation, grouping, modification, deletion and insertion). Provides fundamental knowledge of working with ACID transactions and transaction processing, and practical tips for performance tuning. This course lays the foundations of working with databases, making it easier to use them in real-world applications and to understand concepts such as converting a database into an object-oriented model (ORM).
 
 ### <h2> 📋Course content </h2>
-- Application of the object-oriented programming paradigm
-- Application of the principles of object-oriented programming
-- Creating a class hierarchy and inheritance
-- Using the Reflection API
-- Data encapsulation
-- Unit Testing
+- Working with databases
+- Transaction Management
+- Using procedures and functions
+- Handling and storing data
+- Creation of basic Back-End architectures
+- Using the ACID model
 
 ### <h2> 🎓My Certificate </h2>
