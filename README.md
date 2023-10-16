@@ -99,3 +99,18 @@
 6. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/ExamPreparation)
 7. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/JS%20Front-End/FinalExam)
  </details>
+
+ ***
+ <details>
+ <summary><h3> MS SQL </summary>
+
+1. [**Databases Introduction**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/01.DatabasesIntroduction)
+2. [**CRUD**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/02.CRUD)
+3. [**Table Relations**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/03.TableRelations)
+4. [**Built-in Functions**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/04.Built-inFunctions)
+5. [**Subqueries and Joins**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/05.SubqueriesAndJoins)
+6. [**Indices and Data Aggregation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/06.IndicesAndDataAggregation)
+7. [**Functions and Stored Procedures**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/07.FunctionsAndStoredProcedures)
+8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/ExamPreparation)
+9. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/FinalExam)
+ </details>
