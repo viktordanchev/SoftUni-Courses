@@ -22,67 +22,44 @@
         public string AsIndentedPreOrder(int indent)
         {
             var result = new StringBuilder();
-            var tree = new Stack<IAbstractBinaryTree<T>>();
 
-            tree.Push(this);
-
-            while (tree.Count > 0)
-            {
-                var node = tree.Pop();
-
-                result.AppendLine($"{Repeat(indent, " ")}{node.Value}");
-
-                if (node.RightChild != null)
-                {
-                    tree.Push(node.RightChild);
-                }
-
-                if (node.LeftChild != null)
-                {
-                    tree.Push(node.LeftChild);
-                }
-
-                indent += 2;
-            }
+            AsIndentedPreOrder(result, this, indent);
 
             return result.ToString();
         }
 
         public void ForEachInOrder(Action<T> action)
         {
-            throw new NotImplementedException();
+            if (this.LeftChild != null)
+            {
+                this.LeftChild.ForEachInOrder(action);
+            }
+
+            action(this.Value);
+
+            if (this.RightChild != null)
+            {
+                this.RightChild.ForEachInOrder(action);
+            }
         }
 
         public IEnumerable<IAbstractBinaryTree<T>> InOrder()
         {
-            var result = new List<IAbstractBinaryTree<T>>();
-            var tree = new Stack<IAbstractBinaryTree<T>>();
+            var list = new List<IAbstractBinaryTree<T>>();
 
-            tree.Push(this);
-
-            while (tree.Count > 0)
+            if(this.LeftChild != null)
             {
-                var node = tree.Peek();
-
-                if (node.LeftChild != null)
-                {
-                    tree.Push(node.LeftChild);
-                    continue;
-                }
-
-                result.Add(tree.Pop());
-
-                if (tree.Count == 0)
-                    break;
-
-                node = tree.Pop();
-                result.Add(node);
-
-                if (node.RightChild != null)
-                    tree.Push(node.RightChild);
+                list.AddRange(this.LeftChild.InOrder());
             }
 
-            return result;
+            list.Add(this);
+
+            if (this.RightChild != null)
+            {
+                list.AddRange(this.RightChild.InOrder());
+            }
+
+            return list;
         }
 
         public IEnumerable<IAbstractBinaryTree<T>> PostOrder()
@@ -140,6 +117,21 @@
             }
 
             return output.ToString();
+        }
+
+        private void AsIndentedPreOrder(StringBuilder currString, IAbstractBinaryTree<T> node, int indent)
+        {
+            currString.AppendLine($"{Repeat(indent, " ")}{node.Value}");
+
+            if (node.LeftChild != null)
+            {
+                AsIndentedPreOrder(currString, node.LeftChild, indent + 2);
+            }
+
+            if (node.RightChild != null)
+            {
+                AsIndentedPreOrder(currString, node.RightChild, indent + 2);
+            }
         }
     }
 }
