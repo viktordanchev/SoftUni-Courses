@@ -68,7 +68,7 @@
  <details>
  <summary><h3> Data Structures </summary>
 
-1. [**Fundamentals**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.DataStructures/01.DataStructuresFundamentals)
+1. [**Fundamentals**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.DataStructures/01.DataStructuresFundamentals)
 2. [**Advanced**]()
  </details>
 
