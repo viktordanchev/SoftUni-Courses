@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _03.MaxHeap;
+using System;
 
 namespace MaxHeap
 {
@@ -6,7 +7,16 @@ namespace MaxHeap
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var c = new MaxHeap<int>();
+
+            c.Add(1);
+            c.Add(2);   
+            c.Add(3);
+            c.Add(4);
+            c.Add(5);
+
+            Console.WriteLine(c.ExtractMax());
+            Console.WriteLine(c.ExtractMax());
         }
     }
 }
