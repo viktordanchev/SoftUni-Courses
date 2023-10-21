@@ -1,7 +1,6 @@
 ﻿namespace _03.MaxHeap
 {
     using System;
-    using System.Reflection;
 
     public class MaxHeap<T> : IAbstractHeap<T> where T : IComparable<T>
     {
