@@ -71,17 +71,16 @@
 
         private void HeapifyDown(int index)
         {
-            int parentIndex = (index - 1) / 2;
-            int biggerChild = GetBiggerChildIndex(parentIndex);
+            int biggerChild = GetBiggerChildIndex(index);
 
-            while (items[parentIndex].CompareTo(items[biggerChild]) < 0)
+            while (items[index].CompareTo(items[biggerChild]) < 0)
             {
-                Swap(parentIndex, biggerChild);
-                parentIndex = biggerChild;
+                Swap(index, biggerChild);
+                index = biggerChild;
 
-                if (parentIndex == Size)
+                if (index == Size)
                 {
-                    biggerChild = GetBiggerChildIndex(parentIndex);
+                    biggerChild = GetBiggerChildIndex(index);
                 }
             }
         }
