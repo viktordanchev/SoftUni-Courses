@@ -25,6 +25,8 @@
 
                 AddEdge(parent, child);
             }
+
+            return null;
         }
 
         public IntegerTree CreateNodeByKey(int key)
