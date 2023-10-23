@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
 
     public class BinaryTree<T> : IAbstractBinaryTree<T>
         where T : IComparable<T>
@@ -22,7 +21,24 @@
 
         public List<T> TopView()
         {
-            throw new NotImplementedException();
+            var result = new List<T>();
+            var first = new Queue<T>();
+
+            var tree = this;
+            while(tree != null)
+            {
+                result.Add(tree.Value);
+                tree = tree.LeftChild;
+            }
+
+            tree = RightChild;
+            while (tree != null)
+            {
+                result.Add(tree.Value);
+                tree = tree.RightChild;
+            }
+
+            return result;
         }
     }
 }
