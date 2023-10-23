@@ -21,7 +21,6 @@ namespace BSTOperations
             bst.Insert(39);
             bst.Insert(45);
 
-            bst.DeleteMin();
             //4, 5, 8, 9, 10, 37
             Console.WriteLine(string.Join(", ", bst.Range(4, 37)));
         }
