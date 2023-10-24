@@ -59,20 +59,22 @@
 
         public void DeleteMax()
         {
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            root = DeleteMax(root);
         }
 
         public void DeleteMin()
         {
-            Node currRoot = root;
-
-            while(root.Left != null)
+            if (root == null)
             {
-                root = root.Left;
+                throw new InvalidOperationException();
             }
 
-            root = null;
-            root = currRoot;
+            root = DeleteMin(root);
         }
 
         public int Count()
@@ -97,32 +99,14 @@
 
         public T Floor(T element)
         {
-            throw new NotImplementedException();
+            var node = FindElement(element);
+
+            return DeleteMax(node).Value;
         }
 
         public IEnumerable<T> Range(T startRange, T endRange)
         {
-            var result = new List<T>();
-            var start = new Stack<T>();
-            
-            var currRoot = root;
-
-            while (!currRoot.Value.Equals(startRange))
-            {
-                start.Push(currRoot.Value);
-
-                if (currRoot.Value.CompareTo(startRange) > 0)
-                {
-                    currRoot = currRoot.Left;
-                }
-                else
-                {
-                    currRoot = currRoot.Right;
-                }
-            }
-
-            result.AddRange(start.ToArray());
-            return result;
+            throw new NotImplementedException();
         }
 
         private Node FindElement(T element)
@@ -188,6 +172,30 @@
             this.EachInOrder(node.Left, action);
             action(node.Value);
             this.EachInOrder(node.Right, action);
+        }
+
+        private Node DeleteMin(Node node)
+        {
+            if (node.Left == null)
+            {
+                return node.Right;
+            }
+
+            node.Left = DeleteMin(node.Left);
+
+            return node;
+        }
+
+        private Node DeleteMax(Node node)
+        {
+            if (node.Right == null)
+            {
+                return node.Left;
+            }
+
+            node.Right = DeleteMax(node.Right);
+
+            return node;
         }
     }
 }

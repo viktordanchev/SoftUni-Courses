@@ -1,6 +1,5 @@
 ﻿using _02.BinarySearchTree;
 using System;
-using System.Collections.Generic;
 
 namespace BSTOperations
 {
@@ -21,8 +20,7 @@ namespace BSTOperations
             bst.Insert(39);
             bst.Insert(45);
 
-            //4, 5, 8, 9, 10, 37
-            Console.WriteLine(string.Join(", ", bst.Range(4, 37)));
+            Console.WriteLine(bst.Floor(5));
         }
     }
 }
