@@ -50,7 +50,7 @@ namespace _03.MinHeap
             return elements[0];
         }
 
-        private void HeapifyUp(int index)
+        protected void HeapifyUp(int index)
         {
             int parentIndex = (index - 1) / 2;
             while (index > 0 && elements[index].CompareTo(elements[parentIndex]) < 0)
@@ -93,11 +93,7 @@ namespace _03.MinHeap
             {
                 return leftChildIndex;
             }
-            else if(rightChildIndex == Count - 1)
-            {
-                return leftChildIndex;
-            }
-            else if (rightChildIndex > Count - 1)
+            else if (leftChildIndex > Count - 1 || rightChildIndex > Count - 1)
             {
                 return index;
             }
