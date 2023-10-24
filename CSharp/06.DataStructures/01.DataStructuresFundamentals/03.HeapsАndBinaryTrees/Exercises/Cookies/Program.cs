@@ -6,8 +6,7 @@ namespace _04.CookiesProblem
     {
         static void Main(string[] args)
         {
-            var n = new CookiesProblem();
-            Console.WriteLine(n.Solve(10, new int[] { 1, 1, 1, 1 }));
+            Console.WriteLine("Hello World!");
         }
     }
 }
