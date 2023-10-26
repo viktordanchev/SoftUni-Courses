@@ -19,6 +19,7 @@ namespace SoftUni.Data
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Project> Projects { get; set; } = null!;
         public virtual DbSet<Town> Towns { get; set; } = null!;
+        public virtual DbSet<EmployeeProject> EmployeesProjects { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -108,23 +109,6 @@ namespace SoftUni.Data
                     .WithMany(p => p.InverseManager)
                     .HasForeignKey(d => d.ManagerId)
                     .HasConstraintName("FK_Employees_Employees");
-
-                entity.HasMany(d => d.Projects)
-                    .WithMany(p => p.Employees)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "EmployeesProject",
-                        l => l.HasOne<Project>().WithMany().HasForeignKey("ProjectId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_EmployeesProjects_Projects"),
-                        r => r.HasOne<Employee>().WithMany().HasForeignKey("EmployeeId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_EmployeesProjects_Employees"),
-                        j =>
-                        {
-                            j.HasKey("EmployeeId", "ProjectId");
-
-                            j.ToTable("EmployeesProjects");
-
-                            j.IndexerProperty<int>("EmployeeId").HasColumnName("EmployeeID");
-
-                            j.IndexerProperty<int>("ProjectId").HasColumnName("ProjectID");
-                        });
             });
 
             modelBuilder.Entity<Project>(entity =>
@@ -151,9 +135,20 @@ namespace SoftUni.Data
                     .IsUnicode(false);
             });
 
-            OnModelCreatingPartial(modelBuilder);
-        }
+            modelBuilder.Entity<EmployeeProject>(entity =>
+            {
+                entity.HasKey(pk => new { pk.EmployeeId, pk.ProjectId });
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+                entity
+                .HasOne(eп => eп.Employee)
+                .WithMany(e => e.EmployeesProjects)
+                .HasForeignKey(ep => ep.EmployeeId);
+
+                entity
+                .HasOne(ep => ep.Project)
+                .WithMany(p => p.EmployeesProjects)
+                .HasForeignKey(ep => ep.ProjectId);
+            });
+        }
     }
 }

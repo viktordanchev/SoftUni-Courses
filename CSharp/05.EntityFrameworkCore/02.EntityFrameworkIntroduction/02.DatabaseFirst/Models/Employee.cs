@@ -6,7 +6,7 @@
         {
             Departments = new HashSet<Department>();
             InverseManager = new HashSet<Employee>();
-            Projects = new HashSet<Project>();
+            EmployeesProjects = new HashSet<EmployeeProject>();
         }
 
         public int EmployeeId { get; set; }
@@ -25,7 +25,6 @@
         public virtual Employee? Manager { get; set; }
         public virtual ICollection<Department> Departments { get; set; }
         public virtual ICollection<Employee> InverseManager { get; set; }
-
-        public virtual ICollection<Project> Projects { get; set; }
+        public virtual ICollection<EmployeeProject> EmployeesProjects { get; set; }
     }
 }
