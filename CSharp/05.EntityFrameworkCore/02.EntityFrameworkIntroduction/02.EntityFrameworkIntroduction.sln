@@ -5,11 +5,13 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.DatabaseFirst", "02.DatabaseFirst\02.DatabaseFirst.csproj", "{4ECC6A29-0A0C-4848-B0F9-A9F965AD3074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.EmployeesFullInformation", "03.EmployeesFullInformation\03.EmployeesFullInformation.csproj", "{525F1D0C-6D57-4EDC-A09D-CD4B142194AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.EmployeesFullInformation", "03.EmployeesFullInformation\03.EmployeesFullInformation.csproj", "{525F1D0C-6D57-4EDC-A09D-CD4B142194AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.EmployeesWithSalaryOver50000", "04.EmployeesWithSalaryOver50000\04.EmployeesWithSalaryOver50000.csproj", "{B8066E87-3867-4994-86FF-FDE678F55FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.EmployeesWithSalaryOver50000", "04.EmployeesWithSalaryOver50000\04.EmployeesWithSalaryOver50000.csproj", "{B8066E87-3867-4994-86FF-FDE678F55FAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.EmployeesFromResearchAndDevelopment", "05.EmployeesFromResearchAndDevelopment\05.EmployeesFromResearchAndDevelopment.csproj", "{7AF8A0B8-2D87-47AE-8E09-2002838A4378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.EmployeesFromResearchAndDevelopment", "05.EmployeesFromResearchAndDevelopment\05.EmployeesFromResearchAndDevelopment.csproj", "{7AF8A0B8-2D87-47AE-8E09-2002838A4378}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.EmployeesAndProjects", "07.EmployeesAndProjects\07.EmployeesAndProjects.csproj", "{CB1E4A9D-350B-48F5-BB3E-7F4D2DFDEBBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7AF8A0B8-2D87-47AE-8E09-2002838A4378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AF8A0B8-2D87-47AE-8E09-2002838A4378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AF8A0B8-2D87-47AE-8E09-2002838A4378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1E4A9D-350B-48F5-BB3E-7F4D2DFDEBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1E4A9D-350B-48F5-BB3E-7F4D2DFDEBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1E4A9D-350B-48F5-BB3E-7F4D2DFDEBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1E4A9D-350B-48F5-BB3E-7F4D2DFDEBBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

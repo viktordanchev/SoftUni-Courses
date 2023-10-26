@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SoftUni.Data;
+﻿using SoftUni.Data;
 using System.Text;
 
 namespace SoftUni
