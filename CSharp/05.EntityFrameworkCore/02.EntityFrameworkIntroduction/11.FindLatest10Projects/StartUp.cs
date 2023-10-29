@@ -17,8 +17,10 @@ namespace SoftUni
         public static string GetLatestProjects(SoftUniContext context)
         {
             var projects = context.Projects
-                .OrderBy(p => p.Name)
-                .ToList();
+                .OrderByDescending(p => p.StartDate)
+                .Take(10)
+                .ToList()
+                .OrderBy(p => p.Name);
 
             var result = new StringBuilder();
 
