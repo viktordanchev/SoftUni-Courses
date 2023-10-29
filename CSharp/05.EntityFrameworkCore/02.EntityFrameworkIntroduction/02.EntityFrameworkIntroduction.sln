@@ -15,15 +15,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.EmployeesAndProjects", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.AddingANewAddressAndUpdatingEmployee", "06.AddingANewAddressAndUpdatingEmployee\06.AddingANewAddressAndUpdatingEmployee.csproj", "{14C0C09B-922E-4B08-85F0-CE18E5F48B1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AddressesByTown", "08.AddressesByTown\08.AddressesByTown.csproj", "{AFCF15DA-C3F3-4986-A282-B1B2AB0DA318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.AddressesByTown", "08.AddressesByTown\08.AddressesByTown.csproj", "{AFCF15DA-C3F3-4986-A282-B1B2AB0DA318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Employee147", "09.Employee147\09.Employee147.csproj", "{DB905E01-CC42-4BA4-B455-2132F39BBE6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.Employee147", "09.Employee147\09.Employee147.csproj", "{DB905E01-CC42-4BA4-B455-2132F39BBE6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.DepartmentsWithMoreThan5Employees", "10.DepartmentsWithMoreThan5Employees\10.DepartmentsWithMoreThan5Employees.csproj", "{3950D765-1F9F-47C9-AE13-A6032D40B824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.DepartmentsWithMoreThan5Employees", "10.DepartmentsWithMoreThan5Employees\10.DepartmentsWithMoreThan5Employees.csproj", "{3950D765-1F9F-47C9-AE13-A6032D40B824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.FindLatest10Projects", "11.FindLatest10Projects\11.FindLatest10Projects.csproj", "{199F39B9-E5FE-417A-B843-8DD59A950A07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.FindLatest10Projects", "11.FindLatest10Projects\11.FindLatest10Projects.csproj", "{199F39B9-E5FE-417A-B843-8DD59A950A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.IncreaseSalaries", "12.IncreaseSalaries\12.IncreaseSalaries.csproj", "{9149A80A-0DDD-4CBC-A0CC-8951EB338018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.IncreaseSalaries", "12.IncreaseSalaries\12.IncreaseSalaries.csproj", "{9149A80A-0DDD-4CBC-A0CC-8951EB338018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.FindEmployeesByFirstNameStartingWithSa", "13.FindEmployeesByFirstNameStartingWithSa\13.FindEmployeesByFirstNameStartingWithSa.csproj", "{74692B9F-F78D-47D8-913C-A5E5BB5A43FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.DeleteProjectById", "14.DeleteProjectById\14.DeleteProjectById.csproj", "{73E04B74-72CB-414A-90F3-6301AB6B8870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.RemoveTown", "15.RemoveTown\15.RemoveTown.csproj", "{04E94828-BA72-4C9E-A1B9-DD3F4512E0D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{9149A80A-0DDD-4CBC-A0CC-8951EB338018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9149A80A-0DDD-4CBC-A0CC-8951EB338018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9149A80A-0DDD-4CBC-A0CC-8951EB338018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74692B9F-F78D-47D8-913C-A5E5BB5A43FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74692B9F-F78D-47D8-913C-A5E5BB5A43FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74692B9F-F78D-47D8-913C-A5E5BB5A43FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74692B9F-F78D-47D8-913C-A5E5BB5A43FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E04B74-72CB-414A-90F3-6301AB6B8870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E04B74-72CB-414A-90F3-6301AB6B8870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E04B74-72CB-414A-90F3-6301AB6B8870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E04B74-72CB-414A-90F3-6301AB6B8870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E94828-BA72-4C9E-A1B9-DD3F4512E0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E94828-BA72-4C9E-A1B9-DD3F4512E0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E94828-BA72-4C9E-A1B9-DD3F4512E0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E94828-BA72-4C9E-A1B9-DD3F4512E0D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

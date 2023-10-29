@@ -1,5 +1,4 @@
 ﻿using SoftUni.Data;
-using System.Globalization;
 using System.Text;
 
 namespace SoftUni
@@ -16,17 +15,23 @@ namespace SoftUni
 
         public static string IncreaseSalaries(SoftUniContext context)
         {
-            var projects = context.Projects
-                .OrderBy(p => p.Name)
-                .ToList();
+            var departments = new List<string>() { "Engineering", "Tool Design", "Marketing", "Information Services" };
+
+            var employees = context.Employees
+                .Where(e => departments.Any(d => d == e.Department.Name));
+
+            foreach (var employee in employees)
+            {
+                employee.Salary *= 1.12M;
+            }
+
+            context.SaveChanges();
 
             var result = new StringBuilder();
 
-            foreach (var p in projects)
+            foreach (var e in employees.ToList())
             {
-                result.AppendLine(p.Name);
-                result.AppendLine(p.Description);
-                result.AppendLine(p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture));
+                result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:f2})");
             }
 
             return result.ToString().Trim();
