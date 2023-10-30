@@ -20,7 +20,7 @@ namespace P01_StudentSystem.Data.Models
         [StringLength(10)]
         public string? PhoneNumber { get; set; }
 
-        public bool RegisteredOn { get; set; }
+        public bool RegisteredOn { get; set; } 
 
         public DateTime? Birthday { get; set; }
 

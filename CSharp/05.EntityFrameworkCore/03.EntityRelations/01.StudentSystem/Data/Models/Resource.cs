@@ -1,5 +1,6 @@
 ﻿using _01.StudentSystem.Data.Models.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace P01_StudentSystem.Data.Models
 {
@@ -20,5 +21,8 @@ namespace P01_StudentSystem.Data.Models
 
         [Required]
         public int CourseId { get; set; }
+
+        [ForeignKey(nameof(CourseId))]
+        public Course Course { get; set; }
     }
 }
