@@ -19,8 +19,8 @@ namespace SoftUni
             var addresses = context.Addresses
                 .Include(x => x.Employees)
                 .Include(x => x.Town)
-                .OrderByDescending(address => address.Employees.Count)
-                .ThenBy(address => address.Town.Name)
+                .OrderByDescending(a => a.Employees.Count)
+                .ThenBy(a => a.Town.Name)
                 .Take(10)
                 .ToList();
 
@@ -28,7 +28,7 @@ namespace SoftUni
 
             foreach (var a in addresses)
             {
-                result.AppendLine($"{a.AddressText}, {a.Town.Name} - {a.Employees.Count}");
+                result.AppendLine($"{a.AddressText}, {a.Town.Name} - {a.Employees.Count} employees");
             }
 
             return result.ToString().Trim();
