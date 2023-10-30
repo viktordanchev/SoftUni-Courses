@@ -1,5 +1,5 @@
-﻿using SoftUni.Data;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using SoftUni.Data;
 
 namespace SoftUni
 {
@@ -15,26 +15,24 @@ namespace SoftUni
 
         public static string RemoveTown(SoftUniContext context)
         {
-            var project = context.Projects
-                .Find(2);
+            var town = context.Towns
+                .Include(t => t.Addresses)
+                .FirstOrDefault(t => t.Name == "Seattle");
 
-            context.EmployeesProjects.RemoveRange(context.EmployeesProjects.Where(ep => ep.Project == project));
-            context.Projects.Remove(project);
+            context.Addresses.RemoveRange(town.Addresses);
+            context.Towns.Remove(town);
+
+            var employees = context.Employees
+                .Where(e => e.Address.Town.Name == "Seattle");
+
+            foreach (var e in employees)
+            {
+                e.AddressId = null;
+            }
 
             context.SaveChanges();
 
-            var result = new StringBuilder();
-
-            var projects = context.Projects
-                .Take(10)
-                .ToList();
-
-            foreach (var p in projects)
-            {
-                result.AppendLine(p.Name);
-            }
-
-            return result.ToString().Trim();
+            return $"{town.Addresses.Count} addresses in Seattle were deleted";
         }
     }
 }
