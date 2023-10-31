@@ -6,8 +6,8 @@ namespace P01_StudentSystem.Data.Models
     {
         public Student()
         {
-            Courses = new List<Course>();
             Homeworks = new List<Homework>();
+            StudentsCourses = new List<StudentCourse>();
         }
 
         [Key]
@@ -20,11 +20,12 @@ namespace P01_StudentSystem.Data.Models
         [StringLength(10)]
         public string? PhoneNumber { get; set; }
 
-        public bool RegisteredOn { get; set; } 
+        [Required]
+        public DateTime RegisteredOn { get; set; }
 
         public DateTime? Birthday { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
         public ICollection<Homework> Homeworks { get; set; }
+        public ICollection<StudentCourse> StudentsCourses { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace P01_StudentSystem.Data.Models
         public string Content { get; set; } = null!;
 
         [Required]
-        public ContentType ContentType { get; set; }
+        public virtual ContentType ContentType { get; set; } = null!;
 
         [Required]
         public DateTime SubmissionTime { get; set; }
@@ -22,12 +22,12 @@ namespace P01_StudentSystem.Data.Models
         public int StudentId { get; set; }
 
         [ForeignKey(nameof(StudentId))]
-        public Student Student { get; set; }
+        public virtual Student Student { get; set; } = null!;
 
         [Required]
         public int CourseId { get; set; }
 
         [ForeignKey(nameof(CourseId))]
-        public Course Course { get; set; }
+        public virtual Course Course { get; set; } = null!;
     }
 }

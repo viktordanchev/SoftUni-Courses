@@ -14,7 +14,7 @@ namespace P01_StudentSystem.Data.Models
         public string Name { get; set; } = null!;
 
         [Required]
-        public int Url { get; set; }
+        public string Url { get; set; } = null!;
 
         [Required]
         public ResourceType ResourceType { get; set; }
@@ -23,6 +23,6 @@ namespace P01_StudentSystem.Data.Models
         public int CourseId { get; set; }
 
         [ForeignKey(nameof(CourseId))]
-        public Course Course { get; set; }
+        public virtual Course Course { get; set; } = null!;
     }
 }

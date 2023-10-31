@@ -16,19 +16,10 @@ namespace P01_StudentSystem.Data
         public DbSet<Homework> Homeworks { get; set; }
         public DbSet<StudentCourse> StudentsCourses { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(
-                    @"Server=.;Database=StudentSystem;Integrated Security=True;Trust Server Certificate=True");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<StudentCourse>(entity =>
-            entity.HasKey(sc => new { sc.StudentId, sc.CourseId }));
+            modelBuilder.Entity<StudentCourse>()
+                .HasKey(sc => new { sc.StudentId, sc.CourseId });
         }
     }
 }

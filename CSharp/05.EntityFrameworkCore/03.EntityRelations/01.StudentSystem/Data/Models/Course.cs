@@ -6,9 +6,9 @@ namespace P01_StudentSystem.Data.Models
     {
         public Course()
         {
-            Students = new List<Student>();
             Resources = new List<Resource>();
             Homeworks = new List<Homework>();
+            StudentsCourses = new List<StudentCourse>();
         }
 
         [Key]
@@ -29,8 +29,8 @@ namespace P01_StudentSystem.Data.Models
         [Required]
         public decimal Price { get; set; }
 
-        public ICollection<Student> Students { get; set; }
         public ICollection<Resource> Resources { get; set; }
         public ICollection<Homework> Homeworks { get; set; }
+        public ICollection<StudentCourse> StudentsCourses { get; set; }
     }
 }
