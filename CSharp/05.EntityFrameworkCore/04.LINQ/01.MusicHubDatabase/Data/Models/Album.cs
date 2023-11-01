@@ -20,11 +20,11 @@ namespace _01.MusicHubDatabase.Data.Models
         [Required]
         public DateTime ReleaseDate { get; set; }
 
-        public int Price { get; set; }
+        public decimal Price { get; set; }
 
-        public int ProducerId { get; set; }
+        public int? ProducerId { get; set; }
 
-        [ForeignKey(nameof(Id))]
+        [ForeignKey(nameof(ProducerId))]
         public Producer Producer { get; set; }
 
         public ICollection<Song> Songs { get; set; }
