@@ -1,5 +1,6 @@
 ﻿namespace MusicHub.Data
 {
+    using _01.MusicHubDatabase.Data.Models;
     using Microsoft.EntityFrameworkCore;
 
     public class MusicHubDbContext : DbContext
@@ -24,7 +25,8 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
+            builder.Entity<SongPerformer>()
+                .HasKey(sp => new { sp.SongId, sp.PerformerId });
         }
     }
 }
