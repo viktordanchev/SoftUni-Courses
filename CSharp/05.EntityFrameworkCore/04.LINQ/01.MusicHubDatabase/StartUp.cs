@@ -1,8 +1,6 @@
 ﻿namespace MusicHub
 {
-    using System;
     using System.Text;
-    using _01.MusicHubDatabase.Data.Models;
     using Data;
     using Initializer;
     using Microsoft.EntityFrameworkCore;
@@ -15,8 +13,6 @@
                 new MusicHubDbContext();
 
             DbInitializer.ResetDatabase(context);
-
-            Console.WriteLine(ExportAlbumsInfo(context, 9));
         }
 
         public static string ExportAlbumsInfo(MusicHubDbContext context, int producerId)
@@ -64,7 +60,40 @@
 
         public static string ExportSongsAboveDuration(MusicHubDbContext context, int duration)
         {
-            throw new NotImplementedException();
+            var songs = context.Songs
+                .Include(s => s.SongPerformers)
+                .Where(s => s.Duration.Hours + s.Duration.Minutes + s.Duration.Seconds * 60 > duration)
+                .OrderBy(s => s.Name)
+                .ThenBy(s => s.Writer.Name);
+
+            var result = new StringBuilder();
+            var songNumber = 1;
+
+            foreach (var s in songs)
+            {
+                result.AppendLine($"-Song #{songNumber++}");
+                result.AppendLine($"---SongName: {s.Name}");
+                result.AppendLine($"---Writer: {s.Writer.Name}");
+
+                if(s.SongPerformers.Count > 0)
+                {
+                    var performers = s.SongPerformers
+                        .OrderBy(sp => sp.Performer.FirstName)
+                        .ThenBy(sp => sp.Performer.LastName);
+
+                    foreach (var p in performers)
+                    {
+                        var fullName = p.Performer.FirstName + " " + p.Performer.LastName;
+
+                        result.AppendLine($"---Performer: {fullName}");
+                    }
+                }
+
+                result.AppendLine($"---AlbumProducer: {s.Album.Producer.Name}");
+                result.AppendLine($"---Duration: {s.Duration.ToString("c")}");
+            }
+
+            return result.ToString().Trim();
         }
     }
 }
