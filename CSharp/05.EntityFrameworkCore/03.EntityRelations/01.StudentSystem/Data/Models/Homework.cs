@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Net.Mime;
 
@@ -10,6 +11,7 @@ namespace P01_StudentSystem.Data.Models
         public int HomeworkId { get; set; }
 
         [Required]
+        [Unicode(false)]
         public string Content { get; set; } = null!;
 
         [Required]

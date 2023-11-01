@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace P01_StudentSystem.Data.Models
 {
@@ -16,8 +17,10 @@ namespace P01_StudentSystem.Data.Models
 
         [Required]
         [StringLength(80)]
+        [Unicode(true)]
         public string Name { get; set; } = null!;
 
+        [Unicode(true)]
         public string? Description { get; set; }
 
         [Required]
