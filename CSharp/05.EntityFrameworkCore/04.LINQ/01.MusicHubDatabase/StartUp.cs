@@ -62,7 +62,7 @@
         {
             var songs = context.Songs
                 .Include(s => s.SongPerformers)
-                .Where(s => s.Duration.Hours + s.Duration.Minutes + s.Duration.Seconds * 60 > duration)
+                .Where(s => (s.Duration.Hours + s.Duration.Minutes) * 60 + s.Duration.Seconds > duration)
                 .OrderBy(s => s.Name)
                 .ThenBy(s => s.Writer.Name);
 
