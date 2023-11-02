@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.StudentSystem", "01.Stud
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.FootballBetting", "02.FootballBetting", "{6D2C32A7-6A01-47E6-9375-0C225A5C3EC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting", "P02_FootballBetting\P02_FootballBetting.csproj", "{EC061372-0BF6-4CC0-990E-789EBDFD925A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_FootballBetting", "P02_FootballBetting\P02_FootballBetting.csproj", "{EC061372-0BF6-4CC0-990E-789EBDFD925A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data", "P02_FootballBetting.Data\P02_FootballBetting.Data.csproj", "{1D02B5E6-3D8F-4A62-B284-A5337DE70363}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_FootballBetting.Data", "P02_FootballBetting.Data\P02_FootballBetting.Data.csproj", "{1D02B5E6-3D8F-4A62-B284-A5337DE70363}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_FootballBetting.Data.Models", "P02_FootballBetting.Data.Models\P02_FootballBetting.Data.Models.csproj", "{1CFC66E7-34ED-409A-8512-B9D9C6661031}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_FootballBetting.Data.Models", "P02_FootballBetting.Data.Models\P02_FootballBetting.Data.Models.csproj", "{1CFC66E7-34ED-409A-8512-B9D9C6661031}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
