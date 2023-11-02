@@ -1,6 +1,6 @@
-﻿namespace P01_HospitalDatabase
+﻿namespace P02_FootballBetting
 {
-    public class StartUp
+    internal class Program
     {
         static void Main(string[] args)
         {

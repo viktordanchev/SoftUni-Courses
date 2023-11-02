@@ -19,7 +19,6 @@ namespace P01_StudentSystem.Data.Models
         [Unicode(true)]
         public string Name { get; set; } = null!;
 
-        [StringLength(10)]
         [Unicode(false)]
         public string? PhoneNumber { get; set; }
 
