@@ -2,6 +2,7 @@
 {
     using Data;
     using Initializer;
+    using Microsoft.EntityFrameworkCore;
     using System.Text;
 
     public class StartUp
@@ -11,33 +12,30 @@
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            var output = GetBooksByPrice(db);
+            var input = Console.ReadLine();
+            var output = GetBooksByCategory(db, input);
 
             Console.WriteLine(output);
         }
 
-        public static string GetBooksByPrice(BookShopContext context)
+        public static string GetBooksByCategory(BookShopContext context, string input)
         {
-            var books = context.Books
-                .Select(b => new
-                {
-                    b.Title,
-                    b.Price
-                })
-                .Where(b => b.Price > 40)
-                .OrderByDescending(b => b.Price)
+            var categories = input.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            var books = context.BooksCategories
+                .Where(bc => categories.Contains(bc.Category.Name.ToLower()))
+                .Select(bc => bc.Book.Title)
+                .OrderBy(b => b)
                 .ToList();
 
             var result = new StringBuilder();
 
             foreach (var b in books)
             {
-                result.AppendLine($"{b.Title} - ${b.Price:F2}");
+                result.AppendLine(b);
             }
 
             return result.ToString().Trim();
         }
     }
 }
-
-
