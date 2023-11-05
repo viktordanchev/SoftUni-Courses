@@ -2,7 +2,6 @@
 {
     using Data;
     using Initializer;
-    using Microsoft.EntityFrameworkCore;
     using System.Text;
 
     public class StartUp
