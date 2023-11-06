@@ -12,23 +12,24 @@
             DbInitializer.ResetDatabase(db);
             
             var input = Console.ReadLine();
-            var output = GetBooksReleasedBefore(db, input);
+            var output = GetBookTitlesContaining(db, input);
             
             Console.WriteLine(output);
         }
 
-        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
         {
             var books = context.Books
-                .Where(b => b.ReleaseDate < DateTime.Parse(date))
-                .OrderByDescending(b => b.ReleaseDate)
+                .Where(b => b.Title.ToLower().Contains(input.ToLower()))
+                .Select(b => b.Title)
+                .OrderBy(b => b)
                 .ToList();
 
             var result = new StringBuilder();
 
-            foreach (var b in books)
+            foreach (var book in books)
             {
-                result.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:F2}");
+                result.AppendLine(book);
             }
 
             return result.ToString().Trim();
