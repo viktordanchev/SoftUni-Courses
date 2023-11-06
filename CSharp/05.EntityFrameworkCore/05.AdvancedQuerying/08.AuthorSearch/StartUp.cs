@@ -12,23 +12,27 @@
             DbInitializer.ResetDatabase(db);
             
             var input = Console.ReadLine();
-            var output = GetBooksReleasedBefore(db, input);
+            var output = GetAuthorNamesEndingIn(db, input);
             
             Console.WriteLine(output);
         }
 
-        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
         {
-            var books = context.Books
-                .Where(b => b.ReleaseDate < DateTime.Parse(date))
-                .OrderByDescending(b => b.ReleaseDate)
+            var authors = context.Authors
+                .Where(a => a.FirstName.EndsWith(input))
+                .Select(a => new
+                {
+                    FullName = a.FirstName + " " + a.LastName
+                })
+                .OrderBy(a => a.FullName)
                 .ToList();
 
             var result = new StringBuilder();
 
-            foreach (var b in books)
+            foreach (var a in authors)
             {
-                result.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:F2}");
+                result.AppendLine(a.FullName);
             }
 
             return result.ToString().Trim();
