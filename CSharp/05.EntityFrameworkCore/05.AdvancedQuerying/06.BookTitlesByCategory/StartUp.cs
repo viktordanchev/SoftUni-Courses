@@ -19,7 +19,9 @@
 
         public static string GetBooksByCategory(BookShopContext context, string input)
         {
-            var categories = input.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+            var categories = input.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(i => i.ToLower())
+                .ToList();
 
             var books = context.BooksCategories
                 .Where(bc => categories.Contains(bc.Category.Name.ToLower()))
