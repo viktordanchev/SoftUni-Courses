@@ -2,6 +2,7 @@
 {
     using Data;
     using Initializer;
+    using System.Globalization;
     using System.Text;
 
     public class StartUp
@@ -19,8 +20,10 @@
 
         public static string GetBooksReleasedBefore(BookShopContext context, string date)
         {
+            var convertedDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+
             var books = context.Books
-                .Where(b => b.ReleaseDate < DateTime.Parse(date))
+                .Where(b => b.ReleaseDate < convertedDate)
                 .OrderByDescending(b => b.ReleaseDate)
                 .ToList();
 
