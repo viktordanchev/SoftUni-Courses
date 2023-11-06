@@ -10,30 +10,34 @@
         {
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
-            
+
             var input = Console.ReadLine();
-            var output = GetBooksReleasedBefore(db, input);
-            
+            var output = GetBooksByAuthor(db, input);
+
             Console.WriteLine(output);
         }
 
-        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        public static string GetBooksByAuthor(BookShopContext context, string input)
         {
             var books = context.Books
-                .Where(b => b.ReleaseDate < DateTime.Parse(date))
-                .OrderByDescending(b => b.ReleaseDate)
+                .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                .OrderBy(b => b.BookId)
+                .Select(b => new
+                {
+                    b.Title,
+                    FullName = b.Author.FirstName + " " + b.Author.LastName
+                })
                 .ToList();
 
             var result = new StringBuilder();
 
             foreach (var b in books)
             {
-                result.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:F2}");
+                result.AppendLine($"{b.Title} ({b.FullName})");
             }
 
             return result.ToString().Trim();
         }
     }
 }
-
 
