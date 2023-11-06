@@ -18,26 +18,26 @@
 
         public static string GetTotalProfitByCategory(BookShopContext context)
         {
-            var categories = context.BooksCategories
-                .Select(bc => new
-                {
-                    CategoryName = bc.Category.Name,
-                    Sum = bc.Book.Price * bc.Book.Copies
-                })
+            var categories = context.Categories
                 .GroupBy(c => new
                 {
-                    Category = c.CategoryName,
-                    SumC = c.Sum
+                    c.Name,
+                    Sum = c.CategoryBooks.Sum(b => b.Book.Price * b.Book.Copies)
                 })
-                .OrderByDescending(c => c.Key.SumC)
-                .OrderBy(c => c.Key.Category)
-                .ToList();
+                .Select(c => new
+                {
+                    c.Key.Name,
+                    c.Key.Sum
+                })
+                .ToList()
+                .OrderByDescending(c => c.Sum)
+                .ThenBy(c => c.Name);
 
             var result = new StringBuilder();
 
             foreach (var c in categories)
             {
-                result.AppendLine($"{c.Key.Category} ${c.Key.SumC:F2}");
+                result.AppendLine($"{c.Name} ${c.Sum:F2}");
             }
 
             return result.ToString().Trim();

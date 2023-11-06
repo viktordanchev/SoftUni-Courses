@@ -3,6 +3,6 @@
     internal class Configuration
     {
         internal static string ConnectionString
-            => @"Server=VIKTOR-PC\SQLEXPRESS;Database=MusicHub;Trusted_Connection=True";
+            => @"Server=VIKTOR-PC\SQLEXPRESS;Database=BookShop;Trusted_Connection=True";
     }
 }

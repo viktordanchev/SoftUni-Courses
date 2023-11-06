@@ -11,12 +11,12 @@
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            var output = GetTotalProfitByCategory(db);
+            var output = GetMostRecentBooks(db);
 
             Console.WriteLine(output);
         }
 
-        public static string GetTotalProfitByCategory(BookShopContext context)
+        public static string GetMostRecentBooks(BookShopContext context)
         {
             var categories = context.Categories
                 .OrderBy(c => c.Name)
