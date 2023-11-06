@@ -10,10 +10,10 @@
         {
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
-
+            
             var input = Console.ReadLine();
             var output = GetBooksByAgeRestriction(db, input);
-
+            
             Console.WriteLine(output);
         }
 
