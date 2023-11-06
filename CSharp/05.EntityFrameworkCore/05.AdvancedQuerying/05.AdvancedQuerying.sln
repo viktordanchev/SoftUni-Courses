@@ -5,15 +5,15 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.AgeRestriction", "02.AgeRestriction\02.AgeRestriction.csproj", "{02B1DEC9-CB95-4F3C-9120-8366CEE2D42A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.GoldenBooks", "03.GoldenBooks\03.GoldenBooks.csproj", "{803DA7C2-21F0-4505-B883-CF5371CEA6FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.GoldenBooks", "03.GoldenBooks\03.GoldenBooks.csproj", "{803DA7C2-21F0-4505-B883-CF5371CEA6FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BooksByPrice", "04.BooksByPrice\04.BooksByPrice.csproj", "{C1C5110A-A5E7-44C5-9E59-C86D53CAA143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.BooksByPrice", "04.BooksByPrice\04.BooksByPrice.csproj", "{C1C5110A-A5E7-44C5-9E59-C86D53CAA143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.NotReleasedIn", "05.NotReleasedIn\05.NotReleasedIn.csproj", "{F79A6823-CFCD-43B4-88EE-FC85FB6AF1C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.NotReleasedIn", "05.NotReleasedIn\05.NotReleasedIn.csproj", "{F79A6823-CFCD-43B4-88EE-FC85FB6AF1C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.BookTitlesByCategory", "06.BookTitlesByCategory\06.BookTitlesByCategory.csproj", "{ADD0B11F-F775-4A67-839E-F84DCDA3A5F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.BookTitlesByCategory", "06.BookTitlesByCategory\06.BookTitlesByCategory.csproj", "{ADD0B11F-F775-4A67-839E-F84DCDA3A5F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ReleasedBeforeDate", "07.ReleasedBeforeDate\07.ReleasedBeforeDate.csproj", "{8436D664-B6BC-4ACF-9322-980DF6259CFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.ReleasedBeforeDate", "07.ReleasedBeforeDate\07.ReleasedBeforeDate.csproj", "{8436D664-B6BC-4ACF-9322-980DF6259CFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
