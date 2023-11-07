@@ -10,9 +10,9 @@
         {
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
-
+            
             var output = GetMostRecentBooks(db);
-
+            
             Console.WriteLine(output);
         }
 
