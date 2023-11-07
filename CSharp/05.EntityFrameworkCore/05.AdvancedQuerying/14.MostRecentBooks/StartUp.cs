@@ -24,12 +24,12 @@
                 {
                     c.Name,
                     Books = c.CategoryBooks
+                    .OrderByDescending(b => b.Book.ReleaseDate)
                     .Select(b => new
                     {
                         Title = b.Book.Title,
-                        Year = b.Book.ReleaseDate.Value.Year
+                        Year = b.Book.ReleaseDate!.Value.Year
                     })
-                    .OrderByDescending(b => b.Year)
                     .Take(3)
                     .ToList()
                 })
