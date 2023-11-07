@@ -19,15 +19,10 @@
         public static string GetTotalProfitByCategory(BookShopContext context)
         {
             var categories = context.Categories
-                .GroupBy(c => new
+                .Select(c => new
                 {
                     c.Name,
                     Sum = c.CategoryBooks.Sum(b => b.Book.Price * b.Book.Copies)
-                })
-                .Select(c => new
-                {
-                    c.Key.Name,
-                    c.Key.Sum
                 })
                 .ToList()
                 .OrderByDescending(c => c.Sum)
