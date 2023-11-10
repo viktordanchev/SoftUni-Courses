@@ -35,9 +35,9 @@
                     Insert(root.MiddleChild, element);
                 }
 
-                while (!root.RightChild.IsLeaf() || !root.LeftChild.IsLeaf())
+                if (!root.RightChild.IsLeaf() || !root.LeftChild.IsLeaf())
                 {
-                    Merge(root);
+                   this.root = Merge(root);
                 }
 
                 return;
@@ -84,20 +84,30 @@
             root.RightKey = default;
         }
 
-        private void Merge(TreeNode<T> root)
+        private TreeNode<T> Merge(TreeNode<T> root)
         {
             if (!root.RightChild.IsLeaf())
             {
                 if (root.IsThreeNode())
                 {
+                    var newRoot = new TreeNode<T>(root.RightKey);
+                    newRoot.LeftChild = new TreeNode<T>(root.LeftKey);
+                    newRoot.LeftChild.LeftChild = root.LeftChild;
+                    newRoot.LeftChild.RightChild = root.MiddleChild;
+                    newRoot.RightChild = root.RightChild;
 
+                    root = newRoot;
                 }
-
-                root.RightKey = root.RightChild.LeftKey;
-                root.LeftChild = new TreeNode<T>(root.LeftChild.LeftKey);
-                root.MiddleChild = new TreeNode<T>(root.RightChild.LeftChild.LeftKey);
-                root.RightChild = new TreeNode<T>(root.RightChild.RightChild.LeftKey);
+                else
+                {
+                    root.RightKey = root.RightChild.LeftKey;
+                    root.LeftChild = new TreeNode<T>(root.LeftChild.LeftKey);
+                    root.MiddleChild = new TreeNode<T>(root.RightChild.LeftChild.LeftKey);
+                    root.RightChild = new TreeNode<T>(root.RightChild.RightChild.LeftKey);
+                }
             }
+
+            return root;
         }
 
         public override string ToString()
