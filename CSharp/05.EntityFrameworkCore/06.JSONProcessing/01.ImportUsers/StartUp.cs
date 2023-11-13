@@ -20,7 +20,7 @@ namespace ProductShop
         {
             var users = JsonConvert.DeserializeObject<User[]>(inputJson);
 
-            context.AddRange(users);
+            context.Users.AddRange(users);
             context.SaveChanges();
 
             return $"Successfully imported {users.Length}";
