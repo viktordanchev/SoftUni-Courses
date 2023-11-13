@@ -25,7 +25,7 @@ namespace ProductShop
 
             if (validCategories.Length > 0)
             {
-                context.AddRange(validCategories);
+                context.Categories.AddRange(validCategories);
                 context.SaveChanges();
             }
 

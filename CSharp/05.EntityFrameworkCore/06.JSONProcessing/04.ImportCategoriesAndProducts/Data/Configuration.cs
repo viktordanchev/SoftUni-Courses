@@ -3,6 +3,6 @@
     public static class Configuration
     {
         public const string ConnectionString =
-            @"Server=VIKTOR-PC\SQLEXPRESS;Database=BookShop;Trusted_Connection=True";
+            @"Server=VIKTOR-PC\SQLEXPRESS;Database=ProductShop;Trusted_Connection=True";
     }
 }
