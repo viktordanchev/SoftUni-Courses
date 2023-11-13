@@ -1,5 +1,6 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
 using ProductShop.Data;
+using ProductShop.Models;
 
 namespace ProductShop
 {
@@ -7,19 +8,22 @@ namespace ProductShop
     {
         public static void Main()
         {
-            using var context = new ProductShopContext();
+            var context = new ProductShopContext();
 
-            var input = "users.json";
-            var output = ImportUsers(context, input);
+            var usersJson = File.ReadAllText(@"../../../Datasets/users.json");
+            var output = ImportUsers(context, usersJson);
 
             Console.WriteLine(output);
         }
 
         public static string ImportUsers(ProductShopContext context, string inputJson)
         {
-            var users = File.ReadAllLines(inputJson);
+            var users = JsonConvert.DeserializeObject<User[]>(inputJson);
 
-            return string.Empty;
+            context.AddRange(users);
+            context.SaveChanges();
+
+            return $"Successfully imported {users.Length}";
         }
     }
 }
