@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using ProductShop.Data;
 
 namespace ProductShop
@@ -9,17 +10,36 @@ namespace ProductShop
         {
             using var context = new ProductShopContext();
 
-            var input = "users.json";
-            var output = ImportUsers(context, input);
+            var output = GetCategoriesByProductsCount(context);
 
             Console.WriteLine(output);
         }
 
-        public static string ImportUsers(ProductShopContext context, string inputJson)
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
-            var users = File.ReadAllLines(inputJson);
+            var categories = context.Categories
+                .Select(c => new
+                {
+                    Category = c.Name,
+                    ProductsCount = c.CategoriesProducts.Count,
+                    AveragePrice = $"{c.CategoriesProducts.Average(c => c.Product.Price):F2}",
+                    TotalRevenue = $"{c.CategoriesProducts.Count * c.CategoriesProducts.Average(c => c.Product.Price):F2}"
+                })
+                .ToArray()
+                .OrderByDescending(c => c.ProductsCount);
 
-            return string.Empty;
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var categoriesJson = JsonConvert.SerializeObject(categories, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            return categoriesJson;
         }
     }
 }
