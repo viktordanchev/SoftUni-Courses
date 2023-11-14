@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using ProductShop.Data;
 
 namespace ProductShop
@@ -9,17 +10,36 @@ namespace ProductShop
         {
             using var context = new ProductShopContext();
 
-            var input = "users.json";
-            var output = ImportUsers(context, input);
+            var output = GetProductsInRange(context);
 
             Console.WriteLine(output);
         }
 
-        public static string ImportUsers(ProductShopContext context, string inputJson)
+        public static string GetProductsInRange(ProductShopContext context)
         {
-            var users = File.ReadAllLines(inputJson);
+            var products = context.Products
+                .Select(p => new
+                {
+                    p.Name,
+                    p.Price,
+                    Seller = p.Seller.FirstName + " " + p.Seller.LastName
+                })
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .ToArray()
+                .OrderBy(p => p.Price);
 
-            return string.Empty;
+            DefaultContractResolver contractResolver = new DefaultContractResolver
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            };
+
+            var productsJson = JsonConvert.SerializeObject(products, new JsonSerializerSettings
+            {
+                ContractResolver = contractResolver,
+                Formatting = Formatting.Indented
+            });
+
+            return productsJson;
         }
     }
 }
