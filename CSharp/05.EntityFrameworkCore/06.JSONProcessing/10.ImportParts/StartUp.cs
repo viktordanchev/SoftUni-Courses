@@ -23,8 +23,14 @@ namespace CarDealer
             var config = new MapperConfiguration(cfg => cfg.AddProfile<CarDealerProfile>());
             IMapper mapper = new Mapper(config);
 
+            var supplierIds = context.Suppliers
+                .Select(x => x.Id)
+                .ToList();
+
             var partDTOs = JsonConvert.DeserializeObject<PartDTO[]>(inputJson);
-            var parts = mapper.Map<Part[]>(partDTOs);
+            var parts = mapper.Map<Part[]>(partDTOs)
+                .Where(p => supplierIds.Contains(p.SupplierId))
+                .ToArray();
 
             context.Parts.AddRange(parts);
             context.SaveChanges();
