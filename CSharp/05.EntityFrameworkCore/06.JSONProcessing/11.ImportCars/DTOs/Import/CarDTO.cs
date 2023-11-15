@@ -1,4 +1,6 @@
-﻿namespace CarDealer.DTOs.Import
+﻿using CarDealer.Models;
+
+namespace CarDealer.DTOs.Import
 {
     public class CarDTO
     {
