@@ -2,6 +2,6 @@
 {
     public static class Configuration
     {
-        public const string ConnectionString = @"Server=.;Database=CarDealer;Integrated Security=True;Encrypt=False";
+        public const string ConnectionString = @"Server=VIKTOR-PC\SQLEXPRESS;Database=CarDealer;Trusted_Connection=True";
     }
 }

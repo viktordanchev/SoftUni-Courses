@@ -23,4 +23,12 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Export\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\11.ImportCars\11.ImportCars.csproj" />
+  </ItemGroup>
+
 </Project>
