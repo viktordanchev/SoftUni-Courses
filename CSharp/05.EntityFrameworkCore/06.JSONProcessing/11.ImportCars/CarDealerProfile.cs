@@ -9,6 +9,8 @@ namespace CarDealer
         public CarDealerProfile()
         {
             CreateMap<CarDTO, Car>();
+
+            CreateMap<PartCarDTO, PartCar>();
         }
     }
 }

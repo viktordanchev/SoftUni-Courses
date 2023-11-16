@@ -26,6 +26,16 @@ namespace CarDealer
             var carDTOs = JsonConvert.DeserializeObject<CarDTO[]>(inputJson);
             var cars = mapper.Map<Car[]>(carDTOs);
 
+            foreach (var carDTO in carDTOs)
+            {
+                var car = mapper.Map<Car>(carDTO);
+
+                foreach (var partId in carDTO.PartsId)
+                {
+                    car.PartsCars.Add(new PartCar { PartId = partId });
+                }
+            }
+
             context.Cars.AddRange(cars);
             context.SaveChanges();
 
