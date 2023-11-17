@@ -30,9 +30,13 @@ namespace CarDealer
             {
                 var car = mapper.Map<Car>(carDTO);
 
-                foreach (var partId in carDTO.PartsId)
+                foreach (var partId in carDTO.PartsId.Distinct())
                 {
-                    car.PartsCars.Add(new PartCar { PartId = partId });
+                    context.PartsCars.Add(new PartCar
+                    {
+                        PartId = partId,
+                        Car = car
+                    });
                 }
             }
 
