@@ -1,6 +1,5 @@
 ﻿using CarDealer.Data;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System.Globalization;
 
 namespace CarDealer

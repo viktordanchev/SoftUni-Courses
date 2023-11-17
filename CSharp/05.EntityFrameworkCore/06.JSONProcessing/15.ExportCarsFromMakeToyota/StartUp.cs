@@ -1,6 +1,5 @@
 ﻿using CarDealer.Data;
 using Newtonsoft.Json;
-using System.Globalization;
 
 namespace CarDealer
 {
@@ -10,27 +9,29 @@ namespace CarDealer
         {
             using var context = new CarDealerContext();
 
-            var output = GetOrderedCustomers(context);
+            var output = GetCarsFromMakeToyota(context);
 
             Console.WriteLine(output);
         }
 
-        public static string GetOrderedCustomers(CarDealerContext context)
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
         {
-            var customers = context.Customers
-                .OrderBy(c => c.BirthDate)
-                .ThenBy(c => c.IsYoungDriver)
+            var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
                 .Select(c => new
                 {
-                    c.Name,
-                    BirthDate = c.BirthDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    c.IsYoungDriver
+                    c.Id,
+                    c.Make,
+                    c.Model,
+                    c.TraveledDistance
                 })
-            .ToArray();
+                .ToArray()
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TraveledDistance);
 
-            var customersJson = JsonConvert.SerializeObject(customers, Formatting.Indented);
+            var carsJson = JsonConvert.SerializeObject(cars, Formatting.Indented);
 
-            return customersJson;
+            return carsJson;
         }
     }
 }
