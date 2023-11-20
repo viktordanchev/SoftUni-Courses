@@ -2,6 +2,7 @@
 {
     using System;
     using System.Text;
+    using System.Xml.Linq;
 
     public class TwoThreeTree<T> where T : IComparable<T>
     {
@@ -15,99 +16,115 @@
                 return;
             }
 
-            Insert(root, element);
+            root = Insert(root, element);
         }
 
-        private void Insert(TreeNode<T> root, T element)
+        private TreeNode<T> Insert(TreeNode<T> node, T element)
         {
-            if (!root.IsLeaf())
+            if (!node.IsLeaf())
             {
-                if (element.CompareTo(root.LeftKey) < 0)
+                if (element.CompareTo(node.LeftKey) < 0)
                 {
-                    Insert(root.LeftChild, element);
+                    var newNode = Insert(node.LeftChild, element);
+
+                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
                 }
-                else if (element.CompareTo(root.RightKey) > 0)
+                else if (element.CompareTo(node.RightKey) < 0 || node.IsTwoNode())
                 {
-                    Insert(root.RightChild, element);
+                    var newNode = Insert(node.MiddleChild, element);
+
+                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
                 }
                 else
                 {
-                    Insert(root.MiddleChild, element);
-                }
+                    var newNode = Insert(node.RightChild, element);
 
-                if (!root.RightChild.IsLeaf() || !root.LeftChild.IsLeaf())
-                {
-                   this.root = Merge(root);
+                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
                 }
-
-                return;
             }
 
-            if (root.IsThreeNode())
+            if (node.IsThreeNode())
             {
-                Resize(root, element);
+                node = MergeNodes(node, new TreeNode<T>(element));
             }
             else
             {
-                if (root.LeftKey.CompareTo(element) > 0)
+                if (node.LeftKey.CompareTo(element) > 0)
                 {
-                    root.RightKey = root.LeftKey;
-                    root.LeftKey = element;
+                    node.RightKey = node.LeftKey;
+                    node.LeftKey = element;
                 }
                 else
                 {
-                    root.RightKey = element;
+                    node.RightKey = element;
                 }
             }
+
+            return node;
         }
 
-        private void Resize(TreeNode<T> root, T element)
+        private TreeNode<T> MergeNodes(TreeNode<T> node1, TreeNode<T> node2)
         {
-            if (root.LeftKey.CompareTo(element) > 0)
-            {
-                root.LeftChild = new TreeNode<T>(element);
-                root.RightChild = new TreeNode<T>(root.RightKey);
-            }
-            else if (root.RightKey.CompareTo(element) < 0)
-            {
-                root.LeftChild = new TreeNode<T>(root.LeftKey);
-                root.LeftKey = root.RightKey;
-                root.RightChild = new TreeNode<T>(element);
-            }
-            else
-            {
-                root.LeftChild = new TreeNode<T>(root.LeftKey);
-                root.RightChild = new TreeNode<T>(root.RightKey);
-                root.LeftKey = element;
-            }
+            TreeNode<T> newNode = null;
 
-            root.RightKey = default;
-        }
-
-        private TreeNode<T> Merge(TreeNode<T> root)
-        {
-            if (!root.RightChild.IsLeaf())
-            {
-                if (root.IsThreeNode())
+            if (node1.IsLeaf())
+            { 
+                if (node1.LeftKey.CompareTo(node2.LeftKey) > 0)
                 {
-                    var newRoot = new TreeNode<T>(root.RightKey);
-                    newRoot.LeftChild = new TreeNode<T>(root.LeftKey);
-                    newRoot.LeftChild.LeftChild = root.LeftChild;
-                    newRoot.LeftChild.RightChild = root.MiddleChild;
-                    newRoot.RightChild = root.RightChild;
-
-                    root = newRoot;
+                    newNode = new TreeNode<T>(node1.LeftKey);
+                    newNode.LeftChild = node2;
+                    newNode.MiddleChild = new TreeNode<T>(node1.RightKey);
+                }
+                else if (node1.RightKey.CompareTo(node2.LeftKey) < 0)
+                {
+                    newNode = new TreeNode<T>(node1.RightKey);
+                    newNode.LeftChild = node1;
+                    newNode.MiddleChild = new TreeNode<T>(node2.LeftKey);
+                    node1.RightKey = default;
                 }
                 else
                 {
-                    root.RightKey = root.RightChild.LeftKey;
-                    root.LeftChild = new TreeNode<T>(root.LeftChild.LeftKey);
-                    root.MiddleChild = new TreeNode<T>(root.RightChild.LeftChild.LeftKey);
-                    root.RightChild = new TreeNode<T>(root.RightChild.RightChild.LeftKey);
+                    newNode = new TreeNode<T>(node2.LeftKey);
+                    newNode.LeftChild = node1;
+                    newNode.MiddleChild = new TreeNode<T>(node1.RightKey);
+                    node1.RightKey = default;
+                }
+            }
+            else 
+            {
+                if (node1.IsThreeNode() && node2.IsTwoNode())
+                {
+                    newNode = new TreeNode<T>(node2.LeftKey)
+                    {
+                        LeftChild = node1,
+                        MiddleChild = new TreeNode<T>(node1.RightKey)
+                    };
+
+                    newNode.MiddleChild.LeftChild = node2.MiddleChild;
+                    newNode.MiddleChild.MiddleChild = node1.RightChild;
+                    node2.LeftChild = node1.RightChild;
+                    node1.RightKey = default;
+                    node1.RightChild = null;
+                }
+                else if (node1.LeftKey.CompareTo(node2.LeftKey) < 0)
+                {
+                    newNode = new TreeNode<T>(node1.LeftKey);
+                    newNode.RightKey = node2.LeftKey;
+                    newNode.LeftChild = node1.LeftChild;
+                    newNode.MiddleChild = new TreeNode<T>(node2.LeftChild.LeftKey);
+                    newNode.RightChild = new TreeNode<T>(node2.MiddleChild.LeftKey);
+                }
+                else if (node1.LeftKey.CompareTo(node2.LeftKey) > 0)
+                {
+                    newNode = new TreeNode<T>(node2.LeftKey);
+                    newNode.RightKey = node1.LeftKey;
+                    newNode.LeftChild = node2.LeftChild;
+                    newNode.MiddleChild = new TreeNode<T>(node2.MiddleChild.LeftKey);
+                    newNode.RightChild = new TreeNode<T>(node1.MiddleChild.LeftKey);
                 }
             }
 
-            return root;
+            return newNode;
         }
 
         public override string ToString()
