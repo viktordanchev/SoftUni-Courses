@@ -2,7 +2,6 @@
 {
     using System;
     using System.Text;
-    using System.Xml.Linq;
 
     public class TwoThreeTree<T> where T : IComparable<T>
     {
@@ -43,31 +42,14 @@
                 }
             }
 
-            if (node.IsThreeNode())
-            {
-                node = MergeNodes(node, new TreeNode<T>(element));
-            }
-            else
-            {
-                if (node.LeftKey.CompareTo(element) > 0)
-                {
-                    node.RightKey = node.LeftKey;
-                    node.LeftKey = element;
-                }
-                else
-                {
-                    node.RightKey = element;
-                }
-            }
-
-            return node;
+            return MergeNodes(node, new TreeNode<T>(element));
         }
 
         private TreeNode<T> MergeNodes(TreeNode<T> node1, TreeNode<T> node2)
         {
             TreeNode<T> newNode = null;
 
-            if (node1.IsLeaf())
+            if (node1.IsLeaf() && node2.IsLeaf())
             { 
                 if (node1.LeftKey.CompareTo(node2.LeftKey) > 0)
                 {
@@ -92,21 +74,7 @@
             }
             else 
             {
-                if (node1.IsThreeNode() && node2.IsTwoNode())
-                {
-                    newNode = new TreeNode<T>(node2.LeftKey)
-                    {
-                        LeftChild = node1,
-                        MiddleChild = new TreeNode<T>(node1.RightKey)
-                    };
-
-                    newNode.MiddleChild.LeftChild = node2.MiddleChild;
-                    newNode.MiddleChild.MiddleChild = node1.RightChild;
-                    node2.LeftChild = node1.RightChild;
-                    node1.RightKey = default;
-                    node1.RightChild = null;
-                }
-                else if (node1.LeftKey.CompareTo(node2.LeftKey) < 0)
+                if (node1.LeftKey.CompareTo(node2.LeftKey) < 0)
                 {
                     newNode = new TreeNode<T>(node1.LeftKey);
                     newNode.RightKey = node2.LeftKey;
