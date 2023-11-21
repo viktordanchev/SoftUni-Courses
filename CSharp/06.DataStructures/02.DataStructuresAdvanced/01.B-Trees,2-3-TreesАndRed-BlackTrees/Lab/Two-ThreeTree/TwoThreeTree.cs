@@ -26,73 +26,90 @@
                 {
                     var newNode = Insert(node.LeftChild, element);
 
-                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
+                    return newNode != node.LeftChild ? MergeNodes(node, newNode) : node;
                 }
                 else if (element.CompareTo(node.RightKey) < 0 || node.IsTwoNode())
                 {
                     var newNode = Insert(node.MiddleChild, element);
 
-                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
+                    return newNode != node.MiddleChild ? MergeNodes(node, newNode) : node;
                 }
                 else
                 {
                     var newNode = Insert(node.RightChild, element);
 
-                    return !newNode.IsLeaf() ? MergeNodes(node, newNode) : node;
+                    return newNode != node.RightChild ? MergeNodes(node, newNode) : node;
                 }
             }
 
             return MergeNodes(node, new TreeNode<T>(element));
         }
 
-        private TreeNode<T> MergeNodes(TreeNode<T> node1, TreeNode<T> node2)
+        private TreeNode<T> MergeNodes(TreeNode<T> current, TreeNode<T> node)
         {
-            TreeNode<T> newNode = null;
-
-            if (node1.IsLeaf() && node2.IsLeaf())
-            { 
-                if (node1.LeftKey.CompareTo(node2.LeftKey) > 0)
+            if (current.IsTwoNode())
+            {
+                if (current.LeftKey.CompareTo(node.LeftKey) < 0)
                 {
-                    newNode = new TreeNode<T>(node1.LeftKey);
-                    newNode.LeftChild = node2;
-                    newNode.MiddleChild = new TreeNode<T>(node1.RightKey);
-                }
-                else if (node1.RightKey.CompareTo(node2.LeftKey) < 0)
-                {
-                    newNode = new TreeNode<T>(node1.RightKey);
-                    newNode.LeftChild = node1;
-                    newNode.MiddleChild = new TreeNode<T>(node2.LeftKey);
-                    node1.RightKey = default;
+                    current.RightKey = node.LeftKey;
+                    current.MiddleChild = node.LeftChild;
+                    current.RightChild = node.MiddleChild;
                 }
                 else
                 {
-                    newNode = new TreeNode<T>(node2.LeftKey);
-                    newNode.LeftChild = node1;
-                    newNode.MiddleChild = new TreeNode<T>(node1.RightKey);
-                    node1.RightKey = default;
+                    current.RightKey = current.LeftKey;
+                    current.RightChild = current.MiddleChild;
+                    current.MiddleChild = node.MiddleChild;
+                    current.LeftChild = node.LeftChild;
+                    current.LeftKey = node.LeftKey;
                 }
-            }
-            else 
-            {
-                if (node1.LeftKey.CompareTo(node2.LeftKey) < 0)
-                {
-                    newNode = new TreeNode<T>(node1.LeftKey);
-                    newNode.RightKey = node2.LeftKey;
-                    newNode.LeftChild = node1.LeftChild;
-                    newNode.MiddleChild = new TreeNode<T>(node2.LeftChild.LeftKey);
-                    newNode.RightChild = new TreeNode<T>(node2.MiddleChild.LeftKey);
-                }
-                else if (node1.LeftKey.CompareTo(node2.LeftKey) > 0)
-                {
-                    newNode = new TreeNode<T>(node2.LeftKey);
-                    newNode.RightKey = node1.LeftKey;
-                    newNode.LeftChild = node2.LeftChild;
-                    newNode.MiddleChild = new TreeNode<T>(node2.MiddleChild.LeftKey);
-                    newNode.RightChild = new TreeNode<T>(node1.MiddleChild.LeftKey);
-                }
-            }
 
-            return newNode;
+                return current;
+            }
+            else if (node.LeftKey.CompareTo(current.LeftKey) < 0)
+            {
+                var newNode = new TreeNode<T>(current.LeftKey)
+                {
+                    LeftChild = node,
+                    MiddleChild = current
+                };
+
+                current.LeftChild = current.MiddleChild;
+                current.MiddleChild = current.RightChild;
+                current.LeftKey = current.RightKey;
+                current.RightKey = default;
+                current.RightChild = null;
+
+                return newNode;
+            }
+            else if (node.LeftKey.CompareTo(current.RightKey) < 0)
+            {
+                node.MiddleChild = new TreeNode<T>(current.RightKey)
+                {
+                    LeftChild = node.MiddleChild,
+                    MiddleChild = current.RightChild
+                };
+
+                node.LeftChild = current;
+                current.RightKey = default;
+                current.RightChild = null;
+
+                return node;
+            }
+            else
+            {
+                var newNode = new TreeNode<T>(current.RightKey)
+                {
+                    LeftChild = current,
+                    MiddleChild = node
+                };
+
+                node.LeftChild = current.RightChild;
+                current.RightKey = default;
+                current.RightChild = null;
+
+                return newNode;
+            }
         }
 
         public override string ToString()
