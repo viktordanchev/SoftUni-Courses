@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>TwoThreeTree</RootNamespace>
+    <RootNamespace>Two_ThreeTree</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\01.Implement2-3TreeInsertion\Two-ThreeTree.csproj" />
     <ProjectReference Include="..\Two-ThreeTree\Two-ThreeTree.csproj" />
   </ItemGroup>
 
