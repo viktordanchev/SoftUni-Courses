@@ -7,6 +7,7 @@ namespace P02_FootballBetting.Data.Models
         public Town()
         {
             Teams = new List<Team>();
+            Players = new List<Player>();
         }
 
         public int TownId { get; set; }
@@ -16,5 +17,6 @@ namespace P02_FootballBetting.Data.Models
         [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; }
         public ICollection<Team> Teams { get; set; }
+        public ICollection<Player> Players { get; set; }
     }
 }
