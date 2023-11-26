@@ -21,5 +21,13 @@ namespace P01_StudentSystem.Data
             modelBuilder.Entity<StudentCourse>()
                 .HasKey(sc => new { sc.StudentId, sc.CourseId });
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server=VIKTOR-PC\SQLEXPRESS;Database=BookShop;Trusted_Connection=True");
+            }
+        }
     }
 }

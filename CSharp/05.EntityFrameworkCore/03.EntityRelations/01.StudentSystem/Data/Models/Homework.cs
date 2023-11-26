@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Net.Mime;
+using _01.StudentSystem.Data.Models.Enums;
 
 namespace P01_StudentSystem.Data.Models
 {
@@ -15,7 +15,7 @@ namespace P01_StudentSystem.Data.Models
         public string Content { get; set; } = null!;
 
         [Required]
-        public virtual ContentType ContentType { get; set; } = null!;
+        public ContentType ContentType { get; set; }
 
         [Required]
         public DateTime SubmissionTime { get; set; }

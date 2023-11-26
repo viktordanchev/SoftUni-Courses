@@ -26,5 +26,13 @@ namespace P02_FootballBetting.Data
             modelBuilder.Entity<PlayerStatistic>()
                 .HasKey(ps => new { ps.PlayerId, ps.GameId });
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server=VIKTOR-PC\SQLEXPRESS;Database=BookShop;Trusted_Connection=True");
+            }
+        }
     }
 }
