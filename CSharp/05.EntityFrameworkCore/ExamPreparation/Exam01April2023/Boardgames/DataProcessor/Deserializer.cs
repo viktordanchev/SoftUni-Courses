@@ -83,7 +83,7 @@
 
             foreach (var seller in sellers)
             {
-                if (!IsValid(seller))
+                if (!IsValid(seller) || !IsValidWebsite(seller.Website))
                 {
                     result.AppendLine(ErrorMessage);
                 }
@@ -99,9 +99,12 @@
 
                     foreach (var boardgameId in seller.Boardgames)
                     {
-                        if (!IsValid(boardgameId) 
-                            || !boardgameIds.Contains(boardgameId) 
-                            || validSeller.BoardgamesSellers.Any(bs => bs.BoardgameId == boardgameId))
+                        if(validSeller.BoardgamesSellers.Any(bs => bs.BoardgameId == boardgameId))
+                        {
+                            continue;
+                        }
+
+                        if (!boardgameIds.Contains(boardgameId))
                         {
                             result.AppendLine(ErrorMessage);
                         }
@@ -113,6 +116,7 @@
                                 Seller = validSeller
                             };
 
+                            validSeller.BoardgamesSellers.Add(boardgameSeller);
                             context.BoardgamesSellers.Add(boardgameSeller);
                         }
                     }
@@ -128,6 +132,14 @@
             context.SaveChanges();
 
             return result.ToString().Trim();
+        }
+
+        private static bool IsValidWebsite(string website)
+        {
+            return website.StartsWith("www.")
+                && website.EndsWith(".com")
+                && website.Substring(4, website.Length - 8)
+                .All(c => char.IsDigit(c) || char.IsLetter(c) || c == '-');
         }
 
         private static bool IsValid(object dto)
