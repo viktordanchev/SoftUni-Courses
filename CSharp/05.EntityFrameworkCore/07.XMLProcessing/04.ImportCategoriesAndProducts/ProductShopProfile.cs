@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using _04.ImportCategoriesAndProducts.DTOs.Import;
+using AutoMapper;
+using ProductShop.Models;
 
 namespace ProductShop
 {
