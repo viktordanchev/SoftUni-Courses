@@ -3,7 +3,7 @@
 namespace ProductShop.DTOs.Import
 {
     [XmlType("User")]
-    public class UserDTO
+    public class UserDto
     {
         [XmlElement("firstName")]
         public string FirstName { get; set; } = null!;

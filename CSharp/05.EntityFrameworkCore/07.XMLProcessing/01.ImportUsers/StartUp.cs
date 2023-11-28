@@ -20,7 +20,7 @@ namespace ProductShop
 
         public static string ImportUsers(ProductShopContext context, string inputXml)
         {
-            var serializer = new XmlSerializer(typeof(UserDTO[]), new XmlRootAttribute("Users"));
+            var serializer = new XmlSerializer(typeof(UserDto[]), new XmlRootAttribute("Users"));
             using var reader = new StringReader(inputXml);
             var userDTOs = serializer.Deserialize(reader);
 
