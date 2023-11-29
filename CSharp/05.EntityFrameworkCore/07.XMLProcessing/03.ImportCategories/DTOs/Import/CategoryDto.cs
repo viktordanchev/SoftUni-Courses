@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace _03.ImportCategories.DTOs.Import
+namespace ProductShop.DTOs.Import
 {
     [XmlType("Category")]
     public class CategoryDto
