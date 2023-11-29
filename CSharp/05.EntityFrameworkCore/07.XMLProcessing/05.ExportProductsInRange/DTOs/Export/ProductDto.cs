@@ -12,6 +12,6 @@ namespace ProductShop.DTOs.Export
         public decimal Price { get; set; }
 
         [XmlElement("buyer")]
-        public string? Buyer { get; set; }
+        public string Buyer { get; set; }
     }
 }

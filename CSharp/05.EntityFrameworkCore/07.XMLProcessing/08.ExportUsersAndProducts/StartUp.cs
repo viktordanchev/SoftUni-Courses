@@ -1,5 +1,6 @@
-﻿using ProductShop.DTOs.Export;
-using ProductShop.Data;
+﻿using ProductShop.Data;
+using ProductShop.DTOs.Export;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace ProductShop
@@ -33,11 +34,11 @@ namespace ProductShop
                             Price = p.Price
                         })
                         .OrderByDescending(p => p.Price)
-                        .Take(10)
                         .ToArray()
                     }
                 })
                 .OrderByDescending(u => u.SoldProducts.Count)
+                .Take(10)
                 .ToArray();
 
             var usersDto = new UsersDto()

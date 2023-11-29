@@ -19,14 +19,14 @@ namespace ProductShop
         {
             var products = context.Products
                 .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .OrderBy(p => p.Price)
+                .Take(10)
                 .Select(p => new ProductDto()
                 {
                     Name = p.Name,
                     Price = p.Price,
-                    Buyer = p.Buyer == null ? null : string.Concat(p.Buyer.FirstName, " ", p.Buyer.LastName)
+                    Buyer = string.Concat(p.Buyer.FirstName, " ", p.Buyer.LastName)
                 })
-                .OrderBy(p => p.Price)
-                .Take(10)
                 .ToArray();
 
             var serializer = new XmlSerializer(typeof(ProductDto[]), new XmlRootAttribute("Products"));
