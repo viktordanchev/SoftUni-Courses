@@ -1,7 +1,6 @@
-﻿using ProductShop.DTOs.Import;
+﻿using ProductShop.DTOs.Export;
 using ProductShop.Data;
 using System.Xml.Serialization;
-using ProductShop.Models;
 
 namespace ProductShop
 {
@@ -11,40 +10,34 @@ namespace ProductShop
         {
             using var context = new ProductShopContext();
 
-            var inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
-            var output = ImportCategoryProducts(context, inputXml);
+            var output = GetProductsInRange(context);
 
             Console.WriteLine(output);
         }
 
-        public static string ImportCategoryProducts(ProductShopContext context, string inputXml)
+        public static string GetProductsInRange(ProductShopContext context)
         {
-            var serializer = new XmlSerializer(typeof(CategoryProductDto[]), new XmlRootAttribute("CategoryProducts"));
-            var categoryProductDtos = (CategoryProductDto[])serializer.Deserialize(new StringReader(inputXml));
-
-            var validCategoryIds = context.Categories.Select(c => c.Id).ToList();
-            var validProductIds = context.Products.Select(c => c.Id).ToList();
-
-            var validCategoryProducts = new List<CategoryProduct>();
-            foreach (var categoryProductDto in categoryProductDtos)
-            {
-                if (validCategoryIds.Contains(categoryProductDto.CategoryId)
-                    && validProductIds.Contains(categoryProductDto.ProductId))
+            var products = context.Products
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .Select(p => new ProductDto()
                 {
-                    var validCategoryProduct = new CategoryProduct()
-                    {
-                        CategoryId = categoryProductDto.CategoryId,
-                        ProductId = categoryProductDto.ProductId
-                    };
+                    Name = p.Name,
+                    Price = p.Price,
+                    Buyer = p.Buyer == null ? null : string.Concat(p.Buyer.FirstName, " ", p.Buyer.LastName)
+                })
+                .OrderBy(p => p.Price)
+                .Take(10)
+                .ToArray();
 
-                    validCategoryProducts.Add(validCategoryProduct);
-                }
+            var serializer = new XmlSerializer(typeof(ProductDto[]), new XmlRootAttribute("Products"));
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add(string.Empty, string.Empty);
+
+            using (var productsXml = new StringWriter())
+            {
+                serializer.Serialize(productsXml, products, ns);
+                return productsXml.ToString();
             }
-
-            context.CategoryProducts.AddRange(validCategoryProducts);
-            context.SaveChanges();
-
-            return $"Successfully imported {validCategoryProducts.Count}";
         }
     }
 }
