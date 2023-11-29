@@ -3,21 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ImportUsers", "01.ImportUsers\01.ImportUsers.csproj", "{A0328F3F-CE64-4D64-B073-0EE7A2AAFCD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ImportUsers", "01.ImportUsers\01.ImportUsers.csproj", "{A0328F3F-CE64-4D64-B073-0EE7A2AAFCD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ImportProducts", "02.ImportProducts\02.ImportProducts.csproj", "{413AAC8C-4185-40F6-834B-5E7C19D298F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ImportProducts", "02.ImportProducts\02.ImportProducts.csproj", "{413AAC8C-4185-40F6-834B-5E7C19D298F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ImportCategories", "03.ImportCategories\03.ImportCategories.csproj", "{D3D192B7-EAF2-415C-B2E8-C2CB701C75F0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ImportCategoriesAndProducts", "04.ImportCategoriesAndProducts\04.ImportCategoriesAndProducts.csproj", "{D0C820A8-C882-4590-B482-3DD29C46A93B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExportProductsInRange", "05.ExportProductsInRange\05.ExportProductsInRange.csproj", "{227B1898-6011-4966-949F-8F4AF9CCF8FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.ExportSoldProducts", "06.ExportSoldProducts\06.ExportSoldProducts.csproj", "{CB9CADEC-816F-47F5-A21C-E7EC79F1B4C6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ExportCategoriesByProductsCount", "07.ExportCategoriesByProductsCount\07.ExportCategoriesByProductsCount.csproj", "{CAE3C808-2952-408F-A7D7-AD25B5153111}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.ExportUsersAndProducts", "08.ExportUsersAndProducts\08.ExportUsersAndProducts.csproj", "{EAFBA817-FE9A-4279-B50A-35F2B3ABC7DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ImportCategories", "03.ImportCategories\03.ImportCategories.csproj", "{D3D192B7-EAF2-415C-B2E8-C2CB701C75F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,26 +27,6 @@ Global
 		{D3D192B7-EAF2-415C-B2E8-C2CB701C75F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D192B7-EAF2-415C-B2E8-C2CB701C75F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D192B7-EAF2-415C-B2E8-C2CB701C75F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0C820A8-C882-4590-B482-3DD29C46A93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0C820A8-C882-4590-B482-3DD29C46A93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0C820A8-C882-4590-B482-3DD29C46A93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0C820A8-C882-4590-B482-3DD29C46A93B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{227B1898-6011-4966-949F-8F4AF9CCF8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{227B1898-6011-4966-949F-8F4AF9CCF8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{227B1898-6011-4966-949F-8F4AF9CCF8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{227B1898-6011-4966-949F-8F4AF9CCF8FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB9CADEC-816F-47F5-A21C-E7EC79F1B4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB9CADEC-816F-47F5-A21C-E7EC79F1B4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB9CADEC-816F-47F5-A21C-E7EC79F1B4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB9CADEC-816F-47F5-A21C-E7EC79F1B4C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CAE3C808-2952-408F-A7D7-AD25B5153111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAE3C808-2952-408F-A7D7-AD25B5153111}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAE3C808-2952-408F-A7D7-AD25B5153111}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAE3C808-2952-408F-A7D7-AD25B5153111}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAFBA817-FE9A-4279-B50A-35F2B3ABC7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAFBA817-FE9A-4279-B50A-35F2B3ABC7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAFBA817-FE9A-4279-B50A-35F2B3ABC7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAFBA817-FE9A-4279-B50A-35F2B3ABC7DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

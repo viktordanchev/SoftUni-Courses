@@ -1,7 +1,7 @@
 ﻿using ProductShop.DTOs.Import;
 using ProductShop.Data;
-using ProductShop.Models;
 using System.Xml.Serialization;
+using ProductShop.Models;
 
 namespace ProductShop
 {
@@ -28,8 +28,8 @@ namespace ProductShop
             var validCategoryProducts = new List<CategoryProduct>();
             foreach (var categoryProductDto in categoryProductDtos)
             {
-                if(validCategoryIds.Contains(categoryProductDto.CategoryId) 
-                    && validProductIds.Contains(categoryProductDto.ProductId)) 
+                if (validCategoryIds.Contains(categoryProductDto.CategoryId)
+                    && validProductIds.Contains(categoryProductDto.ProductId))
                 {
                     var validCategoryProduct = new CategoryProduct()
                     {
