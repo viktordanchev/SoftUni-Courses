@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Export\" />
+    <Folder Include="DTOs\Import\" />
   </ItemGroup>
 
   <ItemGroup>

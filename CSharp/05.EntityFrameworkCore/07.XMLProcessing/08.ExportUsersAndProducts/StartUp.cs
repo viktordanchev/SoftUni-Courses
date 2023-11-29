@@ -1,7 +1,6 @@
-﻿using ProductShop.DTOs.Import;
+﻿using ProductShop.DTOs.Export;
 using ProductShop.Data;
 using System.Xml.Serialization;
-using ProductShop.Models;
 
 namespace ProductShop
 {
@@ -11,40 +10,51 @@ namespace ProductShop
         {
             using var context = new ProductShopContext();
 
-            var inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
-            var output = ImportCategoryProducts(context, inputXml);
+            var output = GetUsersWithProducts(context);
 
             Console.WriteLine(output);
         }
 
-        public static string ImportCategoryProducts(ProductShopContext context, string inputXml)
+        public static string GetUsersWithProducts(ProductShopContext context)
         {
-            var serializer = new XmlSerializer(typeof(CategoryProductDto[]), new XmlRootAttribute("CategoryProducts"));
-            var categoryProductDtos = (CategoryProductDto[])serializer.Deserialize(new StringReader(inputXml));
-
-            var validCategoryIds = context.Categories.Select(c => c.Id).ToList();
-            var validProductIds = context.Products.Select(c => c.Id).ToList();
-
-            var validCategoryProducts = new List<CategoryProduct>();
-            foreach (var categoryProductDto in categoryProductDtos)
-            {
-                if (validCategoryIds.Contains(categoryProductDto.CategoryId)
-                    && validProductIds.Contains(categoryProductDto.ProductId))
+            var users = context.Users
+                .Where(u => u.ProductsSold.Count > 0)
+                .Select(u => new UserDto()
                 {
-                    var validCategoryProduct = new CategoryProduct()
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Age = u.Age,
+                    SoldProducts = new ProductsDto()
                     {
-                        CategoryId = categoryProductDto.CategoryId,
-                        ProductId = categoryProductDto.ProductId
-                    };
+                        Count = u.ProductsSold.Count,
+                        Products = u.ProductsSold.Select(p => new ProductDto()
+                        {
+                            Name = p.Name,
+                            Price = p.Price
+                        })
+                        .OrderByDescending(p => p.Price)
+                        .Take(10)
+                        .ToArray()
+                    }
+                })
+                .OrderByDescending(u => u.SoldProducts.Count)
+                .ToArray();
 
-                    validCategoryProducts.Add(validCategoryProduct);
-                }
+            var usersDto = new UsersDto()
+            {
+                Count = users.Length,
+                Users = users
+            };
+
+            var serializer = new XmlSerializer(typeof(UsersDto), new XmlRootAttribute("Users"));
+            var ns = new XmlSerializerNamespaces();
+            ns.Add(string.Empty, string.Empty);
+
+            using (var usersXml = new StringWriter())
+            {
+                serializer.Serialize(usersXml, usersDto, ns);
+                return usersXml.ToString();
             }
-
-            context.CategoryProducts.AddRange(validCategoryProducts);
-            context.SaveChanges();
-
-            return $"Successfully imported {validCategoryProducts.Count}";
         }
     }
 }
