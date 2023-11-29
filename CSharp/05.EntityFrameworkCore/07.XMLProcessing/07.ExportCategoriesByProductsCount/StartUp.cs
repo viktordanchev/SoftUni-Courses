@@ -1,7 +1,6 @@
-﻿using ProductShop.DTOs.Import;
+﻿using ProductShop.DTOs.Export;
 using ProductShop.Data;
 using System.Xml.Serialization;
-using ProductShop.Models;
 
 namespace ProductShop
 {
@@ -11,40 +10,34 @@ namespace ProductShop
         {
             using var context = new ProductShopContext();
 
-            var inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
-            var output = ImportCategoryProducts(context, inputXml);
+            var output = GetCategoriesByProductsCount(context);
 
             Console.WriteLine(output);
         }
 
-        public static string ImportCategoryProducts(ProductShopContext context, string inputXml)
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
-            var serializer = new XmlSerializer(typeof(CategoryProductDto[]), new XmlRootAttribute("CategoryProducts"));
-            var categoryProductDtos = (CategoryProductDto[])serializer.Deserialize(new StringReader(inputXml));
-
-            var validCategoryIds = context.Categories.Select(c => c.Id).ToList();
-            var validProductIds = context.Products.Select(c => c.Id).ToList();
-
-            var validCategoryProducts = new List<CategoryProduct>();
-            foreach (var categoryProductDto in categoryProductDtos)
-            {
-                if (validCategoryIds.Contains(categoryProductDto.CategoryId)
-                    && validProductIds.Contains(categoryProductDto.ProductId))
+            var categories = context.Categories
+                .Select(c => new CategoryDto()
                 {
-                    var validCategoryProduct = new CategoryProduct()
-                    {
-                        CategoryId = categoryProductDto.CategoryId,
-                        ProductId = categoryProductDto.ProductId
-                    };
+                    Name = c.Name,
+                    Count = c.CategoryProducts.Count,
+                    AveragePrice = c.CategoryProducts.Average(p => p.Product.Price),
+                    TotalRevenue = c.CategoryProducts.Sum(p => p.Product.Price)
+                })
+                .OrderByDescending(c => c.Count)
+                .ThenBy(c => c.TotalRevenue)
+                .ToArray();
 
-                    validCategoryProducts.Add(validCategoryProduct);
-                }
+            var serializer = new XmlSerializer(typeof(CategoryDto[]), new XmlRootAttribute("Categroies"));
+            var ns = new XmlSerializerNamespaces();
+            ns.Add(string.Empty, string.Empty);
+
+            using(var categoriesXml = new StringWriter())
+            {
+                serializer.Serialize(categoriesXml, categories, ns);
+                return categoriesXml.ToString();
             }
-
-            context.CategoryProducts.AddRange(validCategoryProducts);
-            context.SaveChanges();
-
-            return $"Successfully imported {validCategoryProducts.Count}";
         }
     }
 }
