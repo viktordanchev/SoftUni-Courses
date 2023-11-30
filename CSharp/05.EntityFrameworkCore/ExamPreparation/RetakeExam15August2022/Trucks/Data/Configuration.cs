@@ -2,6 +2,6 @@
 {
     public static class Configuration
     {
-        public static string ConnectionString = @".;Database=Trucks;Trusted_Connection=True";
+        public static string ConnectionString = @"Server=VIKTOR-PC\SQLEXPRESS;Database=Trucks;Trusted_Connection=True";
     }
 }
