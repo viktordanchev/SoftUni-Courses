@@ -44,8 +44,7 @@
 
                 foreach (var footballer in coach.Footballers)
                 {
-                    if (!IsValid(footballer)
-                        || DateTime.Parse(footballer.ContractStartDate) > DateTime.Parse(footballer.ContractEndDate))
+                    if (!IsValid(footballer))
                     {
                         result.AppendLine(ErrorMessage);
                         continue;
