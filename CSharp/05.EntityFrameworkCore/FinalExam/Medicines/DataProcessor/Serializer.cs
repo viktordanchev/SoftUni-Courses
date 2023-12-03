@@ -18,7 +18,7 @@
                 .Select(p => new PatientDto()
                 {
                     FullName = p.FullName,
-                    AgeGroup = p.AgeGroup,
+                    AgeGroup = p.AgeGroup.ToString(),
                     Gender = p.Gender.ToString().ToLower(),
                     Medicines = p.PatientsMedicines
                         .Where(pm => pm.Medicine.ProductionDate > parsedDate)

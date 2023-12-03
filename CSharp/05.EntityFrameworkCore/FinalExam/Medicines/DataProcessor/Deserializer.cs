@@ -55,9 +55,9 @@
                     };
 
                     patient.PatientsMedicines.Add(patientMedicine);
-                    patients.Add(patient);
                 }
 
+                patients.Add(patient);
                 result.AppendLine(string.Format(SuccessfullyImportedPatient, patient.FullName, patient.PatientsMedicines.Count));
             }
 
@@ -119,9 +119,9 @@
                     };
 
                     pharmacy.Medicines.Add(medicine);
-                    pharmacies.Add(pharmacy);
                 }
 
+                pharmacies.Add(pharmacy);
                 result.AppendLine(string.Format(SuccessfullyImportedPharmacy, pharmacy.Name, pharmacy.Medicines.Count));
             }
 

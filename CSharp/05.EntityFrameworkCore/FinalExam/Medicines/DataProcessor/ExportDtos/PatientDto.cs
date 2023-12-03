@@ -1,5 +1,4 @@
-﻿using Medicines.Data.Models.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
 
 namespace Medicines.DataProcessor.ExportDtos
@@ -19,7 +18,7 @@ namespace Medicines.DataProcessor.ExportDtos
 
         [XmlElement("AgeGroup")]
         [Required]
-        public AgeGroup AgeGroup { get; set; }
+        public string AgeGroup { get; set; } = null!;
 
         [XmlArray("Medicines")]
         public MedicineDto[] Medicines { get; set; }
