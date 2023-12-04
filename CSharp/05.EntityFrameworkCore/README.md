@@ -12,4 +12,4 @@ The course follows in detail the work with the ORM technology: Entity Framework 
 - Work with different data formats - XML, JSON
 
 ### <h2> 🎓My Certificate </h2>
-![Entity Framework Core October 2023 - Certificate](https://softuni.bg/certificates/certificates/converttoimage/194135?code=d811b646)
+![Entity Framework Core October 2023 - Certificate](https://github.com/viktordanchev/SoftUni-Courses/assets/115632936/7ea55975-018b-4287-b3f9-10a27119f860)
