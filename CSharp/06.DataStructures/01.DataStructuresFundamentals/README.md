@@ -12,4 +12,4 @@ The Data Structures course introduces participants to the most used data structu
 - Implementation of linear data structures
 
 ### <h2> 🎓My Certificate </h2>
-![Data Structures Fundamentals (with C#) September 2023 - Certificate](https://softuni.bg/certificates/certificates/converttoimage/185484?code=339b51ab)
+![Data Structures Fundamentals (with C#) September 2023 - Certificate](https://github.com/viktordanchev/SoftUni-Courses/assets/115632936/034ef864-0e49-4e85-aaf5-b112b7b76f8f)
