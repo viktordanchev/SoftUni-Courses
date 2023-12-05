@@ -28,23 +28,23 @@ namespace ProductShop
                     SoldProducts = new ProductsDto()
                     {
                         Count = u.ProductsSold.Count,
-                        Products = u.ProductsSold.Select(p => new ProductDto()
-                        {
-                            Name = p.Name,
-                            Price = p.Price
-                        })
-                        .OrderByDescending(p => p.Price)
-                        .ToArray()
+                        Products = u.ProductsSold
+                            .Select(p => new ProductDto()
+                            { 
+                                Name = p.Name,
+                                Price = p.Price
+                            })
+                            .OrderByDescending(p => p.Price)
+                            .ToArray()
                     }
                 })
                 .OrderByDescending(u => u.SoldProducts.Count)
-                .Take(10)
                 .ToArray();
 
             var usersDto = new UsersDto()
             {
                 Count = users.Length,
-                Users = users
+                Users = users.Take(10).ToArray()
             };
 
             var serializer = new XmlSerializer(typeof(UsersDto), new XmlRootAttribute("Users"));
