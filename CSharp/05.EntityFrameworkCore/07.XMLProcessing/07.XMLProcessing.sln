@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.ImportSales", "13.Import
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.ExportCarsWithDistance", "14.ExportCarsWithDistance\14.ExportCarsWithDistance.csproj", "{BC44EBDB-08A7-4778-915D-3B5B15F3850A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.ExportCarsFromMakeBMW", "15.ExportCarsFromMakeBMW\15.ExportCarsFromMakeBMW.csproj", "{61AD5FB8-F4FB-4336-899A-27307B1B4127}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61AD5FB8-F4FB-4336-899A-27307B1B4127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61AD5FB8-F4FB-4336-899A-27307B1B4127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61AD5FB8-F4FB-4336-899A-27307B1B4127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61AD5FB8-F4FB-4336-899A-27307B1B4127}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
