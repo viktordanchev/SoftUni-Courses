@@ -29,7 +29,7 @@ namespace ProductShop
                 .ThenBy(c => c.TotalRevenue)
                 .ToArray();
 
-            var serializer = new XmlSerializer(typeof(CategoryDto[]), new XmlRootAttribute("Categroies"));
+            var serializer = new XmlSerializer(typeof(CategoryDto[]), new XmlRootAttribute("Categories"));
             var ns = new XmlSerializerNamespaces();
             ns.Add(string.Empty, string.Empty);
 
