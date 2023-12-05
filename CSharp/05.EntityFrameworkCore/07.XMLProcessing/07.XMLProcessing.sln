@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.ImportCustomers", "12.Im
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.ImportSales", "13.ImportSales\13.ImportSales.csproj", "{99E9F0EF-5149-4319-8FF4-7AB03EA72AE8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.ExportCarsWithDistance", "14.ExportCarsWithDistance\14.ExportCarsWithDistance.csproj", "{BC44EBDB-08A7-4778-915D-3B5B15F3850A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{99E9F0EF-5149-4319-8FF4-7AB03EA72AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E9F0EF-5149-4319-8FF4-7AB03EA72AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99E9F0EF-5149-4319-8FF4-7AB03EA72AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC44EBDB-08A7-4778-915D-3B5B15F3850A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
