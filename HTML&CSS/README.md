@@ -12,4 +12,4 @@ The aim of the course is to provide basic knowledge of web technologies and, mor
 - Creating modern websites
 
 ### <h2> 🎓My Certificate </h2>
-![HTML & CSS May 2023 - Certificate](https://softuni.bg/certificates/certificates/converttoimage/174884?code=33c3a95d)
+![HTML & CSS May 2023 - Certificate](https://github.com/viktordanchev/SoftUni-Courses/assets/115632936/e5da2ecd-fffd-4045-ba9f-575b33b2960c)

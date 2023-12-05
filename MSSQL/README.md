@@ -12,4 +12,4 @@ Databases are the standard way of using dynamic information in modern technology
 - Using the ACID model
 
 ### <h2> 🎓My Certificate </h2>
-![MS SQL September 2023 - Certificate](https://softuni.bg/certificates/certificates/converttoimage/185484?code=339b51ab)
+![MS SQL September 2023 - Certificate](https://github.com/viktordanchev/SoftUni-Courses/assets/115632936/9795dbf4-01e2-4a76-8be5-63db90715417)

@@ -12,4 +12,4 @@ This course will provide basic knowledge of the JavaScript language, such as the
 - Working with HTTP and REST
 
 ### <h2> 🎓My Certificate </h2>
-![JS Front-End - June 2023 - Certificate](https://softuni.bg/certificates/certificates/converttoimage/181352?code=ba018e78)
+![JS Front-End - June 2023 - Certificate](https://github.com/viktordanchev/SoftUni-Courses/assets/115632936/6ffa6dde-3815-419c-adf0-dd90ddd13795)
