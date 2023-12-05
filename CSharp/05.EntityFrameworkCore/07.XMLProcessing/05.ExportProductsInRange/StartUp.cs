@@ -23,9 +23,9 @@ namespace ProductShop
                 .Take(10)
                 .Select(p => new ProductDto()
                 {
-                    Name = p.Name,
                     Price = p.Price,
-                    Buyer = string.Concat(p.Buyer.FirstName, " ", p.Buyer.LastName)
+                    Name = p.Name,
+                    Buyer = p.Buyer.FirstName + " " + p.Buyer.LastName
                 })
                 .ToArray();
 
