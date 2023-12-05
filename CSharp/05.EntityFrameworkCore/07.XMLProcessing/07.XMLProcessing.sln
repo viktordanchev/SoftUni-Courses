@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.ImportParts", "10.Import
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.ImportCars", "11.ImportCars\11.ImportCars.csproj", "{6BD74D62-E826-4BE7-ADB9-A38365485495}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.ImportCustomers", "12.ImportCustomers\12.ImportCustomers.csproj", "{AC89389E-97BC-4B8C-9201-1500AFBA13D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{6BD74D62-E826-4BE7-ADB9-A38365485495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BD74D62-E826-4BE7-ADB9-A38365485495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BD74D62-E826-4BE7-ADB9-A38365485495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC89389E-97BC-4B8C-9201-1500AFBA13D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC89389E-97BC-4B8C-9201-1500AFBA13D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC89389E-97BC-4B8C-9201-1500AFBA13D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC89389E-97BC-4B8C-9201-1500AFBA13D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
