@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17.ExportCarsWithTheirListO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18.ExportTotalSalesByCustomer", "18.ExportTotalSalesByCustomer\18.ExportTotalSalesByCustomer.csproj", "{AED2CECA-D47C-4BF1-8271-7DD2B54545FA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19.ExportSalesWithAppliedDiscount", "19.ExportSalesWithAppliedDiscount\19.ExportSalesWithAppliedDiscount.csproj", "{F634CBCA-3893-4448-8AD2-2FF5EEB1466A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{AED2CECA-D47C-4BF1-8271-7DD2B54545FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AED2CECA-D47C-4BF1-8271-7DD2B54545FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AED2CECA-D47C-4BF1-8271-7DD2B54545FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F634CBCA-3893-4448-8AD2-2FF5EEB1466A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F634CBCA-3893-4448-8AD2-2FF5EEB1466A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F634CBCA-3893-4448-8AD2-2FF5EEB1466A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F634CBCA-3893-4448-8AD2-2FF5EEB1466A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
