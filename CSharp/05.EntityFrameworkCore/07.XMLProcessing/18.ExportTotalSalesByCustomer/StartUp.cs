@@ -1,5 +1,6 @@
 ﻿using CarDealer.Data;
 using CarDealer.DTOs.Export;
+using Microsoft.EntityFrameworkCore;
 using System.Xml.Serialization;
 
 namespace CarDealer
@@ -17,35 +18,29 @@ namespace CarDealer
 
         public static string GetTotalSalesByCustomer(CarDealerContext context)
         {
-            var cars = context.Customers
-                .Where(c => c.)
+            var customers = context.Customers
+                .Include(c => c.Sales)
+                .ThenInclude(s => s.Car.PartsCars)
+                .ThenInclude(pc => pc.Part)
+                .Where(c => c.Sales.Count > 0)
+                .AsEnumerable()
                 .Select(c => new CustomerDto()
                 {
-                    Make = c.Make,
-                    Model = c.Model,
-                    TraveledDistance = c.TraveledDistance,
-                    Parts = c.PartsCars
-                        .Select(p => new PartDto()
-                        {
-                            Name = p.Part.Name,
-                            Price = p.Part.Price
-                        })
-                        .OrderByDescending(p => p.Price)
-                        .ToArray()
+                    Name = c.Name,
+                    BoughtCars = c.Sales.Count,
+                    SpentMoney = c.Sales.Sum(c => c.Car.PartsCars.Sum(p => p.Part.Price))
                 })
-                .OrderByDescending(c => c.TraveledDistance)
-                .ThenBy(c => c.Model)
-                .Take(5)
+                .OrderByDescending(c => c.SpentMoney)
                 .ToArray();
 
-            var serializer = new XmlSerializer(typeof(CarDto[]), new XmlRootAttribute("cars"));
+            var serializer = new XmlSerializer(typeof(CustomerDto[]), new XmlRootAttribute("customers"));
             var ns = new XmlSerializerNamespaces();
             ns.Add(string.Empty, string.Empty);
 
-            using (var carXml = new StringWriter())
+            using (var customerXml = new StringWriter())
             {
-                serializer.Serialize(carXml, cars, ns);
-                return carXml.ToString();
+                serializer.Serialize(customerXml, customers, ns);
+                return customerXml.ToString();
             }
         }
     }
