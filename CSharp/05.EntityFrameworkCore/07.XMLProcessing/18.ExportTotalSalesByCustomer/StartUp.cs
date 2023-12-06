@@ -21,14 +21,14 @@ namespace CarDealer
             var customers = context.Customers
                 .Include(c => c.Sales)
                 .ThenInclude(s => s.Car.PartsCars)
-                .ThenInclude(pc => pc.Part)
+                .ThenInclude(p => p.Part)
                 .Where(c => c.Sales.Count > 0)
-                .AsEnumerable()
+                .ToArray()
                 .Select(c => new CustomerDto()
                 {
                     Name = c.Name,
                     BoughtCars = c.Sales.Count,
-                    SpentMoney = c.Sales.Sum(c => c.Car.PartsCars.Sum(p => p.Part.Price))
+                    SpentMoney = Math.Round(c.Sales.Sum(s => s.Car.PartsCars.Sum(p => c.IsYoungDriver ? p.Part.Price * (100 - s.Discount) / 100 : p.Part.Price)), 2)
                 })
                 .OrderByDescending(c => c.SpentMoney)
                 .ToArray();
