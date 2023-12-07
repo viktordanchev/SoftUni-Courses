@@ -114,3 +114,17 @@
 8. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/ExamPreparation)
 9. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/MSSQL/FinalExam)
  </details>
+
+ ***
+ <details>
+ <summary><h3> Entity Framework Core </summary>
+
+1. [**Entity Framework Introduction**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/02.EntityFrameworkIntroduction)
+2. [**Entity Relations**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/03.EntityRelations)
+3. [**LINQ**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/04.LINQ)
+4. [**Advanced Querying**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/05.AdvancedQuerying)
+5. [**JavaScript Object Notation - JSON**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/06.JSONProcessing)
+6. [**Extensible Markup Language - XML**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/07.XMLProcessing)
+7. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/ExamPreparation)
+8. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/FinalExam)
+ </details>
