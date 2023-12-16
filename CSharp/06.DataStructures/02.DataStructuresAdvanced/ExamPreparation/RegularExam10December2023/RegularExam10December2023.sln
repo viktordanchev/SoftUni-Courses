@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kubernetes", "Kubernetes\Kubernetes.csproj", "{572CAB45-4968-46E6-840B-816F16B79C87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kubernetes.Tests", "Kubernetes.Tests\Kubernetes.Tests.csproj", "{7C6406AA-14BB-44B6-9843-663C107CEA6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Kubernetes", "01.Kubernetes", "{9B1790B1-3AEC-462F-9C69-26FFF27B7863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{0811B88A-EC64-4991-8BED-FBB47900DA6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Tests", "TaskManager.Tests\TaskManager.Tests.csproj", "{CB51B628-447D-48A9-ACA7-140ED93E8C89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.TaskManager", "02.TaskManager", "{8A7196C7-4924-4BFB-A02D-3BCD39404EA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{572CAB45-4968-46E6-840B-816F16B79C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572CAB45-4968-46E6-840B-816F16B79C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572CAB45-4968-46E6-840B-816F16B79C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572CAB45-4968-46E6-840B-816F16B79C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6406AA-14BB-44B6-9843-663C107CEA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6406AA-14BB-44B6-9843-663C107CEA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6406AA-14BB-44B6-9843-663C107CEA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6406AA-14BB-44B6-9843-663C107CEA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0811B88A-EC64-4991-8BED-FBB47900DA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0811B88A-EC64-4991-8BED-FBB47900DA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0811B88A-EC64-4991-8BED-FBB47900DA6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0811B88A-EC64-4991-8BED-FBB47900DA6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB51B628-447D-48A9-ACA7-140ED93E8C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB51B628-447D-48A9-ACA7-140ED93E8C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB51B628-447D-48A9-ACA7-140ED93E8C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB51B628-447D-48A9-ACA7-140ED93E8C89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{572CAB45-4968-46E6-840B-816F16B79C87} = {9B1790B1-3AEC-462F-9C69-26FFF27B7863}
+		{7C6406AA-14BB-44B6-9843-663C107CEA6A} = {9B1790B1-3AEC-462F-9C69-26FFF27B7863}
+		{0811B88A-EC64-4991-8BED-FBB47900DA6C} = {8A7196C7-4924-4BFB-A02D-3BCD39404EA9}
+		{CB51B628-447D-48A9-ACA7-140ED93E8C89} = {8A7196C7-4924-4BFB-A02D-3BCD39404EA9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAA32359-05D7-4B5B-9C43-380623932051}
+	EndGlobalSection
+EndGlobal
