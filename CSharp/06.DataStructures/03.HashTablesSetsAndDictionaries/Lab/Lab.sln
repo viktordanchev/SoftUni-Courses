@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "HashTable\HashTable.csproj", "{2C49A24A-0ADF-4067-9CDC-A557D1E2E864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable.Tests", "HashTable.Tests\HashTable.Tests.csproj", "{0257EF30-18A7-45C8-A79C-53DE4C932B21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C49A24A-0ADF-4067-9CDC-A557D1E2E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C49A24A-0ADF-4067-9CDC-A557D1E2E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C49A24A-0ADF-4067-9CDC-A557D1E2E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C49A24A-0ADF-4067-9CDC-A557D1E2E864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0257EF30-18A7-45C8-A79C-53DE4C932B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0257EF30-18A7-45C8-A79C-53DE4C932B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0257EF30-18A7-45C8-A79C-53DE4C932B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0257EF30-18A7-45C8-A79C-53DE4C932B21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F67C30F1-E843-4555-B24D-46A1522C52F8}
+	EndGlobalSection
+EndGlobal
