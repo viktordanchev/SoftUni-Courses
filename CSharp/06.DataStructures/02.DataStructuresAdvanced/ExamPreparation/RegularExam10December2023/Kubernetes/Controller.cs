@@ -1,53 +1,74 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Kubernetes
 {
     public class Controller : IController
     {
+        private Dictionary<string, Pod> Pods = new Dictionary<string, Pod>();
+
         public bool Contains(string podId)
         {
-            throw new NotImplementedException();
+            return Pods.ContainsKey(podId);
         }
 
         public void Deploy(Pod pod)
         {
-            throw new NotImplementedException();
+            if (!Pods.ContainsKey(pod.Id))
+            {
+                Pods.Add(pod.Id, pod);
+            }
         }
 
         public Pod GetPod(string podId)
         {
-            throw new NotImplementedException();
+            if (!Pods.ContainsKey(podId))
+            {
+                throw new ArgumentException();
+            }
+
+            return Pods[podId];
         }
 
         public IEnumerable<Pod> GetPodsBetweenPort(int lowerBound, int upperBound)
         {
-            throw new NotImplementedException();
+            return Pods.Values.Where(p => p.Port >= lowerBound && p.Port <= upperBound);
         }
 
         public IEnumerable<Pod> GetPodsInNamespace(string @namespace)
         {
-            throw new NotImplementedException();
+            return Pods.Values.Where(p => p.Namespace == @namespace);
         }
 
         public IEnumerable<Pod> GetPodsOrderedByPortThenByName()
         {
-            throw new NotImplementedException();
+            var pods = Pods.OrderByDescending(p => p).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                
+            return pods.Values.OrderBy(p => p.ServiceName);
         }
 
         public int Size()
         {
-            throw new NotImplementedException();
+            return Pods.Count;
         }
 
         public void Uninstall(string podId)
         {
-            throw new NotImplementedException();
+            if (!Pods.ContainsKey(podId))
+            {
+                throw new ArgumentException();
+            }
+
+            Pods.Remove(podId);
         }
 
         public void Upgrade(Pod pod)
         {
-            throw new NotImplementedException();
+            if (Pods.ContainsKey(pod.Id))
+            {
+                Pods[pod.Id] = pod;
+            }
         }
     }
 }
