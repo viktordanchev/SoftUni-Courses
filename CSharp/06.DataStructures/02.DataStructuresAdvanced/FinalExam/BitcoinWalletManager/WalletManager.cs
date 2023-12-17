@@ -1,42 +1,75 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using System.Transactions;
 
 namespace BitcoinWalletManager
 {
     public class WalletManager : IWalletManager
     {
+        private Dictionary<string, Transaction> Transactions;
+        private Dictionary<string, Transaction> ExecutedTransactions;
+        private SortedDictionary<int, Transaction> SD;
+
+        public WalletManager()
+        {
+            Transactions = new Dictionary<string, Transaction>();
+            ExecutedTransactions = new Dictionary<string, Transaction>();
+        }
+
         public void AddTransaction(Transaction transaction)
         {
-            throw new System.NotImplementedException();
+            Transactions.Add(transaction.Hash, transaction);
         }
 
         public Transaction BroadcastTransaction(string txHash)
         {
-            throw new System.NotImplementedException();
+            if (!Transactions.ContainsKey(txHash))
+            {
+                throw new ArgumentException();
+            }
+
+            var transaction = Transactions[txHash];
+            Transactions.Remove(txHash);
+            ExecutedTransactions.Add(txHash, transaction);
+
+            return transaction;
         }
 
         public Transaction CancelTransaction(string txHash)
         {
-            throw new System.NotImplementedException();
+            if (!Transactions.ContainsKey(txHash))
+            {
+                throw new ArgumentException();
+            }
+
+            var transaction = Transactions[txHash];
+            Transactions.Remove(txHash);
+
+            return transaction;
         }
 
         public bool Contains(string txHash)
         {
-            throw new System.NotImplementedException();
+            return Transactions.ContainsKey(txHash);
         }
 
         public int GetEarliestNonceByUser(string user)
         {
-            throw new System.NotImplementedException();
+            var earliestNonce = GetPendingTransactionsByUser(user).First().Nonce;
+
+            return earliestNonce;
         }
 
         public IEnumerable<Transaction> GetHistoryTransactionsByUser(string user)
         {
-            throw new System.NotImplementedException();
+            return ExecutedTransactions.Values.Where(t => t.From == user);
         }
 
         public IEnumerable<Transaction> GetPendingTransactionsByUser(string user)
         {
-            throw new System.NotImplementedException();
+            return Transactions.Values.Where(t => t.From == user).OrderBy(t => t.Nonce);
         }
     }
 }
