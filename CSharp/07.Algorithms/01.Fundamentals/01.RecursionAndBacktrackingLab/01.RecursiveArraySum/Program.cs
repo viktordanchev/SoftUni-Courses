@@ -1,5 +1,4 @@
-﻿
-namespace _01.RecursiveArraySum
+﻿namespace _01.RecursiveArraySum
 {
     internal class Program
     {
