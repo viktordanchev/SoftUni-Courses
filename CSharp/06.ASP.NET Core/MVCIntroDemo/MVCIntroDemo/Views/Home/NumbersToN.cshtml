@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Nums 1 ... " + ViewBag.Count;
+}
+
+<h1>@ViewBag.Title</h1>
+<ul>
+    @for (int i = 1; i <= ViewBag.Count; i++)
+    {
+        <li>@i</li>
+    }
+</ul>
+<div class="form-group mx-sm-3 mb-2">
+    <input class="form-control" placeholder="Number">
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</div>
