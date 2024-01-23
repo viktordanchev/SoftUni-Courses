@@ -9,7 +9,9 @@
         <li>@i</li>
     }
 </ul>
-<div class="form-group mx-sm-3 mb-2">
-    <input class="form-control" placeholder="Number">
-    <button type="submit" class="btn btn-primary mb-2">Submit</button>
-</div>
+
+<form asp-action="NumbersToN" method="post">
+    <input type="number" id="count" name="count" placeholder="Number" value="3" required>
+    <button type="submit">Submit</button>
+</form>
+
