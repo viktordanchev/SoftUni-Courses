@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using MVCIntroDemo.Models.Product;
+using System.Text;
+using System.Text.Json;
 
 namespace MVCIntroDemo.Controllers
 {
@@ -7,7 +10,7 @@ namespace MVCIntroDemo.Controllers
     {
         private IEnumerable<ProductViewModel> products
             = new List<ProductViewModel>
-            { 
+            {
                 new ProductViewModel
                 {
                     Id = 1,
@@ -22,7 +25,7 @@ namespace MVCIntroDemo.Controllers
                 },
                 new ProductViewModel
                 {
-                    Id = 1,
+                    Id = 3,
                     Name = "Bread",
                     Price = 1.50
                 }
@@ -38,12 +41,48 @@ namespace MVCIntroDemo.Controllers
             var product = products
                 .FirstOrDefault(p => p.Id == id);
 
-            if(product == null)
+            if (product == null)
             {
                 return BadRequest();
             }
 
             return View(product);
+        }
+
+        public IActionResult AllAsJson()
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            return Json(products, options);
+        }
+
+        public IActionResult AllAsText()
+        {
+            var text = new StringBuilder();
+
+            foreach (var product in products)
+            {
+                text.AppendLine($"Product {product.Id}: {product.Name} - {product.Price} lv.");
+            }
+
+            return Content(text.ToString());
+        }
+
+        public IActionResult AllAsTextFile()
+        {
+            var text = new StringBuilder();
+
+            foreach (var product in products)
+            {
+                text.AppendLine($"Product {product.Id}: {product.Name} - {product.Price:f2} lv.");
+            }
+
+            Response.Headers.Add(HeaderNames.ContentDisposition, @"attachment;filename=products.txt");
+
+            return File(Encoding.UTF8.GetBytes(text.ToString().TrimEnd()), "text/plain");
         }
 
         public IActionResult Index()
