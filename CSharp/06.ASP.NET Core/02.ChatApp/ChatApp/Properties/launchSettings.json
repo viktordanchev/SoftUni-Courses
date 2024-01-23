@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:52971",
-      "sslPort": 44395
+      "applicationUrl": "http://localhost:35895",
+      "sslPort": 44327
     }
   },
   "profiles": {
-    "_02.ChatApp": {
+    "ChatApp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7115;http://localhost:5065",
+      "applicationUrl": "https://localhost:7095;http://localhost:5252",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

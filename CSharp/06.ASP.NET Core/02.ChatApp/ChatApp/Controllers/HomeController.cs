@@ -1,8 +1,8 @@
-﻿using _02.ChatApp.Models;
+﻿using ChatApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace _02.ChatApp.Controllers
+namespace ChatApp.Controllers
 {
     public class HomeController : Controller
     {
