@@ -11,10 +11,10 @@ namespace ForumApp.Data
             Database.Migrate();
         }
 
+        public DbSet<Post> Posts { get; set; }
         private Post FirstPost { get; set; }
         private Post SecondPost { get; set; }
         private Post ThirdPost { get; set; }
-        DbSet<Post> Posts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace ForumApp.Data
             {
                 Id = 1,
                 Title = "My first post",
-                Content = "My first post will be about perfomring " +
+                Content = "My first post will be about performing " +
                 "CRUD operations in MVC. It's so much fun!"
             };
 

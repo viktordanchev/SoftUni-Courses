@@ -47,7 +47,7 @@ namespace ForumApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Content = "My first post will be about perfomring CRUD operations in MVC. It's so much fun!",
+                            Content = "My first post will be about performing CRUD operations in MVC. It's so much fun!",
                             Title = "My first post"
                         },
                         new

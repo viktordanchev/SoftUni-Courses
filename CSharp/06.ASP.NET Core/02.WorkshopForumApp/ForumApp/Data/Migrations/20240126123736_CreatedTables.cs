@@ -25,7 +25,7 @@ namespace ForumApp.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "Id", "Content", "Title" },
-                values: new object[] { 1, "My first post will be about perfomring CRUD operations in MVC. It's so much fun!", "My first post" });
+                values: new object[] { 1, "My first post will be about performing CRUD operations in MVC. It's so much fun!", "My first post" });
 
             migrationBuilder.InsertData(
                 table: "Posts",
