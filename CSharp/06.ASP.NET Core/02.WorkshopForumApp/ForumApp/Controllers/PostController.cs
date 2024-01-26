@@ -15,6 +15,11 @@ namespace ForumApp.Controllers
             data = _data;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> All()
         {
             var posts = await data.Posts
