@@ -11,11 +11,21 @@ namespace SoftUniBazar.Data
         {
         }
 
+        public DbSet<Ad> Ads { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<AdBuyer> AdsBuyers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .Entity<AdBuyer>()
                 .HasKey(ab => new { ab.BuyerId, ab.AdId });
+
+            modelBuilder.Entity<AdBuyer>()
+               .HasOne(e => e.Ad)
+               .WithMany()
+               .HasForeignKey(e => e.AdId)
+               .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder
                 .Entity<Category>()
