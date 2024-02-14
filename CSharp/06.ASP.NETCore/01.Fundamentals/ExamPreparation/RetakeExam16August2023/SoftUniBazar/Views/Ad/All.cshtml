@@ -20,7 +20,7 @@
                 <p class="mb-0"><span class="fw-bold">Seller: </span>@a.Owner</p>
             </div>
 
-            @if (User.Identity.Name == a.Owner.UserName)
+            @if (User.Identity.Name == a.Owner)
             {
                 <a asp-controller="Ad" asp-action="Edit" asp-route-id="@a.Id" class="btn btn-warning mb-2 w-100 p-3 fw-bold">Edit the Ad</a>
             }
