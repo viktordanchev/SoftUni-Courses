@@ -1,11 +1,10 @@
-﻿@{
+﻿@model IEnumerable<EventViewModel>
+@{
     ViewBag.Title = "Joined Events";
 }
 
-@*
 <h2 class="text-center">@ViewBag.Title</h2>
 <hr />
-
 <div class="text-center row">
     @foreach (var e in Model)
     {
@@ -34,6 +33,4 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}*@
-
-
+}

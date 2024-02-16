@@ -1,10 +1,10 @@
-﻿@{
+﻿@model EventViewModel
+@{
     ViewBag.Title = "Edit Info for an Event";
 }
 
-@*<h2 class="text-center">@ViewBag.Title</h2>
+<h2 class="text-center">@ViewBag.Title</h2>
 <hr />
-
 <div class="row">
     <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
         <form asp-action="Edit" method="post">
@@ -47,4 +47,4 @@
 
 @section Scripts {
         <partial name="_ValidationScriptsPartial" />
-}*@
+}

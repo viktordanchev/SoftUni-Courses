@@ -112,6 +112,7 @@ namespace SoftUniBazar.Controllers
                 .Where(ab => ab.BuyerId == buyerId)
                 .Select(a => new AdViewModel()
                 {
+                    Id = a.Ad.Id,
                     Name = a.Ad.Name,
                     ImageUrl = a.Ad.ImageUrl,
                     CreatedOn = a.Ad.CreatedOn.ToString(DataConstants.Ad.DateTimeFormat),
