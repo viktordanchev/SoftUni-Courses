@@ -5,7 +5,7 @@ namespace Contacts.Data.Models
     public class ApplicationUser
     {
         [Key]
-        public int Id { get; set; }
+        public string Id { get; set; } = null!;
 
         [Required]
         [MinLength(DataConstants.ApplicationUser.UserNameMinLength)]
@@ -13,13 +13,15 @@ namespace Contacts.Data.Models
         public string UserName { get; set; } = null!;
 
         [Required]
-        [MinLength(DataConstants.ApplicationUser.EmailMinLength)]
-        [MaxLength(DataConstants.ApplicationUser.EmailMaxLength)]
+        [MinLength(DataConstants.EmailMinLength)]
+        [MaxLength(DataConstants.EmailMaxLength)]
         public string Email { get; set; } = null!;
 
         [Required]
         [MinLength(DataConstants.ApplicationUser.PasswordMinLength)]
         [MaxLength(DataConstants.ApplicationUser.PasswordMaxLength)]
         public string Password { get; set; } = null!;
+
+        public IEnumerable<ApplicationUserContact> ApplicationUsersContacts { get; set; } = new List<ApplicationUserContact>();
     }
 }

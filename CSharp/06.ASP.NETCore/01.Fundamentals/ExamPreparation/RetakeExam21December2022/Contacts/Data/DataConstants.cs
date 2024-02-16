@@ -24,6 +24,9 @@
 
             public const int PhoneNumberMinLength = 10;
             public const int PhoneNumberMaxLength = 13;
+            public const string PhoneNumberRegex = @"^(?:\\+359|0)(?:(?:\\s|-)?\\d{3}){1}(?:(?:\\s|-)?\\d{2}){3}$";
+
+            public const string WebsiteRegex = @"^www\.(?:[A-z0-9]|\-)+\.bg$";
         }
     }
 }
