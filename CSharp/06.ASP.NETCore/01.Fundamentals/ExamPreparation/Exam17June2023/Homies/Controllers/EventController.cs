@@ -1,6 +1,7 @@
 ﻿using Homies.Data;
 using Homies.Data.Models;
-using Homies.Models;
+using Homies.Models.Events;
+using Homies.Models.Types;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -21,7 +22,7 @@ namespace Homies.Controllers
         public async Task<IActionResult> All()
         {
             var events = await _context.Events
-                .Select(e => new EventViewModel()
+                .Select(e => new EventAllViewModel()
                 {
                     Id = e.Id,
                     Name = e.Name,
@@ -38,8 +39,8 @@ namespace Homies.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            var model = new EventViewModel();
-            var types = await GetAllCategoriesAsync();
+            var model = new EventAddViewModel();
+            var types = await GetAllTypesAsync();
 
             model.Types = types;
 
@@ -47,7 +48,7 @@ namespace Homies.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(EventViewModel model)
+        public async Task<IActionResult> Add(EventAddViewModel model)
         {
             DateTime start;
             if (!DateTime.TryParseExact(
@@ -69,6 +70,13 @@ namespace Homies.Controllers
                 out end))
             {
                 ModelState.AddModelError(nameof(model.End), $"Invalid date! Format must be: {DataConstants.Event.DateTimeFormat}.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model.Types = await GetAllTypesAsync();
+
+                return View(model);
             }
 
             var currEvent = new Event()
@@ -94,21 +102,21 @@ namespace Homies.Controllers
             var currEvent = await _context.Events
                 .FirstAsync(e => e.Id == id);
 
-            var model = new EventViewModel()
+            var model = new EventEditViewModel()
             {
                 Name = currEvent.Name,
                 Description = currEvent.Description,
                 Start = currEvent.Start.ToString(DataConstants.Event.DateTimeFormat),
                 End = currEvent.End.ToString(DataConstants.Event.DateTimeFormat),
                 TypeId = currEvent.TypeId,
-                Types = await GetAllCategoriesAsync()
+                Types = await GetAllTypesAsync()
             };
 
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, EventViewModel model)
+        public async Task<IActionResult> Edit(int id, EventEditViewModel model)
         {
             var currEvent = await _context.Events
                 .FirstAsync(e => e.Id == id);
@@ -135,6 +143,13 @@ namespace Homies.Controllers
                 ModelState.AddModelError(nameof(model.End), $"Invalid date! Format must be: {DataConstants.Event.DateTimeFormat}.");
             }
 
+            if (!ModelState.IsValid)
+            {
+                model.Types = await GetAllTypesAsync();
+
+                return View(model);
+            }
+
             currEvent.Name = model.Name;
             currEvent.Description = model.Description;
             currEvent.Start = start;
@@ -152,8 +167,9 @@ namespace Homies.Controllers
             var userId = GetOrganiserId();
             var joinedEvents = await _context.EventsParticipants
                 .Where(p => p.HelperId == userId)
-                .Select(e => new EventViewModel()
+                .Select(e => new EventAllViewModel()
                 {
+                    Id = e.EventId,
                     Name = e.Event.Name,
                     Start = e.Event.Start.ToString(DataConstants.Event.DateTimeFormat),
                     Type = e.Event.Type.Name
@@ -173,13 +189,25 @@ namespace Homies.Controllers
                 EventId = id
             };
 
-            if(!_context.EventsParticipants.Contains(eventParticipant))
+            if (!_context.EventsParticipants.Contains(eventParticipant))
             {
                 await _context.EventsParticipants.AddAsync(eventParticipant);
                 await _context.SaveChangesAsync();
             }
 
-            return View("Joined");
+            return RedirectToAction(nameof(Joined));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Leave(int id)
+        {
+            var currEvent = await _context.EventsParticipants
+                .FirstAsync(e => e.Event.Id == id);
+
+            _context.EventsParticipants.Remove(currEvent);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
         }
 
         private string GetOrganiserId()
@@ -187,7 +215,7 @@ namespace Homies.Controllers
             return User.FindFirstValue(ClaimTypes.NameIdentifier);
         }
 
-        private async Task<IEnumerable<TypeViewModel>> GetAllCategoriesAsync()
+        private async Task<IEnumerable<TypeViewModel>> GetAllTypesAsync()
         {
             return await _context.Types
                 .Select(c => new TypeViewModel()
