@@ -15,8 +15,8 @@
 
             public const string DateAndTimeFormat = "dd/MM/yyyy HH:mm";
 
-            public const int DurationMinLength = 30;
-            public const int DurationMaxLength = 180;
+            public const int DurationMin = 30;
+            public const int DurationMax = 180;
         }
 
         public static class Category

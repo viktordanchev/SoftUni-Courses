@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using SeminarHub.Data;
+using SeminarHub.Models.Categories;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SeminarHub.Data.Models
+namespace SeminarHub.Models.Seminars
 {
-    public class Seminar
+    public class SeminarAddViewModel
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         [MinLength(DataConstants.Seminar.TopicMinLength)]
         [MaxLength(DataConstants.Seminar.TopicMaxLength)]
@@ -25,14 +22,7 @@ namespace SeminarHub.Data.Models
         public string Details { get; set; } = null!;
 
         [Required]
-        public string OrganizerId { get; set; } = null!;
-
-        [Required]
-        [ForeignKey(nameof(OrganizerId))]
-        public IdentityUser Organizer { get; set; } = null!;
-
-        [Required]
-        public DateTime DateAndTime { get; set; }
+        public string DateAndTime { get; set; } = null!;
 
         [Range(DataConstants.Seminar.DurationMin, DataConstants.Seminar.DurationMax)]
         public int Duration { get; set; }
@@ -40,10 +30,6 @@ namespace SeminarHub.Data.Models
         [Required]
         public int CategoryId { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(CategoryId))]
-        public Category Category { get; set; } = null!;
-
-        public IEnumerable<SeminarParticipant> SeminarsParticipants { get; set; } = new List<SeminarParticipant>();
+        public IEnumerable<CategoryViewModel> Categories { get; set; } = new List<CategoryViewModel>();
     }
 }

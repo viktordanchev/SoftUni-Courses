@@ -12,7 +12,7 @@ using SeminarHub.Data;
 namespace SeminarHub.Data.Migrations
 {
     [DbContext(typeof(SeminarHubDbContext))]
-    [Migration("20240218123009_Initial")]
+    [Migration("20240218131612_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -286,7 +286,6 @@ namespace SeminarHub.Data.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("Duration")
-                        .HasMaxLength(180)
                         .HasColumnType("int");
 
                     b.Property<string>("Lecturer")

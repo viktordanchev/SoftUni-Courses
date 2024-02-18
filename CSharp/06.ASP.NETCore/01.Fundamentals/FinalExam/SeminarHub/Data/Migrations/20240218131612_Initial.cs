@@ -33,7 +33,7 @@ namespace SeminarHub.Data.Migrations
                     Details = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     OrganizerId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DateAndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Duration = table.Column<int>(type: "int", maxLength: 180, nullable: false),
+                    Duration = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

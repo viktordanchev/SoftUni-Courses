@@ -1,7 +1,7 @@
 ﻿using SeminarHub.Data;
 using System.ComponentModel.DataAnnotations;
 
-namespace SeminarHub.Models
+namespace SeminarHub.Models.Seminars
 {
     public class SeminarAllViewModel
     {

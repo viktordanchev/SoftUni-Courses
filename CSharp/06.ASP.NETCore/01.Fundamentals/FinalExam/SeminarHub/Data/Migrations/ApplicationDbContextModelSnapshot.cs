@@ -284,7 +284,6 @@ namespace SeminarHub.Data.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("Duration")
-                        .HasMaxLength(180)
                         .HasColumnType("int");
 
                     b.Property<string>("Lecturer")
