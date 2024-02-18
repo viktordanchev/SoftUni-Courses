@@ -12,7 +12,7 @@ using SeminarHub.Data;
 namespace SeminarHub.Data.Migrations
 {
     [DbContext(typeof(SeminarHubDbContext))]
-    [Migration("20240218131612_Initial")]
+    [Migration("20240218143719_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

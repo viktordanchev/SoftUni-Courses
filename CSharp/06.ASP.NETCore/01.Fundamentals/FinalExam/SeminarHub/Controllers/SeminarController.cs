@@ -5,6 +5,7 @@ using SeminarHub.Data;
 using SeminarHub.Data.Models;
 using SeminarHub.Models.Categories;
 using SeminarHub.Models.Seminars;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.Security.Claims;
 
@@ -38,7 +39,7 @@ namespace SeminarHub.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Add() 
+        public async Task<IActionResult> Add()
         {
             var model = new SeminarAddViewModel();
             model.Categories = await GetAllCategoriesAsync();
@@ -50,8 +51,8 @@ namespace SeminarHub.Controllers
         public async Task<IActionResult> Add(SeminarAddViewModel model)
         {
             DateTime dateAndTime;
-            if(!DateTime.TryParseExact(
-                model.DateAndTime, 
+            if (!DateTime.TryParseExact(
+                model.DateAndTime,
                 DataConstants.Seminar.DateAndTimeFormat,
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.None,
@@ -61,7 +62,7 @@ namespace SeminarHub.Controllers
                     .AddModelError(nameof(model.DateAndTime), $"Invalid date! Format must be: {DataConstants.Seminar.DateAndTimeFormat}.");
             }
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 model.Categories = await GetAllCategoriesAsync();
 
@@ -76,10 +77,10 @@ namespace SeminarHub.Controllers
                 DateAndTime = dateAndTime,
                 Duration = model.Duration,
                 CategoryId = model.CategoryId,
-                OrganizerId = GetOrganizerId()
+                OrganizerId = GetUserId()
             };
 
-            await _context.AddAsync(seminar );
+            await _context.Seminars.AddAsync(seminar);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(All));
@@ -170,7 +171,7 @@ namespace SeminarHub.Controllers
 
             var model = new SeminarDeleteViewModel()
             {
-                Id= seminar.Id,
+                Id = seminar.Id,
                 Topic = seminar.Topic,
                 DateAndTime = seminar.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture)
             };
@@ -190,7 +191,60 @@ namespace SeminarHub.Controllers
             return RedirectToAction(nameof(All));
         }
 
-        private string GetOrganizerId()
+        [HttpPost]
+        public async Task<IActionResult> Join(int id)
+        {
+            var seminarParticipant = new SeminarParticipant()
+            {
+                SeminarId = id,
+                ParticipantId = GetUserId()
+            };
+
+            if (!await _context.SeminarsParticipants.ContainsAsync(seminarParticipant))
+            {
+                await _context.SeminarsParticipants.AddAsync(seminarParticipant);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Joined));
+            }
+
+            return RedirectToAction(nameof(All));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Leave(int id)
+        {
+            var seminarParticipant = await _context.SeminarsParticipants
+                .FirstAsync(sp => sp.SeminarId == id);
+
+            _context.Remove(seminarParticipant);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Joined));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Joined()
+        {
+            var userId = GetUserId();
+
+            var seminars = await _context.SeminarsParticipants
+                .Where(sp => sp.ParticipantId == userId)
+                .Select(sp => new SeminarJoinedViewModel() 
+                { 
+                    Id = sp.Seminar.Id,
+                    Topic = sp.Seminar.Topic,
+                    Lecturer = sp.Seminar.Lecturer,
+                    DateAndTime = sp.Seminar.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture),
+                    Organizer = sp.Seminar.Organizer.UserName
+                })
+                .AsNoTracking()
+                .ToListAsync();
+
+            return View(seminars);
+        }
+
+        private string GetUserId()
         {
             return User.FindFirstValue(ClaimTypes.NameIdentifier);
         }
