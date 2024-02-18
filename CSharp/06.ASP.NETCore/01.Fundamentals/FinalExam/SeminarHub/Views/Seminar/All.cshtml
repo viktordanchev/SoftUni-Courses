@@ -1,11 +1,10 @@
-﻿@{
+﻿@model IEnumerable<SeminarAllViewModel>
+@{
     ViewBag.Title = "All Seminars in the Hub";
 }
 
-
-@* <h2 class="text-center">@ViewBag.Title</h2>
+<h2 class="text-center">@ViewBag.Title</h2>
 <hr />
-
 <div class="text-center row">
     @foreach (var e in Model)
     {
@@ -30,7 +29,7 @@
             }
         </div>
     }
-</div> *@
+</div> 
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
