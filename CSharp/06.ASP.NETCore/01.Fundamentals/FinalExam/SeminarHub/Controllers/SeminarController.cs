@@ -27,6 +27,7 @@ namespace SeminarHub.Controllers
                 .Select(s => new SeminarAllViewModel()
                 {
                     Id = s.Id,
+                    Topic = s.Topic,
                     Lecturer = s.Lecturer,
                     Category = s.Category.Name,
                     DateAndTime = s.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture),
@@ -180,7 +181,7 @@ namespace SeminarHub.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteConfirmed(int id, SeminarDeleteViewModel model)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var seminar = await _context.Seminars
                 .FirstAsync(s => s.Id == id);
