@@ -8,7 +8,9 @@ namespace _01.HelloSoftUni
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ThreeSum(new int[] { 0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0 }));
+            //Console.WriteLine(ThreeSum(new int[] { 0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0 }));
+            var d = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            Console.WriteLine(d);
         }
 
         public static IList<IList<int>> ThreeSum(int[] nums)

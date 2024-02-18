@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using SeminarHub.Data;
 using SeminarHub.Data.Models;
 using SeminarHub.Models.Categories;
@@ -27,7 +28,7 @@ namespace SeminarHub.Controllers
                     Id = s.Id,
                     Lecturer = s.Lecturer,
                     Category = s.Category.Name,
-                    DateAndTime = s.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat),
+                    DateAndTime = s.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture),
                     Organizer = s.Organizer.UserName
                 })
                 .AsNoTracking()
@@ -79,6 +80,63 @@ namespace SeminarHub.Controllers
             };
 
             await _context.AddAsync(seminar );
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var seminar = await _context.Seminars
+                .FirstAsync(s => s.Id == id);
+
+            var model = new SeminarAddViewModel()
+            {
+                Topic = seminar.Topic,
+                Lecturer = seminar.Lecturer,
+                Details = seminar.Details,
+                DateAndTime = seminar.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture),
+                Duration = seminar.Duration,
+                CategoryId = seminar.CategoryId,
+                Categories = await GetAllCategoriesAsync()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, SeminarAddViewModel model)
+        {
+            var seminar = await _context.Seminars
+                .FirstAsync(s => s.Id == id);
+
+            DateTime dateAndTime;
+            if (!DateTime.TryParseExact(
+                model.DateAndTime,
+                DataConstants.Seminar.DateAndTimeFormat,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.None,
+                out dateAndTime))
+            {
+                ModelState
+                    .AddModelError(nameof(model.DateAndTime), $"Invalid date! Format must be: {DataConstants.Seminar.DateAndTimeFormat}.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model.Categories = await GetAllCategoriesAsync();
+
+                return View(model);
+            }
+
+            seminar.Topic = model.Topic;
+            seminar.Lecturer = model.Lecturer;
+            seminar.Details = model.Details;
+            seminar.DateAndTime = dateAndTime;
+            seminar.Duration = model.Duration;
+            seminar.CategoryId = model.CategoryId;
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(All));
