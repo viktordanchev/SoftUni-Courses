@@ -142,6 +142,54 @@ namespace SeminarHub.Controllers
             return RedirectToAction(nameof(All));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var seminar = await _context.Seminars
+                .Select(s => new SeminarDetailsViewModel()
+                {
+                    Id = s.Id,
+                    Topic = s.Topic,
+                    DateAndTime = s.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture),
+                    Duration = s.Duration,
+                    Lecturer = s.Lecturer,
+                    Category = s.Category.Name,
+                    Details = s.Details,
+                    Organizer = s.Organizer.UserName
+                })
+                .FirstAsync(s => s.Id == id);
+
+            return View(seminar);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var seminar = await _context.Seminars
+                .FirstAsync(s => s.Id == id);
+
+            var model = new SeminarDeleteViewModel()
+            {
+                Id= seminar.Id,
+                Topic = seminar.Topic,
+                DateAndTime = seminar.DateAndTime.ToString(DataConstants.Seminar.DateAndTimeFormat, CultureInfo.InvariantCulture)
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id, SeminarDeleteViewModel model)
+        {
+            var seminar = await _context.Seminars
+                .FirstAsync(s => s.Id == id);
+
+            _context.Remove(seminar);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
+        }
+
         private string GetOrganizerId()
         {
             return User.FindFirstValue(ClaimTypes.NameIdentifier);
