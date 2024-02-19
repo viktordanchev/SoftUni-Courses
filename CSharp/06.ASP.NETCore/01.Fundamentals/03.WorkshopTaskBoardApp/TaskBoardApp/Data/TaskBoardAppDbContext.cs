@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TaskBoardApp.Data.Models;
+using Board = TaskBoardApp.Data.Models.Board;
 using Task = TaskBoardApp.Data.Models.Task;
 
 namespace TaskBoardApp.Data
@@ -29,7 +29,45 @@ namespace TaskBoardApp.Data
                 .HasForeignKey(t => t.BoardId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            base.OnModelCreating(builder);
+            builder
+                .Entity<Task>()
+                .HasData(
+                new Task()
+                {
+                    Id = 1,
+                    Title = "Improve CSS styles",
+                    Description = "Implement better styling for all public pages",
+                    CreatedOn = DateTime.Now.AddDays(-200),
+                    OwnerId = TestUser.Id,
+                    BoardId = OpenBoard.Id
+                },
+                new Task()
+                {
+                    Id = 2,
+                    Title = "Android Client App",
+                    Description = "Create Android client app for the TaskBoard RESTful API",
+                    CreatedOn = DateTime.Now.AddMonths(-5),
+                    OwnerId = TestUser.Id,
+                    BoardId = OpenBoard.Id
+                },
+                new Task()
+                {
+                    Id = 3,
+                    Title = "Desktop Client App",
+                    Description = "Create Windows Forms desktop app client for the TaskBoard RESTful API",
+                    CreatedOn = DateTime.Now.AddMonths(-1),
+                    OwnerId = TestUser.Id,
+                    BoardId = OpenBoard.Id
+                },
+                new Task()
+                {
+                    Id = 4,
+                    Title = "Create Tasks",
+                    Description = "Implement [Create Task] page for adding new tasks",
+                    CreatedOn = DateTime.Now.AddYears(-1),
+                    OwnerId = TestUser.Id,
+                    BoardId = OpenBoard.Id
+                });
         }
     }
 }
