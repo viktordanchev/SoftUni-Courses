@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace _01.HelloSoftUni
 {
@@ -8,34 +6,68 @@ namespace _01.HelloSoftUni
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(ThreeSum(new int[] { 0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0 }));
-            var d = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-            Console.WriteLine(d);
+            var list1 = new ListNode(2);
+            var list2 = new ListNode(1, new ListNode(2, new ListNode(4)));
+
+            var r = MergeTwoLists(list1, list2);
+
+            while (r != null)
+            {
+                Console.Write($"{r.val}, ");
+                r = r.next;
+            }
         }
 
-        public static IList<IList<int>> ThreeSum(int[] nums)
+        public static ListNode MergeTwoLists(ListNode list1, ListNode list2)
         {
-            IList<IList<int>> result = new List<IList<int>>();
+            var result = new ListNode();
+            var copy = result;
 
-            for (int f = 0; f < nums.Length; f++)
+            while (list1 != null || list2 != null)
             {
-                for (int s = f + 1; s < nums.Length; s++)
+                if (list1 != null && list2 != null)
                 {
-                    for (int t = s + 1; t < nums.Length; t++)
+                    if (list1.val > list2.val)
                     {
-                        var currList = new List<int> { nums[f], nums[s], nums[t] };
-                        currList.Sort();
-
-                        if (nums[f] + nums[s] + nums[t] == 0 &&
-                            result.All(l => !l.SequenceEqual(currList)))
-                        {
-                            result.Add(currList);
-                        }
+                        copy.next = new ListNode(list2.val);
+                        list2 = list2.next;
+                    }
+                    else
+                    {
+                        copy.next = new ListNode(list1.val);
+                        list1 = list1.next;
                     }
                 }
+                else
+                {
+                    if (list1 == null)
+                    {
+                        copy.next = new ListNode(list2.val);
+                        list2 = list2.next;
+                    }
+                    else
+                    {
+                        copy.next = new ListNode(list1.val);
+                        list1 = list1.next;
+                    }
+                }
+
+                copy = copy.next;
             }
 
-            return result;
+            return result.next;
+        }
+    }
+
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
         }
     }
 }
