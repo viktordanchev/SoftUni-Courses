@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using SeminarHub.Data;
 using SeminarHub.Data.Models;
 using SeminarHub.Models.Categories;
 using SeminarHub.Models.Seminars;
-using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.Security.Claims;
 
