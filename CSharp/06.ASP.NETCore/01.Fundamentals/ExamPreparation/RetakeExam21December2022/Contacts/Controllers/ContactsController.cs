@@ -12,6 +12,6 @@ namespace Contacts.Controllers
             context = data;
         }
 
-        public
+        
     }
 }

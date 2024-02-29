@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SeminarHub.Data;
 using SeminarHub.Data.Models;
@@ -9,6 +10,7 @@ using System.Security.Claims;
 
 namespace SeminarHub.Controllers
 {
+    [Authorize]
     public class SeminarController : Controller
     {
         private readonly SeminarHubDbContext _context;
