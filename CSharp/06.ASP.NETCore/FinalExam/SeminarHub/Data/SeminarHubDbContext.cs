@@ -23,7 +23,7 @@ namespace SeminarHub.Data
             builder.Entity<SeminarParticipant>()
                 .HasOne(sp => sp.Seminar)
                 .WithMany(sp => sp.SeminarsParticipants)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder
                .Entity<Category>()

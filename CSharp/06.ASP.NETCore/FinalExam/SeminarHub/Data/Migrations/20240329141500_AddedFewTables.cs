@@ -73,8 +73,7 @@ namespace SeminarHub.Data.Migrations
                         name: "FK_SeminarsParticipants_Seminars_SeminarId",
                         column: x => x.SeminarId,
                         principalTable: "Seminars",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.InsertData(
