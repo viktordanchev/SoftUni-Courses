@@ -12,8 +12,8 @@ using SeminarHub.Data;
 namespace SeminarHub.Data.Migrations
 {
     [DbContext(typeof(SeminarHubDbContext))]
-    [Migration("20240218143719_Initial")]
-    partial class Initial
+    [Migration("20240329134548_AddedFewTables")]
+    partial class AddedFewTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
