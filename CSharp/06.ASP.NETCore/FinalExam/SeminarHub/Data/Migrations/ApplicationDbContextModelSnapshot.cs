@@ -405,7 +405,7 @@ namespace SeminarHub.Data.Migrations
                     b.HasOne("SeminarHub.Data.Models.Seminar", "Seminar")
                         .WithMany("SeminarsParticipants")
                         .HasForeignKey("SeminarId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Participant");

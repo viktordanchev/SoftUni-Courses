@@ -12,7 +12,7 @@ using SeminarHub.Data;
 namespace SeminarHub.Data.Migrations
 {
     [DbContext(typeof(SeminarHubDbContext))]
-    [Migration("20240329141500_AddedFewTables")]
+    [Migration("20240329145535_AddedFewTables")]
     partial class AddedFewTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -407,7 +407,7 @@ namespace SeminarHub.Data.Migrations
                     b.HasOne("SeminarHub.Data.Models.Seminar", "Seminar")
                         .WithMany("SeminarsParticipants")
                         .HasForeignKey("SeminarId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Participant");
