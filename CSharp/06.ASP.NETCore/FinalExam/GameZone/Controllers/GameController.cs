@@ -68,7 +68,7 @@ namespace GameZone.Controllers
                 return View(model);
             }
 
-            var game = new Data.Models.Game()
+            var game = new Game()
             {
                 Title = model.Title,
                 Description = model.Description,
