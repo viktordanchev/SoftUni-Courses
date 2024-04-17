@@ -10,6 +10,11 @@ namespace GameZone.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("All", "Game");
+            }
+
             return View();
         }
 
