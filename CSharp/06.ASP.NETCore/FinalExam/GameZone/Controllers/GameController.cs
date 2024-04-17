@@ -1,4 +1,5 @@
 ﻿using GameZone.Data;
+using GameZone.Data.Models;
 using GameZone.Models.Games;
 using GameZone.Models.Genres;
 using Microsoft.AspNetCore.Mvc;
@@ -161,16 +162,81 @@ namespace GameZone.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var game = await _context.Games
+                .Select(g => new DeleteViewModel()
+                {
+                    Id = g.Id,
+                    Title = g.Title,
+                    Publisher = g.Publisher.UserName
+                })
                 .FirstAsync(s => s.Id == id);
 
-            var model = new DeleteViewModel()
+            return View(game);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var game = await _context.Games
+                .FirstAsync(s => s.Id == id);
+
+            _context.Remove(game);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AddToMyZone(int id)
+        {
+            var gamerGame = new GamerGame()
             {
-                Id = game.Id,
-                Title = game.Title,
-                Publisher = game.Publisher.UserName
+                GameId = id,
+                GamerId = GetUserId()
             };
 
-            return View(model);
+            if (!await _context.GamersGames.ContainsAsync(gamerGame))
+            {
+                await _context.GamersGames.AddAsync(gamerGame);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(MyZone));
+            }
+
+            return RedirectToAction(nameof(All));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> MyZone()
+        {
+            var userId = GetUserId();
+
+            var games = await _context.GamersGames
+                .Where(gg => gg.GamerId == userId)
+                .Select(gg => new JoinedViewModel()
+                {
+                    Id = gg.Game.Id,
+                    Title = gg.Game.Title,
+                    ImageUrl = gg.Game.ImageUrl,
+                    Genre = gg.Game.Genre.Name,
+                    ReleasedOn = gg.Game.ReleasedOn.ToString(DataConstants.Game.DateAndTimeFormat, CultureInfo.InvariantCulture),
+                    Publisher = gg.Game.Publisher.UserName
+                })
+                .AsNoTracking()
+                .ToListAsync();
+
+            return View(games);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> StrikeOut(int id)
+        {
+            var gamerGame = await _context.GamersGames
+                .FirstAsync(gg => gg.GameId == id);
+
+            _context.Remove(gamerGame);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(MyZone));
         }
 
         [HttpGet]
