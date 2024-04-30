@@ -128,3 +128,14 @@
 7. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/ExamPreparation)
 8. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/05.EntityFrameworkCore/FinalExam)
  </details>
+
+ ***
+ <details>
+ <summary><h3> ASP.NET Core </summary>
+
+1. [**ASP.NET Core Introduction**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.ASP.NETCore/01.ASP.NETCoreIntroductionExercise)
+2. [**Workshop: Forum App**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.ASP.NETCore/02.WorkshopForumApp)
+3. [**Workshop: TaskBoard App**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.ASP.NETCore/03.WorkshopTaskBoardApp)
+4. [**Exam Preparation**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.ASP.NETCore/ExamPreparation)
+5. [**Final Exam**](https://github.com/viktordanchev/SoftUni-Courses/tree/main/CSharp/06.ASP.NETCore/FinalExam)
+ </details>
